@@ -186,7 +186,7 @@ There are a few TODOs left. Please bear with me.
 ### Multisite only: A user has been added, or their account activation has been successful
     To:        User being added
     From:      [Network Name] <[network admin]>
-    Subject:   New %1$s User: %2$s
+    Subject:   New %s User: %s
     Function:  wpmu_welcome_user_notification()
     Pluggable: No
     Filters:   update_welcome_user_subject
