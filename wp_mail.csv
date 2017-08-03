@@ -1,33 +1,0 @@
-function,subject filter,content filter,disable with,pluggable,can disable,type,ms-only,notes
-WP_Automatic_Updater::send_email,auto_core_update_email,auto_core_update_email,filter: auto_core_update_send_email,,yes,network admin,,called from 4 places
-WP_Automatic_Updater::send_debug_email, automatic_updates_debug_email, automatic_updates_debug_email,"filter: send_update_notification_email, filter: automatic_updates_send_debug_email",,yes,network admin,,only sent in dev versions of WP
-update_option_new_admin_email,,new_admin_email_content,"remove action: add_option_new_admin_email, remove action: update_option_new_admin_email",,yes,site admin,,sent when site admin email address is changed
-send_confirmation_on_profile_email,,new_user_email_content,remove action: personal_options_update,,yes,user,,sent when user email address is changed
-wp_new_blog_notification,,,pluggable,yes,yes,user,,sent when WP is installed or a site is added
-file: wp-admin/ms-delete-site.php,,delete_site_email_content,,,NO,site admin,yes,sends site deletion confirmation link to site admin
-file: wp-admin/network/site-new.php,,,,,NO,network admin,yes,sent to network admin when new site created via network admin screen
-file: wp-admin/user-new.php,,,click the ‘no confirmation” checkbox when adding a user,,NO,user,yes,sent to user when adding existing user to a site
-wpmu_signup_blog_notification,wpmu_signup_blog_notification_subject,wpmu_signup_blog_notification_email,"filter: wpmu_signup_blog_notification, remove action: after_signup_site",,yes,email,yes,"see validate_blog_signup() ->  wpmu_signup_blog() -> after_signup_site. could be converted to user notification type via wpmu_validate_user_signup() in validate_blog_signup()"
-wpmu_signup_user_notification,wpmu_signup_user_notification_subject,wpmu_signup_user_notification_email,"filter: wpmu_signup_user_notification, click the ‘no confirmation’ checkbox when adding user",,yes,email,yes,"user doesn’t exist at this point. see after_signup_user action"
-newblog_notify_siteadmin,,newblog_notify_siteadmin,"registrationnotification’ network option, remove action: wpmu_new_blog",,yes,network admin,yes,sent to network admin when site created
-newuser_notify_siteadmin,,newuser_notify_siteadmin,"registrationnotification’ network option, remove action: wpmu_new_user",,yes,network admin,yes,sent to network admin when user created
-wpmu_welcome_notification,update_welcome_subject,update_welcome_email,"filter: wpmu_welcome_notification, remove action: wpmu_activate_blog",,yes,user,yes,also called directly when a site is added via site-new.php
-wpmu_welcome_user_notification,update_welcome_user_subject,update_welcome_user_email,"filter: wpmu_welcome_user_notification, remove action: wpmu_activate_user, check the checkbox when adding user",,yes,user,yes,
-wp_notify_postauthor,comment_notification_subject,comment_notification_text,"comments_notify option, remove action: comment_post:wp_new_comment_notify_postauthor Since 4.4: filter: notify_post_author",yes,yes,user + email,,"related filters: comment_notification_recipients, comment_notification_notify_author. also hardcoded action added to wp_set_comment_status in wp_set_comment_status()"
-wp_notify_moderator,comment_moderation_subject,comment_moderation_text,"moderation_notify option, remove action: comment_post:wp_new_comment_notify_moderator Since 4.4: filter: notify_moderator",yes,yes,site admin + email,,related filters: comment_moderation_recipients
-wp_password_change_notification,,,remove action: after_password_reset,yes,yes,site admin,,
-wp_new_user_notification 1/2,,,"remove wp_send_new_user_notifications action on: register_new_user
-edit_user_created_user
-network_site_new_created_user
-network_site_users_created_user
-network_user_new_created_user",yes,yes,site admin,,
-wp_new_user_notification 2/2,,,"remove wp_send_new_user_notifications action on: register_new_user
-edit_user_created_user
-network_site_new_created_user
-network_site_users_created_user
-network_user_new_created_user",yes,yes,user,,
-wp_update_user 1/2,password_change_email,password_change_email,filter send_password_change_email,,yes,user,,
-wp_update_user 2/2,email_change_email,email_change_email,filter send_email_change_email,,yes,user,,
-retrieve_password,retrieve_password_title,retrieve_password_message,filter retrieve_password_message,,yes,user,,see also other actions in this function
-,,,,,,,,
-Proposed: wp_new_comment_notify_commenter (#33717),comment_approval_notification_subject,comment_approval_notification_text,remove action comment_unapproved_to_approved,,yes,user + email,,
