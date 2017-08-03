@@ -28,7 +28,8 @@ There are a few TODOs left. Please bear with me.
                comment_moderation_headers
     Disable:   Filter notify_moderator
                Remove comment_post:wp_new_comment_notify_moderator action
-               "Email me whenever" on Settings -> Discussion.
+               "Email me whenever" on Settings -> Discussion
+               Overwrite the pluggable function
 
 ### Comment has been published
     To:        Post author
@@ -45,6 +46,7 @@ There are a few TODOs left. Please bear with me.
     Disable:   Filter notify_post_author
                Remove comment_post:wp_new_comment_notify_postauthor action
                See also hardcoded action added to wp_set_comment_status in wp_set_comment_status()
+               Overwrite the pluggable function
 
 ## Change of Admin Email
 
@@ -201,11 +203,12 @@ There are a few TODOs left. Please bear with me.
     Function:  wp_new_user_notification()
     Pluggable: Yes
     Filters:   None
-    Disable:   Remove  register_new_user action
+    Disable:   Remove register_new_user action
                Remove edit_user_created_user action
                Remove network_site_new_created_user action
                Remove network_site_users_created_user action
                Remove network_user_new_created_user action
+               Overwrite the pluggable function
 
 ### @TODO [description]
     To:        User being added
@@ -214,11 +217,12 @@ There are a few TODOs left. Please bear with me.
     Function:  wp_new_user_notification()
     Pluggable: Yes
     Filters:   None
-    Disable:   Remove  register_new_user action
+    Disable:   Remove register_new_user action
                Remove edit_user_created_user action
                Remove network_site_new_created_user action
                Remove network_site_users_created_user action
                Remove network_user_new_created_user action
+               Overwrite the pluggable function
 
 ## New Site
 
