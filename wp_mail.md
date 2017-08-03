@@ -43,7 +43,7 @@ There are a few TODOs left. Please bear with me.
                comment_notification_text
                comment_notification_recipients
                comment_notification_headers
-    Disable:   Filter notify_post_author
+    Disable:   Return false from notify_post_author filter
                Remove comment_post:wp_new_comment_notify_postauthor action
                See also hardcoded action added to wp_set_comment_status in wp_set_comment_status()
                Overwrite the pluggable function
@@ -159,7 +159,7 @@ There are a few TODOs left. Please bear with me.
     Function:  wp-admin/user-new.php
     Pluggable: No
     Filters:   None
-    Disable:   Click the "Skip Confirmation Email" checkbox when adding the user.
+    Disable:   Click the "Skip Confirmation Email" checkbox when adding the user
 
 ### Multisite only: A new user is added to a site from Users -> Add New -> Add New User
     To:        User being added
