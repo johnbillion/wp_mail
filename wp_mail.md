@@ -152,8 +152,8 @@ There are a few TODOs left. Please bear with me.
 
 ## New User
 
-### Multisite only: An existing user is added to a site from Users -> Add New -> Add Existing User
-    To:        User being added
+### Multisite only: An existing user is invited to a site from Users -> Add New -> Add Existing User
+    To:        User being invited
     From:      WordPress <wordpress@host>
     Subject:   [%s] Joining confirmation
     Function:  wp-admin/user-new.php
@@ -161,8 +161,8 @@ There are a few TODOs left. Please bear with me.
     Filters:   None
     Disable:   Click the "Skip Confirmation Email" checkbox when adding the user
 
-### Multisite only: A new user is added to a site from Users -> Add New -> Add New User
-    To:        User being added
+### Multisite only: A new user is invited to a site from Users -> Add New -> Add New User
+    To:        User being invited
     From:      [Network Name] <[network admin]>
     Subject:   [%s] Activate %s
     Function:  wpmu_signup_user_notification()
@@ -196,7 +196,7 @@ There are a few TODOs left. Please bear with me.
                Return false from wpmu_welcome_user_notification filter
                Remove action on wpmu_activate_user hook
 
-### @TODO [description]
+### A new user is created
     To:        Site Admin
     From:      WordPress <wordpress@host>
     Subject:   [%s] New User Registration
