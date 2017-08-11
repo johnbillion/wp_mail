@@ -95,7 +95,7 @@ There are a few TODOs left. Please bear with me.
     Subject:   [%s] Password Changed
     Function:  wp_password_change_notification()
     Pluggable: Yes
-    Filters:   [filter] @TODO: #38068
+    Filters:   wp_password_change_notification_email (since 4.9)
     Disable:   Remove action on after_password_reset hook
                Overwrite the pluggable function
 
@@ -202,7 +202,7 @@ There are a few TODOs left. Please bear with me.
     Subject:   [%s] New User Registration
     Function:  wp_new_user_notification()
     Pluggable: Yes
-    Filters:   None
+    Filters:   wp_new_user_notification_email_admin (since 4.9)
     Disable:   Remove action on register_new_user hook
                Remove action on edit_user_created_user hook
                Remove action on network_site_new_created_user hook
@@ -216,7 +216,7 @@ There are a few TODOs left. Please bear with me.
     Subject:   [%s] Your username and password info
     Function:  wp_new_user_notification()
     Pluggable: Yes
-    Filters:   None
+    Filters:   wp_new_user_notification_email (since 4.9)
     Disable:   Remove action on register_new_user hook
                Remove action on edit_user_created_user hook
                Remove action on network_site_new_created_user hook
