@@ -26,7 +26,7 @@ There are a few TODOs left. Please bear with me.
                comment_moderation_text
                comment_moderation_recipients
                comment_moderation_headers
-    Disable:   Filter notify_moderator
+    Disable:   Return false from notify_moderator filter
                Remove comment_post:wp_new_comment_notify_moderator action
                "Email me whenever" on Settings -> Discussion
                Overwrite the pluggable function
