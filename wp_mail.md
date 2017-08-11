@@ -95,7 +95,7 @@ There are a few TODOs left. Please bear with me.
     Subject:   [%s] Password Changed
     Function:  wp_password_change_notification()
     Pluggable: Yes
-    Filters:   wp_password_change_notification_email (since 4.9)
+    Filters:   wp_password_change_notification_email (WordPress 4.9+)
     Disable:   Remove action on after_password_reset hook
                Overwrite the pluggable function
 
@@ -202,12 +202,12 @@ There are a few TODOs left. Please bear with me.
     Subject:   [%s] New User Registration
     Function:  wp_new_user_notification()
     Pluggable: Yes
-    Filters:   wp_new_user_notification_email_admin (since 4.9)
-    Disable:   Remove action on register_new_user hook
-               Remove action on edit_user_created_user hook
-               Remove action on network_site_new_created_user hook
-               Remove action on network_site_users_created_user hook
-               Remove action on network_user_new_created_user hook
+    Filters:   wp_new_user_notification_email_admin (WordPress 4.9+)
+    Disable:   Remove wp_send_new_user_notifications action on register_new_user hook
+               Remove wp_send_new_user_notifications action on edit_user_created_user hook
+               Remove wp_send_new_user_notifications action on network_site_new_created_user hook
+               Remove wp_send_new_user_notifications action on network_site_users_created_user hook
+               Remove wp_send_new_user_notifications action on network_user_new_created_user hook
                Overwrite the pluggable function
 
 ### @TODO [description]
@@ -216,12 +216,12 @@ There are a few TODOs left. Please bear with me.
     Subject:   [%s] Your username and password info
     Function:  wp_new_user_notification()
     Pluggable: Yes
-    Filters:   wp_new_user_notification_email (since 4.9)
-    Disable:   Remove action on register_new_user hook
-               Remove action on edit_user_created_user hook
-               Remove action on network_site_new_created_user hook
-               Remove action on network_site_users_created_user hook
-               Remove action on network_user_new_created_user hook
+    Filters:   wp_new_user_notification_email (WordPress 4.9+)
+    Disable:   Remove wp_send_new_user_notifications action on register_new_user hook
+               Remove wp_send_new_user_notifications action on edit_user_created_user hook
+               Remove wp_send_new_user_notifications action on network_site_new_created_user hook
+               Remove wp_send_new_user_notifications action on network_site_users_created_user hook
+               Remove wp_send_new_user_notifications action on network_user_new_created_user hook
                Overwrite the pluggable function
 
 ## New Site
@@ -280,7 +280,7 @@ There are a few TODOs left. Please bear with me.
 
 ## Other
 
-### Multisite only: Site admin attempts to delete site from the Tools -> Delete Site menu
+### Multisite only: Site admin deletes site from Tools -> Delete Site
     To:        Site Admin
     From:      WordPress <wordpress@host>
     Subject:   [ %s ] Delete My Site
