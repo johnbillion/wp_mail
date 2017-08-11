@@ -27,7 +27,7 @@ There are a few TODOs left. Please bear with me.
                comment_moderation_recipients
                comment_moderation_headers
     Disable:   Return false from notify_moderator filter
-               Remove comment_post:wp_new_comment_notify_moderator action
+               Remove wp_new_comment_notify_moderator action on comment_post hook
                "Email me whenever" on Settings -> Discussion
                Overwrite the pluggable function
 
@@ -44,9 +44,9 @@ There are a few TODOs left. Please bear with me.
                comment_notification_recipients
                comment_notification_headers
     Disable:   Return false from notify_post_author filter
-               Remove comment_post:wp_new_comment_notify_postauthor action
-               See also hardcoded action added to wp_set_comment_status in wp_set_comment_status()
+               Remove wp_new_comment_notify_postauthor action on comment_post hook
                Overwrite the pluggable function
+               See also the hardcoded action added to wp_set_comment_status in wp_set_comment_status()
 
 ## Change of Admin Email
 
@@ -57,7 +57,7 @@ There are a few TODOs left. Please bear with me.
     Function:  update_option_new_admin_email()
     Pluggable: No
     Filters:   new_admin_email_content
-    Disable:   Remove add_option_new_admin_email and update_option_new_admin_email actions
+    Disable:   Remove action on add_option_new_admin_email and update_option_new_admin_email hooks
 
 ### Site admin email address is changed (WordPress 4.9+)
     To:        Old site admin email address
@@ -96,7 +96,7 @@ There are a few TODOs left. Please bear with me.
     Function:  wp_password_change_notification()
     Pluggable: Yes
     Filters:   [filter] @TODO: #38068
-    Disable:   Remove action after_password_reset
+    Disable:   Remove action on after_password_reset hook
                Overwrite the pluggable function
 
 ### User attempts to change their email address (Prior to WordPress 4.9, this was Multisite-only)
@@ -106,7 +106,7 @@ There are a few TODOs left. Please bear with me.
     Function:  send_confirmation_on_profile_email()
     Pluggable: No
     Filters:   new_user_email_content
-    Disable:   Remove action personal_options_update
+    Disable:   Remove action on personal_options_update hook
 
 ### User changes their password
     To:        User
@@ -180,7 +180,7 @@ There are a few TODOs left. Please bear with me.
     Pluggable: No
     Filters:   newuser_notify_siteadmin
     Disable:   Filter registrationnotification option value
-               Remove wpmu_new_user action
+               Remove action on wpmu_new_user hook
                Toggle "Registration notification" in Network Admin -> Settings
 
 ### Multisite only: A user has been added, or their account activation has been successful
@@ -194,7 +194,7 @@ There are a few TODOs left. Please bear with me.
                See also "Welcome User Email" setting in Network Admin -> Settings
     Disable:   Click the "Skip Confirmation Email" checkbox when adding the user
                Return false from wpmu_welcome_user_notification filter
-               Remove wpmu_activate_user action
+               Remove action on wpmu_activate_user hook
 
 ### @TODO [description]
     To:        Site Admin
@@ -203,11 +203,11 @@ There are a few TODOs left. Please bear with me.
     Function:  wp_new_user_notification()
     Pluggable: Yes
     Filters:   None
-    Disable:   Remove register_new_user action
-               Remove edit_user_created_user action
-               Remove network_site_new_created_user action
-               Remove network_site_users_created_user action
-               Remove network_user_new_created_user action
+    Disable:   Remove action on register_new_user hook
+               Remove action on edit_user_created_user hook
+               Remove action on network_site_new_created_user hook
+               Remove action on network_site_users_created_user hook
+               Remove action on network_user_new_created_user hook
                Overwrite the pluggable function
 
 ### @TODO [description]
@@ -217,11 +217,11 @@ There are a few TODOs left. Please bear with me.
     Function:  wp_new_user_notification()
     Pluggable: Yes
     Filters:   None
-    Disable:   Remove register_new_user action
-               Remove edit_user_created_user action
-               Remove network_site_new_created_user action
-               Remove network_site_users_created_user action
-               Remove network_user_new_created_user action
+    Disable:   Remove action on register_new_user hook
+               Remove action on edit_user_created_user hook
+               Remove action on network_site_new_created_user hook
+               Remove action on network_site_users_created_user hook
+               Remove action on network_user_new_created_user hook
                Overwrite the pluggable function
 
 ## New Site
@@ -253,7 +253,7 @@ There are a few TODOs left. Please bear with me.
     Filters:   wpmu_signup_blog_notification_subject
                wpmu_signup_blog_notification_email
     Disable:   Return false from wpmu_signup_blog_notification filter
-               Remove after_signup_site action
+               Remove action on after_signup_site hook
 
 ### Multisite only: User activates their new site, or site added from Network Admin -> Sites -> Add New
     To:        Network Admin
@@ -263,7 +263,7 @@ There are a few TODOs left. Please bear with me.
     Pluggable: No
     Filters:   newblog_notify_siteadmin
     Disable:   Filter registrationnotification option value
-               Remove wpmu_new_blog action
+               Remove action on wpmu_new_blog hook
                Toggle "Registration notification" in Network Admin -> Settings
 
 ### Multisite only: User activates their new site, or site added from Network Admin -> Sites -> Add New
@@ -276,7 +276,7 @@ There are a few TODOs left. Please bear with me.
                update_welcome_email
                See also "Welcome Email" setting in Network Admin -> Settings
     Disable:   Return false from wpmu_welcome_notification filter
-               Remove wpmu_activate_blog action
+               Remove action on wpmu_activate_blog hook
 
 ## Other
 
