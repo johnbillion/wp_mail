@@ -196,17 +196,21 @@ There are a few TODOs left. Please bear with me.
                Return false from wpmu_welcome_user_notification filter
                Remove action on wpmu_activate_user hook
 
-### A new user is created
+### A new user is created (@TODO: needs a lot more information here)
 
-In this situation, two emails are sent from the same function. One to the site admin, and one to the newly created user:
+When a new user is created, two emails are sent from the same function. One to the site admin:
 
     To:        Site Admin
     From:      WordPress <wordpress@host>
     Subject:   [%s] New User Registration
 
+and one to the newly created user:
+
     To:        User being added
     From:      WordPress <wordpress@host>
     Subject:   [%s] Your username and password info
+
+Details:
 
     Function:  wp_new_user_notification()
     Pluggable: Yes
