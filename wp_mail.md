@@ -199,6 +199,7 @@ There are a few TODOs left. Please bear with me.
 ### A new user is created
 
 In this situation, two emails are sent from the same function. One to the site admin, and one to the newly created user:
+
     To:        Site Admin
     From:      WordPress <wordpress@host>
     Subject:   [%s] New User Registration
@@ -210,6 +211,7 @@ In this situation, two emails are sent from the same function. One to the site a
     Function:  wp_new_user_notification()
     Pluggable: Yes
     Filters:   wp_new_user_notification_email_admin (WordPress 4.9+)
+               wp_new_user_notification_email (WordPress 4.9+)
     Disable:   Remove wp_send_new_user_notifications action on register_new_user hook
                Remove wp_send_new_user_notifications action on edit_user_created_user hook
                Remove wp_send_new_user_notifications action on network_site_new_created_user hook
