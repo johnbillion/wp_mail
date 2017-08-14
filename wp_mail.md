@@ -50,7 +50,7 @@ There are a few TODOs left. Please bear with me.
 
 ## Change of Admin Email
 
-### Multisite only: Change of site admin email address is attempted
+### Change of site admin email address is attempted (Prior to WordPress 4.9, this was Multisite-only)
     To:        Proposed new email address
     From:      WordPress <wordpress@host>
     Subject:   [%s] New Admin Email Address
