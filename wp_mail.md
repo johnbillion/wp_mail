@@ -68,6 +68,15 @@ There are a few TODOs left. Please bear with me.
     Filters:   site_admin_email_change_email
     Disable:   Return false from send_site_admin_email_change_email filter
 
+### Multisite only: Change of network admin email address is attempted (WordPress 4.9+)
+    To:        Proposed new email address
+    From:      WordPress <wordpress@host>
+    Subject:   [%s] New Network Admin Email Address
+    Function:  update_network_option_new_admin_email()
+    Pluggable: No
+    Filters:   new_network_admin_email_content
+    Disable:   Remove action on add_site_option_new_admin_email and update_site_option_new_admin_email hooks
+
 ### Multisite only: Network admin email address is changed (WordPress 4.9+)
     To:        Old network admin email address
     From:      WordPress <wordpress@host>
