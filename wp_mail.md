@@ -2,7 +2,7 @@
 
 This document lists all the situations where WordPress sends an email, along with how to filter or disable each email.
 
-This is accurate as of WordPress 4.8, and includes some upcoming changes in WordPress 4.9.
+This is accurate as of WordPress 4.9.
 
 There are a few TODOs left. Please bear with me.
 
