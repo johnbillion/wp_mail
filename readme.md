@@ -98,7 +98,7 @@ There are a few TODOs left. Please bear with me.
                retrieve_password_message
     Disable:   Return an empty message from retrieve_password_message filter
 
-### User resets their password
+### User resets their password from the password reset link
     To:        Site admin
     From:      WordPress <wordpress@host>
     Subject:   [%s] Password Changed
