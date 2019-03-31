@@ -9,6 +9,7 @@ There are a few TODOs left. Please bear with me.
 - [Comments](#comments)
 - [Change of Admin Email](#change-of-admin-email)
 - [Change of User Email or Password](#change-of-user-email-or-password)
+- [Personal Data Requests](#personal-data-requests)
 - [Automatic Updates](#automatic-updates)
 - [New User](#new-user)
 - [New Site](#new-site)
@@ -134,6 +135,49 @@ There are a few TODOs left. Please bear with me.
     Pluggable: No
     Filters:   email_change_email
     Disable:   Return false from send_email_change_email filter
+
+## Personal Data Requests
+
+### Personal data export or erasure request is created or resent from Tools -> Export Personal Data or Tools -> Erase Personal Data
+    To:        Requester email address
+    From:      WordPress <wordpress@host>
+    Subject:   [%s] Confirm Action: %s
+    Function:  wp_send_user_request()
+    Pluggable: No
+    Filters:   user_request_action_email_content
+               user_request_action_email_subject
+    Disable:   Unknown, may have to remove the admin pages entirely by unhooking _wp_privacy_hook_requests_page from admin_menu
+
+### User clicks confirmation link in personal data export or erasure request email
+    To:        Site admin / Network admin
+    From:      WordPress <wordpress@host>
+    Subject:   [%s] Action Confirmed: %s
+    Function:  _wp_privacy_send_request_confirmation_notification()
+    Pluggable: No
+    Filters:   user_request_confirmed_email_to
+               user_confirmed_action_email_content
+               user_request_confirmed_email_subject
+    Disable:   Remove action on user_request_action_confirmed hook
+
+### Site admin clicks Send Export Link button next to a confirmed data export request
+    To:        Requester email address
+    From:      WordPress <wordpress@host>
+    Subject:   [%s] Personal Data Export
+    Function:  wp_privacy_send_personal_data_export_email()
+    Pluggable: No
+    Filters:   wp_privacy_personal_data_email_content
+    Disable:   Remove filter on wp_privacy_personal_data_export_page hook
+
+### Site admin clicks Erase Personal Data button next to a confirmed data erasure request
+    To:        Requester email address
+    From:      WordPress <wordpress@host>
+    Subject:   [%s] Erasure Request Fulfilled
+    Function:  _wp_privacy_send_erasure_fulfillment_notification()
+    Pluggable: No
+    Filters:   user_erasure_fulfillment_email_to
+               user_erasure_complete_email_subject
+               user_confirmed_action_email_content
+    Disable:   Remove filter on wp_privacy_personal_data_erased hook
 
 ## Automatic Updates
 
