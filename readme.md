@@ -96,7 +96,7 @@ There are a few TODOs left. Please bear with me.
     Pluggable: No
     Filters:   retrieve_password_title
                retrieve_password_message
-    Disable:   Not possible
+    Disable:   Return an empty message from retrieve_password_message filter
 
 ### User resets their password
     To:        Site admin
