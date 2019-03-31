@@ -2,9 +2,7 @@
 
 This document lists all the situations where WordPress sends an email, along with how to filter or disable each email.
 
-This is accurate as of WordPress 4.9.
-
-There are a few TODOs left. Please bear with me.
+This is accurate as of WordPress 5.2 beta 1.
 
 - [Comments](#comments)
 - [Change of Admin Email](#change-of-admin-email)
@@ -146,7 +144,7 @@ There are a few TODOs left. Please bear with me.
     Pluggable: No
     Filters:   user_request_action_email_content
                user_request_action_email_subject
-    Disable:   Unknown, may have to remove the admin pages entirely by unhooking _wp_privacy_hook_requests_page from admin_menu
+    Disable:   Unknown, may have to remove the admin pages entirely by removing _wp_privacy_hook_requests_page action from admin_menu hook
 
 ### User clicks confirmation link in personal data export or erasure request email
     To:        Site admin / Network admin
@@ -332,7 +330,7 @@ Details:
 
 ## Other
 
-### A fatal error occurs in a plugin or theme and Recovery Mode is not active
+### A fatal error occurs in a plugin or theme and Recovery Mode is not active (WordPress 5.2+)
     To:        Site Admin / Value of RECOVERY_MODE_EMAIL constant
     From:      WordPress <wordpress@host>
     Subject:   [%s] Your Site is Experiencing a Technical Issue
