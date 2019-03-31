@@ -332,6 +332,16 @@ Details:
 
 ## Other
 
+### A fatal error occurs in a plugin or theme and Recovery Mode is not active
+    To:        Site Admin / Value of RECOVERY_MODE_EMAIL constant
+    From:      WordPress <wordpress@host>
+    Subject:   [%s] Your Site is Experiencing a Technical Issue
+    Function:  send_recovery_mode_email()
+    Pluggable: No
+    Filters:   wp_fatal_error_handler_enabled
+    Disable:   Define WP_DISABLE_FATAL_ERROR_HANDLER as false
+               Return false from wp_fatal_error_handler_enabled filter
+
 ### Multisite only: Site admin deletes site from Tools -> Delete Site
     To:        Site Admin
     From:      WordPress <wordpress@host>
