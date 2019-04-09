@@ -49,7 +49,10 @@ This is accurate as of WordPress 5.2 beta 1.
 
 ## Change of Admin Email
 
-### Change of site admin email address is attempted (Prior to WordPress 4.9, this was Multisite-only)
+### Change of site admin email address is attempted
+
+**Note:** Prior to WordPress 4.9, this was Multisite-only functionality.
+
     To:        Proposed new email address
     From:      WordPress <wordpress@host>
     Subject:   [%s] New Admin Email Address
@@ -58,7 +61,8 @@ This is accurate as of WordPress 5.2 beta 1.
     Filters:   new_admin_email_content
     Disable:   Remove action on add_option_new_admin_email and update_option_new_admin_email hooks
 
-### Site admin email address is changed (WordPress 4.9+)
+### Site admin email address is changed
+
     To:        Old site admin email address
     From:      WordPress <wordpress@host>
     Subject:   [%s] Notice of Admin Email Change
@@ -66,8 +70,12 @@ This is accurate as of WordPress 5.2 beta 1.
     Pluggable: No
     Filters:   site_admin_email_change_email
     Disable:   Return false from send_site_admin_email_change_email filter
+    Since:     WordPress 4.9
 
-### Multisite only: Change of network admin email address is attempted (WordPress 4.9+)
+### Change of network admin email address is attempted
+
+**Note:** Multisite only.
+
     To:        Proposed new email address
     From:      WordPress <wordpress@host>
     Subject:   [%s] New Network Admin Email Address
@@ -75,8 +83,12 @@ This is accurate as of WordPress 5.2 beta 1.
     Pluggable: No
     Filters:   new_network_admin_email_content
     Disable:   Remove action on add_site_option_new_admin_email and update_site_option_new_admin_email hooks
+    Since:     WordPress 4.9
 
-### Multisite only: Network admin email address is changed (WordPress 4.9+)
+### Network admin email address is changed
+
+**Note:** Multisite only.
+
     To:        Old network admin email address
     From:      WordPress <wordpress@host>
     Subject:   [%s] Notice of Network Admin Email Change
@@ -84,6 +96,7 @@ This is accurate as of WordPress 5.2 beta 1.
     Pluggable: No
     Filters:   network_admin_email_change_email
     Disable:   Return false from send_network_admin_email_change_email filter
+    Since:     WordPress 4.9
 
 ## Change of User Email or Password
 
@@ -107,7 +120,10 @@ This is accurate as of WordPress 5.2 beta 1.
     Disable:   Remove action on after_password_reset hook
                Overwrite the pluggable function
 
-### User attempts to change their email address (Prior to WordPress 4.9, this was Multisite-only)
+### User attempts to change their email address
+
+**Note:** Prior to WordPress 4.9, this was Multisite-only functionality.
+
     To:        Proposed new email address
     From:      WordPress <wordpress@host>
     Subject:   [%s] New Email Address
@@ -191,7 +207,10 @@ This is accurate as of WordPress 5.2 beta 1.
     Disable:   Return false from auto_core_update_send_email filter
                Return false from send_core_update_notification_email filter
 
-### Full log of background update results, sent when you are using a development version of WordPress
+### Full log of background update results
+
+**Note:** Only sent when you are using a development version of WordPress.
+
     To:        Site admin / Network admin
     From:      WordPress <wordpress@host>
     Subject:   [%s] There were failures during background updates
@@ -203,7 +222,10 @@ This is accurate as of WordPress 5.2 beta 1.
 
 ## New User
 
-### Multisite only: An existing user is invited to a site from Users -> Add New -> Add Existing User
+### An existing user is invited to a site from Users -> Add New -> Add Existing User
+
+**Note:** Multisite only.
+
     To:        User being invited
     From:      WordPress <wordpress@host>
     Subject:   [%s] Joining confirmation
@@ -212,7 +234,10 @@ This is accurate as of WordPress 5.2 beta 1.
     Filters:   None
     Disable:   Click the "Skip Confirmation Email" checkbox when adding the user
 
-### Multisite only: A new user is invited to a site from Users -> Add New -> Add New User
+### A new user is invited to a site from Users -> Add New -> Add New User
+
+**Note:** Multisite only.
+
     To:        User being invited
     From:      [Network Name] <[network admin]>
     Subject:   [%s] Activate %s
@@ -223,7 +248,10 @@ This is accurate as of WordPress 5.2 beta 1.
     Disable:   Click the "Skip Confirmation Email" checkbox when adding the user
                Return false from wpmu_signup_user_notification filter
 
-### Multisite only: A new user account is created
+### A new user account is created
+
+**Note:** Multisite only.
+
     To:        Network Admin
     From:      WordPress <wordpress@host>
     Subject:   New User Registration: %s
@@ -234,7 +262,10 @@ This is accurate as of WordPress 5.2 beta 1.
                Remove action on wpmu_new_user hook
                Toggle "Registration notification" in Network Admin -> Settings
 
-### Multisite only: A user has been added, or their account activation has been successful
+### A user has been added, or their account activation has been successful
+
+**Note:** Multisite only.
+
     To:        User being added
     From:      [Network Name] <[network admin]>
     Subject:   New %s User: %s
@@ -247,7 +278,9 @@ This is accurate as of WordPress 5.2 beta 1.
                Return false from wpmu_welcome_user_notification filter
                Remove action on wpmu_activate_user hook
 
-### A new user is created (@TODO: needs a lot more information here)
+### A new user is created
+
+**TODO:** Needs a lot more information here.
 
 When a new user is created, two emails are sent from the same function. One to the site admin:
 
@@ -285,7 +318,10 @@ Details:
     Filters:   None
     Disable:   Overwrite the pluggable function
 
-### Multisite only: New site created from Network Admin -> Sites -> Add New
+### New site created from Network Admin -> Sites -> Add New
+
+**Note:** Multisite only.
+
     To:        Network Admin
     From:      Site Admin <[network admin]>
     Subject:   [%s] New Site Created
@@ -294,7 +330,10 @@ Details:
     Filters:   None
     Disable:   Not possible
 
-### Multisite only: User registers for a new site
+### User registers for a new site
+
+**Note:** Multisite only.
+
     To:        Site Admin
     From:      [Network Name] <[network admin]>
     Subject:   [%s] Activate %s
@@ -305,7 +344,10 @@ Details:
     Disable:   Return false from wpmu_signup_blog_notification filter
                Remove action on after_signup_site hook
 
-### Multisite only: User activates their new site, or site added from Network Admin -> Sites -> Add New
+### User activates their new site, or site added from Network Admin -> Sites -> Add New
+
+**Note:** Multisite only.
+
     To:        Network Admin
     From:      WordPress <wordpress@host>
     Subject:   New Site Registration: %s
@@ -316,7 +358,10 @@ Details:
                Remove action on wpmu_new_blog hook
                Toggle "Registration notification" in Network Admin -> Settings
 
-### Multisite only: User activates their new site, or site added from Network Admin -> Sites -> Add New
+### User activates their new site, or site added from Network Admin -> Sites -> Add New
+
+**Note:** Multisite only.
+
     To:        Site Admin
     From:      [Network Name] <[network admin]>
     Subject:   New %s Site: %s
@@ -330,7 +375,8 @@ Details:
 
 ## Other
 
-### A fatal error occurs in a plugin or theme and Recovery Mode is not active (WordPress 5.2+)
+### A fatal error occurs in a plugin or theme and Recovery Mode is not active
+
     To:        Site Admin / Value of RECOVERY_MODE_EMAIL constant
     From:      WordPress <wordpress@host>
     Subject:   [%s] Your Site is Experiencing a Technical Issue
@@ -339,8 +385,12 @@ Details:
     Filters:   wp_fatal_error_handler_enabled
     Disable:   Define WP_DISABLE_FATAL_ERROR_HANDLER as false
                Return false from wp_fatal_error_handler_enabled filter
+    Since:     WordPress 5.2
 
-### Multisite only: Site admin deletes site from Tools -> Delete Site
+### Site admin deletes site from Tools -> Delete Site
+
+**Note:** Multisite only.
+
     To:        Site Admin
     From:      WordPress <wordpress@host>
     Subject:   [ %s ] Delete My Site
