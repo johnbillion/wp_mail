@@ -119,7 +119,7 @@ This is accurate as of WordPress 5.2 beta 1.
     Subject:   [%s] Password Changed
     Function:  wp_password_change_notification()
     Pluggable: Yes
-    Filters:   wp_password_change_notification_email (WordPress 4.9+)
+    Filters:   wp_password_change_notification_email
     Disable:   Remove action on after_password_reset hook
                Overwrite the pluggable function
 
@@ -308,8 +308,8 @@ Details:
 
     Function:  wp_new_user_notification()
     Pluggable: Yes
-    Filters:   wp_new_user_notification_email_admin (WordPress 4.9+)
-               wp_new_user_notification_email (WordPress 4.9+)
+    Filters:   wp_new_user_notification_email_admin
+               wp_new_user_notification_email
     Disable:   Remove wp_send_new_user_notifications action on register_new_user hook
                Remove wp_send_new_user_notifications action on edit_user_created_user hook
                Remove wp_send_new_user_notifications action on network_site_new_created_user hook
