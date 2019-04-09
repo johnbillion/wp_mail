@@ -4,6 +4,8 @@ This document lists all the situations where WordPress sends an email, along wit
 
 This is accurate as of WordPress 5.2 beta 1.
 
+## Table of Contents
+
 - [Comments](#comments)
 - [Change of Admin Email](#change-of-admin-email)
 - [Change of User Email or Password](#change-of-user-email-or-password)
@@ -374,7 +376,7 @@ Details:
 
 **Note:** Multisite only.
 
-    To:        Site Admin
+    To:        New Site Admin
     From:      [Network Name] <[network admin]>
     Subject:   New %s Site: %s
     Function:  wpmu_welcome_notification()
