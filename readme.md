@@ -16,6 +16,7 @@ This is accurate as of WordPress 5.2 beta 1.
 ## Comments
 
 ### Comment is awaiting moderation
+
     To:        Site Admin, plus post author if they can edit comments
     From:      WordPress <wordpress@host>
     Subject:   [%s] Please moderate: "%s"
@@ -31,6 +32,7 @@ This is accurate as of WordPress 5.2 beta 1.
                Overwrite the pluggable function
 
 ### Comment has been published
+
     To:        Post author
     From:      WordPress <wordpress@host>
     Subject:   [%s] Comment: "%s"
@@ -101,6 +103,7 @@ This is accurate as of WordPress 5.2 beta 1.
 ## Change of User Email or Password
 
 ### User requests a password reset via "Lost your password?"
+
     To:        User
     From:      WordPress <wordpress@host>
     Subject:   [%s] Password Reset
@@ -111,6 +114,7 @@ This is accurate as of WordPress 5.2 beta 1.
     Disable:   Return an empty message from retrieve_password_message filter
 
 ### User resets their password from the password reset link
+
     To:        Site admin
     From:      WordPress <wordpress@host>
     Subject:   [%s] Password Changed
@@ -133,6 +137,7 @@ This is accurate as of WordPress 5.2 beta 1.
     Disable:   Remove action on personal_options_update hook
 
 ### User changes their password
+
     To:        User
     From:      WordPress <wordpress@host>
     Subject:   [%s] Notice of Password Change
@@ -142,6 +147,7 @@ This is accurate as of WordPress 5.2 beta 1.
     Disable:   Return false from send_password_change_email filter
 
 ### User changes their email address
+
     To:        User
     From:      WordPress <wordpress@host>
     Subject:   [%s] Notice of Email Change
@@ -153,6 +159,7 @@ This is accurate as of WordPress 5.2 beta 1.
 ## Personal Data Requests
 
 ### Personal data export or erasure request is created or resent from Tools -> Export Personal Data or Tools -> Erase Personal Data
+
     To:        Requester email address
     From:      WordPress <wordpress@host>
     Subject:   [%s] Confirm Action: %s
@@ -163,6 +170,7 @@ This is accurate as of WordPress 5.2 beta 1.
     Disable:   Unknown, may have to remove the admin pages entirely by removing _wp_privacy_hook_requests_page action from admin_menu hook
 
 ### User clicks confirmation link in personal data export or erasure request email
+
     To:        Site admin / Network admin
     From:      WordPress <wordpress@host>
     Subject:   [%s] Action Confirmed: %s
@@ -174,6 +182,7 @@ This is accurate as of WordPress 5.2 beta 1.
     Disable:   Remove action on user_request_action_confirmed hook
 
 ### Site admin clicks Send Export Link button next to a confirmed data export request
+
     To:        Requester email address
     From:      WordPress <wordpress@host>
     Subject:   [%s] Personal Data Export
@@ -183,6 +192,7 @@ This is accurate as of WordPress 5.2 beta 1.
     Disable:   Remove filter on wp_privacy_personal_data_export_page hook
 
 ### Site admin clicks Erase Personal Data button next to a confirmed data erasure request
+
     To:        Requester email address
     From:      WordPress <wordpress@host>
     Subject:   [%s] Erasure Request Fulfilled
@@ -196,6 +206,7 @@ This is accurate as of WordPress 5.2 beta 1.
 ## Automatic Updates
 
 ### Completion or failure of a background automatic core update
+
     To:        Site admin / Network admin
     From:      WordPress <wordpress@host>
     Subject:   [%s] Your site has updated to WordPress %s
@@ -310,6 +321,7 @@ Details:
 ## New Site
 
 ### When WordPress is installed, and when a site is added to a Multisite network
+
     To:        Site Admin
     From:      WordPress <wordpress@host>
     Subject:   New WordPress Site
