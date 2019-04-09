@@ -74,7 +74,6 @@ This is accurate as of WordPress 5.2 beta 1.
     Pluggable: No
     Filters:   site_admin_email_change_email
     Disable:   Return false from send_site_admin_email_change_email filter
-    Since:     WordPress 4.9
 
 ### Change of network admin email address is attempted
 
@@ -87,7 +86,6 @@ This is accurate as of WordPress 5.2 beta 1.
     Pluggable: No
     Filters:   new_network_admin_email_content
     Disable:   Remove action on add_site_option_new_admin_email and update_site_option_new_admin_email hooks
-    Since:     WordPress 4.9
 
 ### Network admin email address is changed
 
@@ -100,7 +98,6 @@ This is accurate as of WordPress 5.2 beta 1.
     Pluggable: No
     Filters:   network_admin_email_change_email
     Disable:   Return false from send_network_admin_email_change_email filter
-    Since:     WordPress 4.9
 
 ## Change of User Email or Password
 
@@ -399,7 +396,6 @@ Details:
     Filters:   wp_fatal_error_handler_enabled
     Disable:   Define WP_DISABLE_FATAL_ERROR_HANDLER as false
                Return false from wp_fatal_error_handler_enabled filter
-    Since:     WordPress 5.2
 
 ### Site admin deletes site from Tools -> Delete Site
 
