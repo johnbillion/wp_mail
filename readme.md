@@ -2,7 +2,9 @@
 
 This document lists all the situations where WordPress sends an email, along with how to filter or disable each email.
 
-This is accurate as of WordPress 5.2 beta 1.
+This is accurate as of WordPress 5.2 beta 2.
+
+Note that several email subjects were changed in WordPress 5.2 beta 2.
 
 ## Table of Contents
 
@@ -69,7 +71,8 @@ This is accurate as of WordPress 5.2 beta 1.
 
     To:        Old site admin email address
     From:      WordPress <wordpress@host>
-    Subject:   [%s] Notice of Admin Email Change
+    Subject:   [%s] Admin Email Changed (WP 5.2+)
+               [%s] Notice of Admin Email Change (WP < 5.2)
     Function:  wp_site_admin_email_change_notification()
     Pluggable: No
     Filters:   site_admin_email_change_email
@@ -81,7 +84,8 @@ This is accurate as of WordPress 5.2 beta 1.
 
     To:        Proposed new email address
     From:      WordPress <wordpress@host>
-    Subject:   [%s] New Network Admin Email Address
+    Subject:   [%s] Network Admin Email Change Request (WP 5.2+)
+               [%s] New Network Admin Email Address (WP < 5.2)
     Function:  update_network_option_new_admin_email()
     Pluggable: No
     Filters:   new_network_admin_email_content
@@ -129,7 +133,8 @@ This is accurate as of WordPress 5.2 beta 1.
 
     To:        Proposed new email address
     From:      WordPress <wordpress@host>
-    Subject:   [%s] New Email Address
+    Subject:   [%s] Email Change Request (WP 5.2+)
+               [%s] New Email Address (WP < 5.2)
     Function:  send_confirmation_on_profile_email()
     Pluggable: No
     Filters:   new_user_email_content
@@ -139,7 +144,8 @@ This is accurate as of WordPress 5.2 beta 1.
 
     To:        User
     From:      WordPress <wordpress@host>
-    Subject:   [%s] Notice of Password Change
+    Subject:   [%s] Password Changed (WP 5.2+)
+               [%s] Notice of Password Change (WP < 5.2)
     Function:  wp_update_user()
     Pluggable: No
     Filters:   password_change_email
@@ -149,7 +155,8 @@ This is accurate as of WordPress 5.2 beta 1.
 
     To:        User
     From:      WordPress <wordpress@host>
-    Subject:   [%s] Notice of Email Change
+    Subject:   [%s] Email Changed (WP 5.2+)
+               [%s] Notice of Email Change (WP < 5.2)
     Function:  wp_update_user()
     Pluggable: No
     Filters:   email_change_email
@@ -223,8 +230,10 @@ This is accurate as of WordPress 5.2 beta 1.
 
     To:        Site admin / Network admin
     From:      WordPress <wordpress@host>
-    Subject:   [%s] There were failures during background updates
-               [%s] Background updates have finished
+    Subject:   [%s] Background Update Failed (WP 5.2+)
+               [%s] Background Update Finished (WP 5.2+)
+               [%s] There were failures during background updates (WP < 5.2)
+               [%s] Background updates have finished (WP < 5.2)
     Function:  WP_Automatic_Updater::send_debug_email()
     Pluggable: No
     Filters:   automatic_updates_debug_email
@@ -238,7 +247,7 @@ This is accurate as of WordPress 5.2 beta 1.
 
     To:        User being invited
     From:      WordPress <wordpress@host>
-    Subject:   [%s] Joining confirmation
+    Subject:   [%s] Joining Confirmation
     Function:  wp-admin/user-new.php
     Pluggable: No
     Filters:   None
@@ -302,7 +311,8 @@ and one to the newly created user:
 
     To:        User being added
     From:      WordPress <wordpress@host>
-    Subject:   [%s] Your username and password info
+    Subject:   [%s] Login Credentials (WP 5.2+)
+               [%s] Your username and password info (WP < 5.2)
 
 Details:
 
