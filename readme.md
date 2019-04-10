@@ -21,7 +21,7 @@ This is accurate as of WordPress 5.2 beta 1.
 
     To:        Site Admin, plus post author if they can edit comments
     From:      WordPress <wordpress@host>
-    Subject:   [%s] Please moderate: "%s"
+    Subject:   [%1$s] Please moderate: "%2$s"
     Function:  wp_notify_moderator()
     Pluggable: Yes
     Filters:   comment_moderation_subject
@@ -37,9 +37,9 @@ This is accurate as of WordPress 5.2 beta 1.
 
     To:        Post author
     From:      WordPress <wordpress@host>
-    Subject:   [%s] Comment: "%s"
-               [%s] Pingback: "%s"
-               [%s] Trackback: "%s"
+    Subject:   [%1$s] Comment: "%2$s"
+               [%1$s] Pingback: "%2$s"
+               [%1$s] Trackback: "%2$s"
     Function:  wp_notify_postauthor()
     Pluggable: Yes
     Filters:   comment_notification_subject
@@ -161,7 +161,7 @@ This is accurate as of WordPress 5.2 beta 1.
 
     To:        Requester email address
     From:      WordPress <wordpress@host>
-    Subject:   [%s] Confirm Action: %s
+    Subject:   [%1$s] Confirm Action: %2$s
     Function:  wp_send_user_request()
     Pluggable: No
     Filters:   user_request_action_email_content
@@ -172,7 +172,7 @@ This is accurate as of WordPress 5.2 beta 1.
 
     To:        Site admin / Network admin
     From:      WordPress <wordpress@host>
-    Subject:   [%s] Action Confirmed: %s
+    Subject:   [%1$s] Action Confirmed: %2$s
     Function:  _wp_privacy_send_request_confirmation_notification()
     Pluggable: No
     Filters:   user_request_confirmed_email_to
@@ -208,9 +208,9 @@ This is accurate as of WordPress 5.2 beta 1.
 
     To:        Site admin / Network admin
     From:      WordPress <wordpress@host>
-    Subject:   [%s] Your site has updated to WordPress %s
-               [%s] WordPress %s is available. Please update!
-               [%s] URGENT: Your site may be down due to a failed update
+    Subject:   [%1$s] Your site has updated to WordPress %2$s
+               [%1$s] WordPress %2$s is available. Please update!
+               [%1$s] URGENT: Your site may be down due to a failed update
     Function:  WP_Automatic_Updater::send_email()
     Pluggable: No
     Filters:   auto_core_update_email
@@ -250,7 +250,7 @@ This is accurate as of WordPress 5.2 beta 1.
 
     To:        User being invited
     From:      [Network Name] <[network admin]>
-    Subject:   [%s] Activate %s
+    Subject:   [%1$s] Activate %2$s
     Function:  wpmu_signup_user_notification()
     Pluggable: No
     Filters:   wpmu_signup_user_notification_subject
@@ -347,7 +347,7 @@ Details:
 
     To:        Site Admin
     From:      [Network Name] <[network admin]>
-    Subject:   [%s] Activate %s
+    Subject:   [%1$s] Activate %2$s
     Function:  wpmu_signup_blog_notification()
     Pluggable: No
     Filters:   wpmu_signup_blog_notification_subject
@@ -375,7 +375,7 @@ Details:
 
     To:        New Site Admin
     From:      [Network Name] <[network admin]>
-    Subject:   New %s Site: %s
+    Subject:   New %1$s Site: %2$s
     Function:  wpmu_welcome_notification()
     Pluggable: No
     Filters:   update_welcome_subject
