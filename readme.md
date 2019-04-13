@@ -2,9 +2,9 @@
 
 This document lists all the situations where WordPress sends an email, along with how to filter or disable each email.
 
-This is accurate as of WordPress 5.2 beta 2.
+This is accurate as of WordPress 5.2 beta 3.
 
-Note that several email subjects were changed in WordPress 5.2 beta 2.
+Note that several email subjects were changed in WordPress 5.2.
 
 ## Table of Contents
 
@@ -311,7 +311,7 @@ and one to the newly created user:
 
     To:        User being added
     From:      WordPress <wordpress@host>
-    Subject:   [%s] Login Credentials (WP 5.2+)
+    Subject:   [%s] Login Details (WP 5.2+)
                [%s] Your username and password info (WP < 5.2)
 
 Details:
