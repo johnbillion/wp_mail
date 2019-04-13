@@ -404,7 +404,7 @@ Details:
     Function:  send_recovery_mode_email()
     Pluggable: No
     Filters:   wp_fatal_error_handler_enabled
-    Disable:   Define WP_DISABLE_FATAL_ERROR_HANDLER as false
+    Disable:   Define WP_DISABLE_FATAL_ERROR_HANDLER as true
                Return false from wp_fatal_error_handler_enabled filter
 
 ### Site admin deletes site from Tools -> Delete Site
