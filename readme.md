@@ -409,6 +409,8 @@ Details:
     Filters:   delete_site_email_content
     Disable:   Not possible
 
+## Other
+
 ### A fatal error occurs in a plugin or theme and Recovery Mode is not active
 
     To:        Site Admin / Value of RECOVERY_MODE_EMAIL constant
