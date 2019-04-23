@@ -15,6 +15,7 @@ Note that several email subjects were changed in WordPress 5.2.
 - [Automatic Updates](#automatic-updates)
 - [New User](#new-user)
 - [New Site](#new-site)
+- [Delete Site](#delete-site)
 - [Other](#other)
 
 ## Comments
@@ -394,18 +395,7 @@ Details:
     Disable:   Return false from wpmu_welcome_notification filter
                Remove action on wpmu_activate_blog hook
 
-## Other
-
-### A fatal error occurs in a plugin or theme and Recovery Mode is not active
-
-    To:        Site Admin / Value of RECOVERY_MODE_EMAIL constant
-    From:      WordPress <wordpress@host>
-    Subject:   [%s] Your Site is Experiencing a Technical Issue
-    Function:  send_recovery_mode_email()
-    Pluggable: No
-    Filters:   wp_fatal_error_handler_enabled
-    Disable:   Define WP_DISABLE_FATAL_ERROR_HANDLER as true
-               Return false from wp_fatal_error_handler_enabled filter
+## Delete Site
 
 ### Site admin deletes site from Tools -> Delete Site
 
@@ -418,3 +408,14 @@ Details:
     Pluggable: No
     Filters:   delete_site_email_content
     Disable:   Not possible
+
+### A fatal error occurs in a plugin or theme and Recovery Mode is not active
+
+    To:        Site Admin / Value of RECOVERY_MODE_EMAIL constant
+    From:      WordPress <wordpress@host>
+    Subject:   [%s] Your Site is Experiencing a Technical Issue
+    Function:  send_recovery_mode_email()
+    Pluggable: No
+    Filters:   wp_fatal_error_handler_enabled
+    Disable:   Define WP_DISABLE_FATAL_ERROR_HANDLER as true
+               Return false from wp_fatal_error_handler_enabled filter
