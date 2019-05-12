@@ -2,7 +2,7 @@
 
 This document lists all the situations where WordPress sends an email, along with how to filter or disable each email.
 
-This is accurate as of WordPress 5.2 beta 3.
+This is accurate as of WordPress 5.2.
 
 Note that several email subjects were changed in WordPress 5.2.
 
@@ -404,6 +404,8 @@ Details:
     Function:  send_recovery_mode_email()
     Pluggable: No
     Filters:   wp_fatal_error_handler_enabled
+               recovery_email_support_info
+               recovery_mode_email
     Disable:   Define WP_DISABLE_FATAL_ERROR_HANDLER as true
                Return false from wp_fatal_error_handler_enabled filter
 
