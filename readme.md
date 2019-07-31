@@ -1,6 +1,6 @@
 # WordPress Emails
 
-This document lists all the situations where WordPress sends an email, along with how to filter or disable each email.
+This document lists all of the situations where WordPress sends an email, along with how to filter or disable each email.
 
 This is accurate as of WordPress 5.2.
 
@@ -21,7 +21,8 @@ Note that several email subjects were changed in WordPress 5.2.
 
 ### Comment is awaiting moderation
 
-    To:        Site Admin, plus post author if they can edit comments
+    To:        Site Admin
+               Post author if they can edit comments
     From:      WordPress <wordpress@host>
     Subject:   [%1$s] Please moderate: "%2$s"
     Function:  wp_notify_moderator()
@@ -299,27 +300,25 @@ Note that several email subjects were changed in WordPress 5.2.
 
 ### A new user is created
 
-**TODO:** Needs a lot more information here.
-
 When a new user is created, two emails are sent from the same function. One to the site admin:
 
     To:        Site Admin
     From:      WordPress <wordpress@host>
     Subject:   [%s] New User Registration
+    Filters:   wp_new_user_notification_email_admin
 
 and one to the newly created user:
 
-    To:        User being added
+    To:        New user
     From:      WordPress <wordpress@host>
     Subject:   [%s] Login Details (WP 5.2+)
                [%s] Your username and password info (WP < 5.2)
+    Filters:   wp_new_user_notification_email
 
 Details:
 
     Function:  wp_new_user_notification()
     Pluggable: Yes
-    Filters:   wp_new_user_notification_email_admin
-               wp_new_user_notification_email
     Disable:   Remove wp_send_new_user_notifications action on register_new_user hook
                Remove wp_send_new_user_notifications action on edit_user_created_user hook
                Remove wp_send_new_user_notifications action on network_site_new_created_user hook
@@ -397,6 +396,8 @@ Details:
 ## Other
 
 ### A fatal error occurs in a plugin or theme and Recovery Mode is not active
+
+**Note:** Not on Multisite.
 
     To:        Site Admin / Value of RECOVERY_MODE_EMAIL constant
     From:      WordPress <wordpress@host>
