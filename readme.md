@@ -196,6 +196,8 @@ Note that several email subjects were changed in WordPress 5.2.
     Function:  wp_privacy_send_personal_data_export_email()
     Pluggable: No
     Filters:   wp_privacy_personal_data_email_content
+               wp_privacy_personal_data_email_to
+               wp_privacy_personal_data_email_subject
     Disable:   Remove filter on wp_privacy_personal_data_export_page hook
 
 ### Site admin clicks Erase Personal Data button next to a confirmed data erasure request
@@ -406,6 +408,7 @@ Details:
     Pluggable: No
     Filters:   wp_fatal_error_handler_enabled
                recovery_email_support_info
+               recovery_email_debug_info
                recovery_mode_email
     Disable:   Define WP_DISABLE_FATAL_ERROR_HANDLER as true
                Return false from wp_fatal_error_handler_enabled filter
