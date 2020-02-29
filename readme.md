@@ -2,7 +2,7 @@
 
 This document lists all of the situations where WordPress sends an email, along with how to filter or disable each email.
 
-This list was last updated for WordPress 5.3.
+This list was last updated for WordPress 5.4 beta.
 
 ## Table of Contents
 
@@ -172,6 +172,7 @@ This list was last updated for WordPress 5.3.
     Pluggable: No
     Filters:   user_request_action_email_content
                user_request_action_email_subject
+               user_request_action_email_headers
     Disable:   Unknown, may have to remove the admin pages entirely by removing _wp_privacy_hook_requests_page action from admin_menu hook
 
 ### User clicks confirmation link in personal data export or erasure request email
@@ -184,6 +185,7 @@ This list was last updated for WordPress 5.3.
     Filters:   user_request_confirmed_email_to
                user_confirmed_action_email_content
                user_request_confirmed_email_subject
+               user_request_confirmed_email_headers
     Disable:   Remove action on user_request_action_confirmed hook
 
 ### Site admin clicks Send Export Link button next to a confirmed data export request
@@ -196,6 +198,7 @@ This list was last updated for WordPress 5.3.
     Filters:   wp_privacy_personal_data_email_content
                wp_privacy_personal_data_email_to
                wp_privacy_personal_data_email_subject
+               wp_privacy_personal_data_email_headers
     Disable:   Remove filter on wp_privacy_personal_data_export_page hook
 
 ### Site admin clicks Erase Personal Data button next to a confirmed data erasure request
@@ -208,6 +211,7 @@ This list was last updated for WordPress 5.3.
     Filters:   user_erasure_fulfillment_email_to
                user_erasure_complete_email_subject
                user_confirmed_action_email_content
+               user_erasure_complete_email_headers
     Disable:   Remove filter on wp_privacy_personal_data_erased hook
 
 ## Automatic Updates
