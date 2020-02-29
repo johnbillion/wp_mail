@@ -380,7 +380,7 @@ Details:
     Pluggable: No
     Filters:   newblog_notify_siteadmin
     Disable:   Filter registrationnotification option value
-               Remove action on wpmu_new_blog hook
+               Remove action on wpmu_new_blog or wp_initialize_site hooks
                Toggle "Registration notification" in Network Admin -> Settings
 
 ### User activates their new site, or site added from Network Admin -> Sites -> Add New
