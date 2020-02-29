@@ -271,6 +271,7 @@ This list was last updated for WordPress 5.4 beta.
                wpmu_signup_user_notification_email
     Disable:   Click the "Skip Confirmation Email" checkbox when adding the user
                Return false from wpmu_signup_user_notification filter
+    Note:      There is a default filter on wpmu_signup_user_notification_email: admin_created_user_email()
 
 ### A new user account is created
 
