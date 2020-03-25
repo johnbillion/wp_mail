@@ -422,7 +422,7 @@ Details:
 
     To:        Site Admin
     From:      WordPress <wordpress@host>
-    Subject:   [ %s ] Delete My Site
+    Subject:   [%s] Delete My Site
     Function:  wp-admin/ms-delete-site.php
     Pluggable: No
     Filters:   delete_site_email_content
