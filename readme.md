@@ -216,6 +216,22 @@ This list was last updated for WordPress 5.4.
 
 ## Automatic Updates
 
+### Completion or failure of background automatic plugin or theme updates
+
+    To:        Site admin / Network admin
+    From:      WordPress <wordpress@host>
+    Subject:   [%s] Some plugins and themes have automatically updated
+               [%s] Some plugins were automatically updated
+               [%s] Some themes were automatically updated
+               [%s] Some plugins and themes have failed to update
+               [%s] Some plugins have failed to update
+               [%s] Some themes have failed to update
+    Function:  WP_Automatic_Updater::after_plugin_theme_update()
+    Pluggable: No
+    Filters:   auto_plugin_theme_update_email
+    Disable:   Return false from auto_plugin_update_send_email filter
+               Return false from auto_theme_update_send_email filter
+
 ### Completion or failure of a background automatic core update
 
     To:        Site admin / Network admin
