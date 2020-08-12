@@ -2,7 +2,7 @@
 
 This document lists all of the situations where WordPress sends an email, along with how to filter or disable each email.
 
-This list was last updated for WordPress 5.4.
+This list was last updated for WordPress 5.5.
 
 ## Table of Contents
 
