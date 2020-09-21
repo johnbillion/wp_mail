@@ -20,7 +20,7 @@ This list was last updated for WordPress 5.5.
 ### Comment is awaiting moderation
 
     To:        Site Admin
-               Post author if they can edit comments
+               Post author, if they have the ability to edit the comment
     From:      WordPress <wordpress@host>
     Subject:   [%1$s] Please moderate: "%2$s"
     Function:  wp_notify_moderator()
@@ -177,7 +177,7 @@ This list was last updated for WordPress 5.5.
 
 ### User clicks confirmation link in personal data export or erasure request email
 
-    To:        Site admin / Network admin
+    To:        Site admin on a single site installation, Network admin on Multisite
     From:      WordPress <wordpress@host>
     Subject:   [%1$s] Action Confirmed: %2$s
     Function:  _wp_privacy_send_request_confirmation_notification()
@@ -218,7 +218,7 @@ This list was last updated for WordPress 5.5.
 
 ### Completion or failure of background automatic plugin or theme updates
 
-    To:        Site admin / Network admin
+    To:        Site admin on a single site installation, Network admin on Multisite
     From:      WordPress <wordpress@host>
     Subject:   [%s] Some plugins and themes have automatically updated
                [%s] Some plugins were automatically updated
@@ -234,7 +234,7 @@ This list was last updated for WordPress 5.5.
 
 ### Completion or failure of a background automatic core update
 
-    To:        Site admin / Network admin
+    To:        Site admin on a single site installation, Network admin on Multisite
     From:      WordPress <wordpress@host>
     Subject:   [%1$s] Your site has updated to WordPress %2$s
                [%1$s] WordPress %2$s is available. Please update!
@@ -247,7 +247,7 @@ This list was last updated for WordPress 5.5.
 
 ### Full log of background update results
 
-    To:        Site admin / Network admin
+    To:        Site admin on a single site installation, Network admin on Multisite
     From:      WordPress <wordpress@host>
     Subject:   [%s] Background Update Failed (WP 5.2+)
                [%s] Background Update Finished (WP 5.2+)
@@ -429,7 +429,7 @@ Multisite only.
                recovery_mode_email
     Disable:   Define WP_DISABLE_FATAL_ERROR_HANDLER as true
                Return false from wp_fatal_error_handler_enabled filter
-    Note:      Does not apply to Multisite.
+    Note:      Does not currently apply to Multisite
 
 ### Site admin deletes site from Tools -> Delete Site
 
