@@ -126,6 +126,17 @@ This list was last updated for WordPress 5.5.
     Disable:   Remove action on after_password_reset hook
                Overwrite the pluggable function
 
+### User changes their password
+
+    To:        User
+    From:      WordPress <wordpress@host>
+    Subject:   [%s] Password Changed (WP 5.2+)
+               [%s] Notice of Password Change (WP < 5.2)
+    Function:  wp_update_user()
+    Pluggable: No
+    Filters:   password_change_email
+    Disable:   Return false from send_password_change_email filter
+
 ### User attempts to change their email address
 
 
@@ -138,17 +149,6 @@ This list was last updated for WordPress 5.5.
     Filters:   new_user_email_content
     Disable:   Remove action on personal_options_update hook
     Note:      Prior to WordPress 4.9 this was Multisite-only functionality
-
-### User changes their password
-
-    To:        User
-    From:      WordPress <wordpress@host>
-    Subject:   [%s] Password Changed (WP 5.2+)
-               [%s] Notice of Password Change (WP < 5.2)
-    Function:  wp_update_user()
-    Pluggable: No
-    Filters:   password_change_email
-    Disable:   Return false from send_password_change_email filter
 
 ### User changes their email address
 
