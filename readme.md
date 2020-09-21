@@ -1,6 +1,6 @@
 # WordPress Emails
 
-This document lists all of the situations where WordPress sends an email, along with how to filter or disable each email.
+This document lists all the situations where WordPress core sends an email, how and when they happen, and how to filter or disable each one.
 
 This list was last updated for WordPress 5.5.
 
@@ -19,6 +19,8 @@ This list was last updated for WordPress 5.5.
 
 ### Comment is awaiting moderation
 
+Sent when a user or visitor submits a comment that gets held for moderation.
+
     To:        Site Admin
                Post author, if they have the ability to edit the comment
     From:      WordPress <wordpress@host>
@@ -35,6 +37,8 @@ This list was last updated for WordPress 5.5.
                Overwrite the pluggable function
 
 ### Comment has been published
+
+Sent when a user or visitor submits a comment that gets automatically approved, or when a comment previously held for moderation gets approved.
 
     To:        Post author
     From:      WordPress <wordpress@host>
@@ -56,6 +60,7 @@ This list was last updated for WordPress 5.5.
 
 ### Change of site admin email address is attempted
 
+Sent when a user attempts to change the Administration Email Address option on the General Settings screen.
 
     To:        Proposed new email address
     From:      WordPress <wordpress@host>
@@ -68,6 +73,8 @@ This list was last updated for WordPress 5.5.
 
 ### Site admin email address is changed
 
+Sent when a user clicks the link in the email requesting confirmation of the change to the site admin email address (see above).
+
     To:        Old site admin email address
     From:      WordPress <wordpress@host>
     Subject:   [%s] Admin Email Changed (WP 5.2+)
@@ -79,7 +86,7 @@ This list was last updated for WordPress 5.5.
 
 ### Change of network admin email address is attempted
 
-**Note:** Multisite only.
+Multisite only. Sent when a user attempts to change the Network Admin Email option on the Network Settings screen.
 
     To:        Proposed new email address
     From:      WordPress <wordpress@host>
@@ -92,7 +99,7 @@ This list was last updated for WordPress 5.5.
 
 ### Network admin email address is changed
 
-**Note:** Multisite only.
+Multisite only. Sent when a user clicks the link in the email requesting confirmation of the change to the network admin email (see above).
 
     To:        Old network admin email address
     From:      WordPress <wordpress@host>
@@ -104,7 +111,9 @@ This list was last updated for WordPress 5.5.
 
 ## Change of User Email or Password
 
-### User requests a password reset via "Lost your password?"
+### User requests a password reset
+
+Sent when a user clicks the "Lost your password?" link on the login screen and submits their email address.
 
     To:        User
     From:      WordPress <wordpress@host>
@@ -115,7 +124,9 @@ This list was last updated for WordPress 5.5.
                retrieve_password_message
     Disable:   Return an empty message from retrieve_password_message filter
 
-### User resets their password from the password reset link
+### User resets their password
+
+Sent when a user resets their password after clicking the confirmation link sent by the "Lost your password?" feature (see above).
 
     To:        Site admin
     From:      WordPress <wordpress@host>
@@ -128,6 +139,8 @@ This list was last updated for WordPress 5.5.
 
 ### User changes their password
 
+Sent when a logged in user changes their password from the user profile screen.
+
     To:        User
     From:      WordPress <wordpress@host>
     Subject:   [%s] Password Changed (WP 5.2+)
@@ -139,6 +152,7 @@ This list was last updated for WordPress 5.5.
 
 ### User attempts to change their email address
 
+Sent when a logged in user attempts to change their email address from the user profile screen.
 
     To:        Proposed new email address
     From:      WordPress <wordpress@host>
@@ -152,6 +166,8 @@ This list was last updated for WordPress 5.5.
 
 ### User changes their email address
 
+Sent when a user clicks the link in the email requesting confirmation of the change to their email address (see above).
+
     To:        User
     From:      WordPress <wordpress@host>
     Subject:   [%s] Email Changed (WP 5.2+)
@@ -163,7 +179,9 @@ This list was last updated for WordPress 5.5.
 
 ## Personal Data Requests
 
-### Personal data export or erasure request is created or resent from Tools -> Export Personal Data or Tools -> Erase Personal Data
+### Personal data export or erasure request is created or resent
+
+Sent when a request is created or resent from the Tools -> Export Personal Data or Tools -> Erase Personal Data screen.
 
     To:        Requester email address
     From:      WordPress <wordpress@host>
@@ -175,7 +193,9 @@ This list was last updated for WordPress 5.5.
                user_request_action_email_headers
     Disable:   Unknown, may have to remove the admin pages entirely by removing _wp_privacy_hook_requests_page action from admin_menu hook
 
-### User clicks confirmation link in personal data export or erasure request email
+### User confirms personal data export or erasure request
+
+Sent when a user clicks the link in the personal data export or erasure request confirmation email (see above).
 
     To:        Site admin on a single site installation, Network admin on Multisite
     From:      WordPress <wordpress@host>
@@ -188,7 +208,9 @@ This list was last updated for WordPress 5.5.
                user_request_confirmed_email_headers
     Disable:   Remove action on user_request_action_confirmed hook
 
-### Site admin clicks Send Export Link button next to a confirmed data export request
+### Site admin sends link to a personal data export
+
+Sent when a site admin clicks the Send Export Link button next to a confirmed data export request.
 
     To:        Requester email address
     From:      WordPress <wordpress@host>
@@ -201,7 +223,9 @@ This list was last updated for WordPress 5.5.
                wp_privacy_personal_data_email_headers
     Disable:   Remove filter on wp_privacy_personal_data_export_page hook
 
-### Site admin clicks Erase Personal Data button next to a confirmed data erasure request
+### Site admin erases personal data to fulfill a data erasure request
+
+Sent when a site admin clicks the Erase Personal Data button next to a confirmed data erasure request, or clicks the Force Erase Personal Data button next to a data erasure request of any status.
 
     To:        Requester email address
     From:      WordPress <wordpress@host>
@@ -216,7 +240,9 @@ This list was last updated for WordPress 5.5.
 
 ## Automatic Updates
 
-### Completion or failure of background automatic plugin or theme updates
+### Automatic plugin or theme updates
+
+Sent upon completion or failure of background automatic updates to plugins and/or themes that have been opted into automatic updates.
 
     To:        Site admin on a single site installation, Network admin on Multisite
     From:      WordPress <wordpress@host>
@@ -232,7 +258,9 @@ This list was last updated for WordPress 5.5.
     Disable:   Return false from auto_plugin_update_send_email filter
                Return false from auto_theme_update_send_email filter
 
-### Completion or failure of a background automatic core update
+### Automatic core update
+
+Sent upon completion or failure of a background automatic update to WordPress core.
 
     To:        Site admin on a single site installation, Network admin on Multisite
     From:      WordPress <wordpress@host>
@@ -246,6 +274,8 @@ This list was last updated for WordPress 5.5.
                Return false from send_core_update_notification_email filter
 
 ### Full log of background update results
+
+Only sent when you are using a development version of WordPress.
 
     To:        Site admin on a single site installation, Network admin on Multisite
     From:      WordPress <wordpress@host>
@@ -415,8 +445,9 @@ Multisite only.
 
 ## Other
 
-### A fatal error occurs in a plugin or theme and Recovery Mode is not active
+### A fatal error occurs
 
+Sent when a fatal error occurs in a plugin or theme and Recovery Mode is not active.
 
     To:        Site Admin / Value of RECOVERY_MODE_EMAIL constant
     From:      WordPress <wordpress@host>
