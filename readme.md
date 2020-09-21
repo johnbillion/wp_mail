@@ -56,7 +56,6 @@ This list was last updated for WordPress 5.5.
 
 ### Change of site admin email address is attempted
 
-**Note:** Prior to WordPress 4.9, this was Multisite-only functionality.
 
     To:        Proposed new email address
     From:      WordPress <wordpress@host>
@@ -65,6 +64,7 @@ This list was last updated for WordPress 5.5.
     Pluggable: No
     Filters:   new_admin_email_content
     Disable:   Remove action on add_option_new_admin_email and update_option_new_admin_email hooks
+    Note:      Prior to WordPress 4.9 this was Multisite-only functionality
 
 ### Site admin email address is changed
 
@@ -128,7 +128,6 @@ This list was last updated for WordPress 5.5.
 
 ### User attempts to change their email address
 
-**Note:** Prior to WordPress 4.9, this was Multisite-only functionality.
 
     To:        Proposed new email address
     From:      WordPress <wordpress@host>
@@ -138,6 +137,7 @@ This list was last updated for WordPress 5.5.
     Pluggable: No
     Filters:   new_user_email_content
     Disable:   Remove action on personal_options_update hook
+    Note:      Prior to WordPress 4.9 this was Multisite-only functionality
 
 ### User changes their password
 
@@ -247,8 +247,6 @@ This list was last updated for WordPress 5.5.
 
 ### Full log of background update results
 
-**Note:** Only sent when you are using a development version of WordPress.
-
     To:        Site admin / Network admin
     From:      WordPress <wordpress@host>
     Subject:   [%s] Background Update Failed (WP 5.2+)
@@ -259,12 +257,13 @@ This list was last updated for WordPress 5.5.
     Pluggable: No
     Filters:   automatic_updates_debug_email
     Disable:   Return false from automatic_updates_send_debug_email filter
+    Note:      Only sent when you are using a development version of WordPress.
 
 ## New User
 
 ### An existing user is invited to a site from Users -> Add New -> Add Existing User
 
-**Note:** Multisite only.
+Multisite only.
 
     To:        User being invited
     From:      WordPress <wordpress@host>
@@ -276,7 +275,7 @@ This list was last updated for WordPress 5.5.
 
 ### A new user is invited to a site from Users -> Add New -> Add New User
 
-**Note:** Multisite only.
+Multisite only.
 
     To:        User being invited
     From:      [Network Name] <[network admin]>
@@ -291,7 +290,7 @@ This list was last updated for WordPress 5.5.
 
 ### A new user account is created
 
-**Note:** Multisite only.
+Multisite only.
 
     To:        Network Admin
     From:      WordPress <wordpress@host>
@@ -305,7 +304,7 @@ This list was last updated for WordPress 5.5.
 
 ### A user has been added, or their account activation has been successful
 
-**Note:** Multisite only.
+Multisite only.
 
     To:        User being added
     From:      [Network Name] <[network admin]>
@@ -361,7 +360,7 @@ Details:
 
 ### New site created from Network Admin -> Sites -> Add New
 
-**Note:** Multisite only.
+Multisite only.
 
     To:        Network Admin
     From:      Site Admin <[network admin]>
@@ -373,7 +372,7 @@ Details:
 
 ### User registers for a new site
 
-**Note:** Multisite only.
+Multisite only.
 
     To:        Site Admin
     From:      [Network Name] <[network admin]>
@@ -387,7 +386,7 @@ Details:
 
 ### User activates their new site, or site added from Network Admin -> Sites -> Add New
 
-**Note:** Multisite only.
+Multisite only.
 
     To:        Network Admin
     From:      WordPress <wordpress@host>
@@ -401,7 +400,7 @@ Details:
 
 ### User activates their new site, or site added from Network Admin -> Sites -> Add New
 
-**Note:** Multisite only.
+Multisite only.
 
     To:        New Site Admin
     From:      [Network Name] <[network admin]>
@@ -418,7 +417,6 @@ Details:
 
 ### A fatal error occurs in a plugin or theme and Recovery Mode is not active
 
-**Note:** Not on Multisite.
 
     To:        Site Admin / Value of RECOVERY_MODE_EMAIL constant
     From:      WordPress <wordpress@host>
@@ -431,10 +429,11 @@ Details:
                recovery_mode_email
     Disable:   Define WP_DISABLE_FATAL_ERROR_HANDLER as true
                Return false from wp_fatal_error_handler_enabled filter
+    Note:      Does not apply to Multisite.
 
 ### Site admin deletes site from Tools -> Delete Site
 
-**Note:** Multisite only.
+Multisite only.
 
     To:        Site Admin
     From:      WordPress <wordpress@host>
