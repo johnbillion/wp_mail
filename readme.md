@@ -36,7 +36,7 @@ Sent when a user or visitor submits a comment that gets held for moderation.
                "Email me whenever" on Settings -> Discussion
                Overwrite the pluggable function
 
-### Comment has been published
+### Comment is published
 
 Sent when a user or visitor submits a comment that gets automatically approved, or when a comment previously held for moderation gets approved.
 
@@ -242,7 +242,7 @@ Sent when a site admin clicks the Erase Personal Data button next to a confirmed
 
 ### Automatic plugin or theme updates
 
-Sent upon completion or failure of background automatic updates to plugins and/or themes that have been opted into automatic updates.
+Sent when a background automatic update to plugins and/or themes completes or fails.
 
     To:        Site admin on a single site installation, Network admin on Multisite
     From:      WordPress <wordpress@host>
@@ -260,7 +260,7 @@ Sent upon completion or failure of background automatic updates to plugins and/o
 
 ### Automatic core update
 
-Sent upon completion or failure of a background automatic update to WordPress core.
+Sent when a background automatic update to WordPress core completes or fails.
 
     To:        Site admin on a single site installation, Network admin on Multisite
     From:      WordPress <wordpress@host>
@@ -340,7 +340,7 @@ Details:
                Remove action on wpmu_new_user hook
                Toggle "Registration notification" in Network Admin -> Settings
 
-### A user has been added, or their account activation has been successful
+### A user is added, or their account activation is successful
 
 Multisite only.
 
@@ -470,9 +470,9 @@ Sent when a fatal error occurs in a plugin or theme and Recovery Mode is not act
                Return false from wp_fatal_error_handler_enabled filter
     Note:      Does not currently apply to Multisite
 
-### Site admin deletes site from Tools -> Delete Site
+### Site admin requests to delete site
 
-Multisite only.
+Multisite only. Sent from Tools -> Delete Site.
 
     To:        Site Admin
     From:      WordPress <wordpress@host>
