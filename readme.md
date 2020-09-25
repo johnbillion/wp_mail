@@ -386,18 +386,6 @@ Details:
 
 ## New Site
 
-### When WordPress is installed
-
-Sent when WordPress is initially installed.
-
-    To:        Site Admin
-    From:      WordPress <wordpress@host>
-    Subject:   New WordPress Site
-    Function:  wp_new_blog_notification()
-    Pluggable: Yes
-    Filters:   None
-    Disable:   Overwrite the pluggable function
-
 ### A new site is created
 
 Multisite only. Sent when a new site is created from Network Admin -> Sites -> Add New.
@@ -454,6 +442,18 @@ Multisite only.
                Remove action on wpmu_activate_blog hook
 
 ## Other
+
+### Installation
+
+Sent when WordPress is initially installed.
+
+    To:        Site Admin
+    From:      WordPress <wordpress@host>
+    Subject:   New WordPress Site
+    Function:  wp_new_blog_notification()
+    Pluggable: Yes
+    Filters:   None
+    Disable:   Overwrite the pluggable function
 
 ### A fatal error occurs
 
