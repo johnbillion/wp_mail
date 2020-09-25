@@ -386,7 +386,9 @@ Details:
 
 ## New Site
 
-### When WordPress is installed, and when a site is added to a Multisite network
+### When WordPress is installed
+
+Sent when WordPress is initially installed.
 
     To:        Site Admin
     From:      WordPress <wordpress@host>
