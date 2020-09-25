@@ -287,13 +287,12 @@ Only sent when you are using a development version of WordPress.
     Pluggable: No
     Filters:   automatic_updates_debug_email
     Disable:   Return false from automatic_updates_send_debug_email filter
-    Note:      Only sent when you are using a development version of WordPress.
 
 ## New User
 
-### An existing user is invited to a site from Users -> Add New -> Add Existing User
+### An existing user is invited to a site
 
-Multisite only.
+Multisite only. Sent when an existing user is added to a site from Users -> Add New -> Add Existing User.
 
     To:        User being invited
     From:      WordPress <wordpress@host>
@@ -303,9 +302,9 @@ Multisite only.
     Filters:   None
     Disable:   Click the "Skip Confirmation Email" checkbox when adding the user
 
-### A new user is invited to a site from Users -> Add New -> Add New User
+### A new user is invited to join a site
 
-Multisite only.
+Multisite only. Sent when a new user is invited to join a site from Users -> Add New -> Add New User.
 
     To:        User being invited
     From:      [Network Name] <[network admin]>
@@ -320,7 +319,14 @@ Multisite only.
 
 ### A new user account is created
 
-Multisite only.
+Multisite only. Sent when a new user account is created via `wpmu_create_user()`:
+
+* From Network Admin -> Sites -> Add New and the email address doesn't already exist
+* From Network Admin -> Sites -> [Edit] -> Users -> Add New User
+* From Network Admin -> Users -> Add New
+* From Users -> Add New -> Add New User and the "Skip Confirmation Email" checkbox is checked
+* When a user activates their new account on `wp-activate.php`
+* Via a REST API request to create a new user (`POST` to `/wp/v2/users`)
 
     To:        Network Admin
     From:      WordPress <wordpress@host>
@@ -388,9 +394,9 @@ Details:
     Filters:   None
     Disable:   Overwrite the pluggable function
 
-### New site created from Network Admin -> Sites -> Add New
+### A new site is created
 
-Multisite only.
+Multisite only. Sent when a new site is created from Network Admin -> Sites -> Add New.
 
     To:        Network Admin
     From:      Site Admin <[network admin]>
@@ -402,7 +408,7 @@ Multisite only.
 
 ### User registers for a new site
 
-Multisite only.
+Multisite only, with site registration allowed. Sent when a visitor registers a new user account and site from wp-signup.php.
 
     To:        Site Admin
     From:      [Network Name] <[network admin]>
