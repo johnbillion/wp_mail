@@ -328,6 +328,8 @@ Multisite only. Sent when a new user account is created via `wpmu_create_user()`
 * When a user activates their new account on `wp-activate.php`
 * Via a REST API request to create a new user (`POST` to `/wp/v2/users`)
 
+Details:
+
     To:        Network Admin
     From:      WordPress <wordpress@host>
     Subject:   New User Registration: %s
