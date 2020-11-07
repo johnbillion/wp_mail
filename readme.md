@@ -300,8 +300,9 @@ Multisite only. Sent when an existing user is added to a site from Users -> Add 
     Subject:   [%s] Joining Confirmation
     Function:  wp-admin/user-new.php
     Pluggable: No
-    Filters:   None
+    Filters:   invited_user_email (WP 5.6+)
     Disable:   Click the "Skip Confirmation Email" checkbox when adding the user
+    Note:      Prior to WordPress 5.6 there was no filter to alter this email
 
 ### A new user is invited to join a site
 
