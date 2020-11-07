@@ -463,6 +463,8 @@ Sent when WordPress is initially installed.
 
 Sent when a fatal error occurs in a plugin or theme and Recovery Mode is not active.
 
+**Important:** The `wp_fatal_error_handler_enabled` filter cannot be used by plugins as it runs too early. [Information about using this filter can be found here](https://core.trac.wordpress.org/browser/trunk/src/wp-includes/error-protection.php?rev=49489&marks=114-131#L97).
+
     To:        Site Admin / Value of RECOVERY_MODE_EMAIL constant
     From:      WordPress <wordpress@host>
     Subject:   [%s] Your Site is Experiencing a Technical Issue
