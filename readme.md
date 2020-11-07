@@ -77,12 +77,12 @@ Sent when a user clicks the link in the email requesting confirmation of the cha
 
     To:        Old site admin email address
     From:      WordPress <wordpress@host>
-    Subject:   [%s] Admin Email Changed (WP 5.2+)
-               [%s] Notice of Admin Email Change (WP < 5.2)
+    Subject:   [%s] Admin Email Changed
     Function:  wp_site_admin_email_change_notification()
     Pluggable: No
     Filters:   site_admin_email_change_email
     Disable:   Return false from send_site_admin_email_change_email filter
+    Note:      Prior to WordPress 5.2 the subject was: [%s] Notice of Admin Email Change
 
 ### Change of network admin email address is attempted
 
@@ -90,12 +90,12 @@ Multisite only. Sent when a user attempts to change the Network Admin Email opti
 
     To:        Proposed new email address
     From:      WordPress <wordpress@host>
-    Subject:   [%s] Network Admin Email Change Request (WP 5.2+)
-               [%s] New Network Admin Email Address (WP < 5.2)
+    Subject:   [%s] Network Admin Email Change Request
     Function:  update_network_option_new_admin_email()
     Pluggable: No
     Filters:   new_network_admin_email_content
     Disable:   Remove action on add_site_option_new_admin_email and update_site_option_new_admin_email hooks
+    Note:      Prior to WordPress 5.2 the subject was: [%s] New Network Admin Email Address
 
 ### Network admin email address is changed
 
@@ -143,12 +143,12 @@ Sent when a logged in user changes their password from the user profile screen.
 
     To:        User
     From:      WordPress <wordpress@host>
-    Subject:   [%s] Password Changed (WP 5.2+)
-               [%s] Notice of Password Change (WP < 5.2)
+    Subject:   [%s] Password Changed
     Function:  wp_update_user()
     Pluggable: No
     Filters:   password_change_email
     Disable:   Return false from send_password_change_email filter
+    Note:      Prior to WordPress 5.2 the subject was: [%s] Notice of Password Change
 
 ### User attempts to change their email address
 
@@ -156,12 +156,12 @@ Sent when a logged in user attempts to change their email address from the user 
 
     To:        Proposed new email address
     From:      WordPress <wordpress@host>
-    Subject:   [%s] Email Change Request (WP 5.2+)
-               [%s] New Email Address (WP < 5.2)
+    Subject:   [%s] Email Change Request
     Function:  send_confirmation_on_profile_email()
     Pluggable: No
     Filters:   new_user_email_content
     Disable:   Remove action on personal_options_update hook
+    Note:      Prior to WordPress 5.2 the subject was: [%s] New Email Address
     Note:      Prior to WordPress 4.9 this was Multisite-only functionality
 
 ### User changes their email address
@@ -170,12 +170,12 @@ Sent when a user clicks the link in the email requesting confirmation of the cha
 
     To:        User
     From:      WordPress <wordpress@host>
-    Subject:   [%s] Email Changed (WP 5.2+)
-               [%s] Notice of Email Change (WP < 5.2)
+    Subject:   [%s] Email Changed
     Function:  wp_update_user()
     Pluggable: No
     Filters:   email_change_email
     Disable:   Return false from send_email_change_email filter
+    Note:      Prior to WordPress 5.2 the subject was: [%s] Notice of Email Change
 
 ## Personal Data Requests
 
@@ -279,14 +279,15 @@ Only sent when you are using a development version of WordPress.
 
     To:        Site admin on a single site installation, Network admin on Multisite
     From:      WordPress <wordpress@host>
-    Subject:   [%s] Background Update Failed (WP 5.2+)
-               [%s] Background Update Finished (WP 5.2+)
-               [%s] There were failures during background updates (WP < 5.2)
-               [%s] Background updates have finished (WP < 5.2)
+    Subject:   [%s] Background Update Failed
+               [%s] Background Update Finished
     Function:  WP_Automatic_Updater::send_debug_email()
     Pluggable: No
     Filters:   automatic_updates_debug_email
     Disable:   Return false from automatic_updates_send_debug_email filter
+    Note:      Prior to WordPress 5.2 the subjects were:
+               [%s] There were failures during background updates
+               [%s] Background updates have finished
 
 ## New User
 
@@ -369,9 +370,9 @@ and one to the newly created user:
 
     To:        New user
     From:      WordPress <wordpress@host>
-    Subject:   [%s] Login Details (WP 5.2+)
-               [%s] Your username and password info (WP < 5.2)
+    Subject:   [%s] Login Details
     Filters:   wp_new_user_notification_email
+    Note:      Prior to WordPress 5.2 the subject was: [%s] Your username and password info
 
 Details:
 
