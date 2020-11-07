@@ -2,7 +2,7 @@
 
 This document lists all the situations where WordPress core sends an email, how and when they happen, and how to filter or disable each one.
 
-This list was last updated for WordPress 5.5.
+This list was last updated for WordPress 5.6 beta.
 
 ## Table of Contents
 
@@ -394,10 +394,11 @@ Multisite only. Sent when a new site is created from Network Admin -> Sites -> A
     To:        Network Admin
     From:      Site Admin <[network admin]>
     Subject:   [%s] New Site Created
-    Function:  wp-admin/network/site-new.php
+    Function:  wpmu_new_site_admin_notification()
     Pluggable: No
-    Filters:   None
-    Disable:   Not possible
+    Filters:   new_site_email (WP 5.6+)
+    Disable:   Return false from send_new_site_email filter (WP 5.6+)
+    Note:      Prior to WordPress 5.6 there were no filters to alter or disable this email
 
 ### User registers for a new site
 
