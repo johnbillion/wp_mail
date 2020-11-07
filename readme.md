@@ -454,8 +454,9 @@ Sent when WordPress is initially installed.
     Subject:   New WordPress Site
     Function:  wp_new_blog_notification()
     Pluggable: Yes
-    Filters:   None
+    Filters:   wp_installed_email (WP 5.6+)
     Disable:   Overwrite the pluggable function
+    Note:      Prior to WordPress 5.6 there was no filter to alter this email
 
 ### A fatal error occurs
 
