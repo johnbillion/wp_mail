@@ -6,6 +6,7 @@ This list was last updated for WordPress 5.7 beta.
 
 ## Table of Contents
 
+- [Information Applicable to All Emails](#information-applicable-to-all-emails)
 - [Comments](#comments)
 - [Change of Admin Email](#change-of-admin-email)
 - [Change of User Email or Password](#change-of-user-email-or-password)
@@ -14,6 +15,19 @@ This list was last updated for WordPress 5.7 beta.
 - [New User](#new-user)
 - [New Site](#new-site)
 - [Other](#other)
+
+## Information Applicable to All Emails
+
+All emails sent by WordPress go through the pluggable `wp_mail()` function. The following general-purpose filters and actions are used in this function:
+
+    Filters:   wp_mail
+               pre_wp_mail
+               wp_mail_from
+               wp_mail_from_name
+               wp_mail_content_type
+               wp_mail_charset
+    Actions:   phpmailer_init
+               wp_mail_failed
 
 ## Comments
 
