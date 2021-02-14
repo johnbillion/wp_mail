@@ -111,9 +111,15 @@ Multisite only. Sent when a user clicks the link in the email requesting confirm
 
 ## Change of User Email or Password
 
-### User requests a password reset
+### User or Administrator requests a password reset
 
-Sent when a user clicks the "Lost your password?" link on the login screen and submits their email address.
+Sent when:
+
+* A user clicks the "Lost your password?" link on the login screen and submits their email address
+* An Administrator clicks the "Send password reset" link next to a user on the Users screen (WP 5.7+)
+* Ad Administrator clicks the "Send Reset Link" from the user editing screen of another user (WP 5.7+)
+
+Details:
 
     To:        User
     From:      WordPress <wordpress@host>
