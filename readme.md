@@ -70,6 +70,18 @@ Sent when a user or visitor submits a comment that gets automatically approved, 
                Overwrite the pluggable function
                See also the hardcoded action added to wp_set_comment_status in wp_set_comment_status()
 
+### Moderated comment is published
+
+Sent when a comment previously held for moderation is approved and the comment author has opted in to receiving a notification when their comment is published.
+
+    To:        Comment author
+    From:      WordPress <wordpress@host>
+    Subject:   [%1$s] Your comment on "%2$s" has been approved
+    Function:  wp_new_comment_notify_comment_author()
+    Pluggable: No
+    Filters:   comment_approval_notification
+    Disable:   Remove wp_new_comment_notify_comment_author action on comment_unapproved_to_approved hook
+
 ## Change of Admin Email
 
 ### Change of site admin email address is attempted
