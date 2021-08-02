@@ -514,7 +514,7 @@ Multisite only. Sent when an Administrator requests to delete their site from th
     Filters:   delete_site_email_content
     Disable:   Not possible
 
-# License: GPLv2 #
+## License: GPLv2
 
 Copyright 2015 - 2021 John Blackbourn
 
