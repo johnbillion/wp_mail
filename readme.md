@@ -516,7 +516,7 @@ Multisite only. Sent when an Administrator requests to delete their site from th
 
 # License: GPLv2 #
 
-Copyright 2015 - 2020 John Blackbourn
+Copyright 2015 - 2021 John Blackbourn
 
 This documentation is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
