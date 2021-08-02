@@ -41,9 +41,9 @@ Sent when a user or visitor submits a comment that gets held for moderation.
     Subject:   [%1$s] Please moderate: "%2$s"
     Function:  wp_notify_moderator()
     Pluggable: Yes
-    Filters:   comment_moderation_subject
+    Filters:   comment_moderation_recipients
+               comment_moderation_subject
                comment_moderation_text
-               comment_moderation_recipients
                comment_moderation_headers
     Disable:   Return false from notify_moderator filter
                Remove wp_new_comment_notify_moderator action on comment_post hook
@@ -61,9 +61,9 @@ Sent when a user or visitor submits a comment that gets automatically approved, 
                [%1$s] Trackback: "%2$s"
     Function:  wp_notify_postauthor()
     Pluggable: Yes
-    Filters:   comment_notification_subject
+    Filters:   comment_notification_recipients
+               comment_notification_subject
                comment_notification_text
-               comment_notification_recipients
                comment_notification_headers
     Disable:   Return false from notify_post_author filter
                Remove wp_new_comment_notify_postauthor action on comment_post hook
@@ -208,8 +208,8 @@ Sent when a request is created or resent from the Tools -> Export Personal Data 
     Subject:   [%1$s] Confirm Action: %2$s
     Function:  wp_send_user_request()
     Pluggable: No
-    Filters:   user_request_action_email_content
-               user_request_action_email_subject
+    Filters:   user_request_action_email_subject
+               user_request_action_email_content
                user_request_action_email_headers
     Disable:   Unknown, may have to remove the admin pages entirely by removing _wp_privacy_hook_requests_page action from admin_menu hook
 
@@ -238,9 +238,9 @@ Sent when a site admin clicks the Send Export Link button next to a confirmed da
     Subject:   [%s] Personal Data Export
     Function:  wp_privacy_send_personal_data_export_email()
     Pluggable: No
-    Filters:   wp_privacy_personal_data_email_content
-               wp_privacy_personal_data_email_to
+    Filters:   wp_privacy_personal_data_email_to
                wp_privacy_personal_data_email_subject
+               wp_privacy_personal_data_email_content
                wp_privacy_personal_data_email_headers
     Disable:   Remove filter on wp_privacy_personal_data_export_page hook
 
@@ -257,8 +257,8 @@ Sent when a site admin clicks the Erase Personal Data button next to a confirmed
                user_erasure_fulfillment_email_subject (WP 5.9+)
                user_erasure_fulfillment_email_content (WP 5.9+)
                user_erasure_fulfillment_email_headers (WP 5.9+)
-               user_confirmed_action_email_content (deprecated in 5.9)
                user_erasure_complete_email_subject (deprecated in 5.9)
+               user_confirmed_action_email_content (deprecated in 5.9)
                user_erasure_complete_email_headers (deprecated in 5.9)
     Disable:   Remove filter on wp_privacy_personal_data_erased hook
 
