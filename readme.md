@@ -504,7 +504,7 @@ Sent when a fatal error occurs in a plugin or theme and Recovery Mode is not act
 
 ### Site admin requests to delete site
 
-Multisite only. Sent from Tools -> Delete Site.
+Multisite only. Sent when an Administrator requests to delete their site from the Tools -> Delete Site screen.
 
     To:        Site Admin
     From:      WordPress <wordpress@host>
