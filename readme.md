@@ -363,7 +363,7 @@ Multisite only.
 
     To:        User being added
     From:      [Network Name] <[network admin]>
-    Subject:   New %s User: %s
+    Subject:   New %1$s User: %2$s
     Function:  wpmu_welcome_user_notification()
     Pluggable: No
     Filters:   update_welcome_user_subject
