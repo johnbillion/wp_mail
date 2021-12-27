@@ -84,7 +84,6 @@ Sent when a user attempts to change the Administration Email Address option on t
     Pluggable: No
     Filters:   new_admin_email_content
     Disable:   Remove action on add_option_new_admin_email and update_option_new_admin_email hooks
-    Note:      Prior to WordPress 4.9 this was Multisite-only functionality
 
 ### Site admin email address is changed
 
@@ -97,7 +96,6 @@ Sent when a user clicks the link in the email requesting confirmation of the cha
     Pluggable: No
     Filters:   site_admin_email_change_email
     Disable:   Return false from send_site_admin_email_change_email filter
-    Note:      Prior to WordPress 5.2 the subject was: [%s] Notice of Admin Email Change
 
 ### Change of network admin email address is attempted
 
@@ -110,7 +108,6 @@ Multisite only. Sent when a user attempts to change the Network Admin Email opti
     Pluggable: No
     Filters:   new_network_admin_email_content
     Disable:   Remove action on add_site_option_new_admin_email and update_site_option_new_admin_email hooks
-    Note:      Prior to WordPress 5.2 the subject was: [%s] New Network Admin Email Address
 
 ### Network admin email address is changed
 
@@ -169,7 +166,6 @@ Sent when a logged in user changes their password from the user profile screen.
     Pluggable: No
     Filters:   password_change_email
     Disable:   Return false from send_password_change_email filter
-    Note:      Prior to WordPress 5.2 the subject was: [%s] Notice of Password Change
 
 ### User attempts to change their email address
 
@@ -182,8 +178,6 @@ Sent when a logged in user attempts to change their email address from the user 
     Pluggable: No
     Filters:   new_user_email_content
     Disable:   Remove action on personal_options_update hook
-    Note:      Prior to WordPress 5.2 the subject was: [%s] New Email Address
-    Note:      Prior to WordPress 4.9 this was Multisite-only functionality
 
 ### User changes their email address
 
@@ -196,7 +190,6 @@ Sent when a user clicks the link in the email requesting confirmation of the cha
     Pluggable: No
     Filters:   email_change_email
     Disable:   Return false from send_email_change_email filter
-    Note:      Prior to WordPress 5.2 the subject was: [%s] Notice of Email Change
 
 ## Personal Data Requests
 
@@ -310,9 +303,6 @@ Only sent when you are using a development version of WordPress.
     Pluggable: No
     Filters:   automatic_updates_debug_email
     Disable:   Return false from automatic_updates_send_debug_email filter
-    Note:      Prior to WordPress 5.2 the subjects were:
-               [%s] There were failures during background updates
-               [%s] Background updates have finished
 
 ## New User
 
@@ -398,7 +388,6 @@ and one to the newly created user:
     From:      WordPress <wordpress@host>
     Subject:   [%s] Login Details
     Filters:   wp_new_user_notification_email
-    Note:      Prior to WordPress 5.2 the subject was: [%s] Your username and password info
 
 Details:
 
