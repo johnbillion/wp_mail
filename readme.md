@@ -2,7 +2,7 @@
 
 This document lists all the situations where WordPress core sends an email, how and when they happen, and how to filter or disable each one.
 
-This list was last updated for WordPress 5.8.
+This list was last updated for WordPress 5.9 beta.
 
 ## Table of Contents
 
@@ -27,6 +27,7 @@ All emails sent by WordPress go through the pluggable `wp_mail()` function. The 
                wp_mail_content_type
                wp_mail_charset
     Actions:   phpmailer_init
+               wp_mail_succeeded (WP 5.9+)
                wp_mail_failed
 
 ## Comments
