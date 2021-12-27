@@ -218,9 +218,9 @@ Sent when a user clicks the link in the personal data export or erasure request 
     Pluggable: No
     Filters:   user_request_confirmed_email_to
                user_request_confirmed_email_subject
-               user_request_confirmed_email_content (WP 5.9+)
+               user_request_confirmed_email_content (WP 5.8+)
                user_request_confirmed_email_headers
-               user_confirmed_action_email_content (deprecated in 5.9)
+               user_confirmed_action_email_content (deprecated in 5.8)
     Disable:   Remove action on user_request_action_confirmed hook
 
 ### Site admin sends link to a personal data export
@@ -248,12 +248,12 @@ Sent when a site admin clicks the Erase Personal Data button next to a confirmed
     Function:  _wp_privacy_send_erasure_fulfillment_notification()
     Pluggable: No
     Filters:   user_erasure_fulfillment_email_to
-               user_erasure_fulfillment_email_subject (WP 5.9+)
-               user_erasure_fulfillment_email_content (WP 5.9+)
-               user_erasure_fulfillment_email_headers (WP 5.9+)
-               user_erasure_complete_email_subject (deprecated in 5.9)
-               user_confirmed_action_email_content (deprecated in 5.9)
-               user_erasure_complete_email_headers (deprecated in 5.9)
+               user_erasure_fulfillment_email_subject (WP 5.8+)
+               user_erasure_fulfillment_email_content (WP 5.8+)
+               user_erasure_fulfillment_email_headers (WP 5.8+)
+               user_erasure_complete_email_subject (deprecated in 5.8)
+               user_confirmed_action_email_content (deprecated in 5.8)
+               user_erasure_complete_email_headers (deprecated in 5.8)
     Disable:   Remove filter on wp_privacy_personal_data_erased hook
 
 ## Automatic Updates
