@@ -49,7 +49,7 @@ Sent when a user or visitor submits a comment that gets held for moderation.
     Disable:   Return false from notify_moderator filter
                Remove wp_new_comment_notify_moderator action on comment_post hook
                "Email me whenever" on Settings -> Discussion
-               Overwrite the pluggable function
+               Overwrite the pluggable wp_notify_moderator() function
 
 ### Comment is published
 
@@ -68,7 +68,7 @@ Sent when a user or visitor submits a comment that gets automatically approved, 
                comment_notification_headers
     Disable:   Return false from notify_post_author filter
                Remove wp_new_comment_notify_postauthor action on comment_post hook
-               Overwrite the pluggable function
+               Overwrite the pluggable wp_notify_postauthor() function
                See also the hardcoded action added to wp_set_comment_status in wp_set_comment_status()
 
 ## Change of Admin Email
@@ -153,7 +153,7 @@ Sent when a user resets their password after clicking the confirmation link sent
     Pluggable: Yes
     Filters:   wp_password_change_notification_email
     Disable:   Remove action on after_password_reset hook
-               Overwrite the pluggable function
+               Overwrite the pluggable wp_password_change_notification() function
 
 ### User changes their password
 
@@ -398,7 +398,7 @@ Details:
                Remove wp_send_new_user_notifications action on network_site_new_created_user hook
                Remove wp_send_new_user_notifications action on network_site_users_created_user hook
                Remove wp_send_new_user_notifications action on network_user_new_created_user hook
-               Overwrite the pluggable function
+               Overwrite the pluggable wp_new_user_notification() function
 
 ## New Site
 
@@ -470,7 +470,7 @@ Sent when WordPress is initially installed.
     Function:  wp_new_blog_notification()
     Pluggable: Yes
     Filters:   wp_installed_email (WP 5.6+)
-    Disable:   Overwrite the pluggable function
+    Disable:   Overwrite the pluggable wp_new_blog_notification() function
     Note:      Prior to WordPress 5.6 there was no filter to alter this email
 
 ### A fatal error occurs
