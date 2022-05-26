@@ -2,7 +2,7 @@
 
 This document lists all the situations where WordPress core sends an email, how and when they happen, and how to filter or disable each one.
 
-This list was last updated for WordPress 5.9.
+This list was last updated for WordPress 6.0.
 
 ## Table of Contents
 
@@ -140,7 +140,9 @@ Details:
     Pluggable: No
     Filters:   retrieve_password_title
                retrieve_password_message
-    Disable:   Return an empty message from retrieve_password_message filter
+               retrieve_password_notification_email (6.0+)
+    Disable:   Return false from send_retrieve_password_email filter (6.0+)
+               Return an empty message from retrieve_password_message filter
 
 ### User resets their password
 
