@@ -151,7 +151,6 @@ Sent when:
 
 Sent when a user attempts to change the Administration Email Address option on the General Settings screen.
 
-
 <table>
 	<tr>
 		<th valign="top" align="left">To</th>
@@ -191,37 +190,118 @@ Sent when a user attempts to change the Administration Email Address option on t
 
 Sent when a user clicks the link in the email requesting confirmation of the change to the site admin email address (see above).
 
-    To:        Old site admin email address
-    From:      WordPress <wordpress@host>
-    Subject:   [%s] Admin Email Changed
-    Function:  wp_site_admin_email_change_notification()
-    Pluggable: No
-    Filters:   site_admin_email_change_email
-    Disable:   Return false from send_site_admin_email_change_email filter
+<table>
+	<tr>
+		<th valign="top" align="left">To</th>
+		<td>Old site admin email address</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Subject</th>
+		<td>[%s] Admin Email Changed</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/wp_site_admin_email_change_notification/"><code>wp_site_admin_email_change_notification()</code></a></td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/site_admin_email_change_email/"><code>site_admin_email_change_email</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Disable</th>
+		<td>
+			Return false from <a href="https://developer.wordpress.org/reference/hooks/send_site_admin_email_change_email/"><code>send_site_admin_email_change_email</code></a> filter
+		</td>
+	</tr>
+</table>
 
 ### Change of network admin email address is attempted
 
 Multisite only. Sent when a user attempts to change the Network Admin Email option on the Network Settings screen.
 
-    To:        Proposed new email address
-    From:      WordPress <wordpress@host>
-    Subject:   [%s] Network Admin Email Change Request
-    Function:  update_network_option_new_admin_email()
-    Pluggable: No
-    Filters:   new_network_admin_email_content
-    Disable:   Remove action on add_site_option_new_admin_email and update_site_option_new_admin_email hooks
+<table>
+	<tr>
+		<th valign="top" align="left">To</th>
+		<td>Proposed new email address</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Subject</th>
+		<td>[%s] Network Admin Email Change Request</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/update_network_option_new_admin_email/"><code>update_network_option_new_admin_email()</code></a></td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/new_network_admin_email_content/"><code>new_network_admin_email_content</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Disable</th>
+		<td>
+			Remove <a href="https://developer.wordpress.org/reference/functions/update_network_option_new_admin_email/"><code>update_network_option_new_admin_email</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/add_site_option_new_admin_email/"><code>add_site_option_new_admin_email</code></a> and <a href="https://developer.wordpress.org/reference/hooks/update_site_option_new_admin_email/"><code>update_site_option_new_admin_email</code></a> hooks
+		</td>
+	</tr>
+</table>
 
 ### Network admin email address is changed
 
 Multisite only. Sent when a user clicks the link in the email requesting confirmation of the change to the network admin email (see above).
 
-    To:        Old network admin email address
-    From:      WordPress <wordpress@host>
-    Subject:   [%s] Notice of Network Admin Email Change
-    Function:  wp_network_admin_email_change_notification()
-    Pluggable: No
-    Filters:   network_admin_email_change_email
-    Disable:   Return false from send_network_admin_email_change_email filter
+<table>
+	<tr>
+		<th valign="top" align="left">To</th>
+		<td>Old network admin email address</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Subject</th>
+		<td>[%s] Notice of Network Admin Email Change</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/wp_network_admin_email_change_notification/"><code>wp_network_admin_email_change_notification()</code></a></td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/network_admin_email_change_email/"><code>network_admin_email_change_email</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Disable</th>
+		<td>
+			Return false from <a href="https://developer.wordpress.org/reference/hooks/send_network_admin_email_change_email/"><code>send_network_admin_email_change_email</code></a> filter
+		</td>
+	</tr>
+</table>
 
 ## Change of User Email or Password
 
