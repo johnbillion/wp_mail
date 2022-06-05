@@ -99,7 +99,6 @@ Sent when:
 * A user or visitor submits a comment that gets automatically approved
 * A comment previously held for moderation gets approved.
 
-
 <table>
 	<tr>
 		<th valign="top" align="left">To</th>
@@ -138,7 +137,7 @@ Sent when:
 		<th valign="top" align="left">Disable</th>
 		<td>
 			- Return false from <a href="https://developer.wordpress.org/reference/hooks/notify_post_author/"><code>notify_post_author</code></a> filter<br>
-			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_new_comment_notify_postauthor/"><code>wp_new_comment_notify_postauthor</code></a> action on <a href="https://developer.wordpress.org/reference/hooks/comment_post/"><code>comment_post</code></a> hook<br>
+			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_new_comment_notify_postauthor/"><code>wp_new_comment_notify_postauthor</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/comment_post/"><code>comment_post</code></a> hook<br>
 			- "Email me whenever" settings on Settings -> Discussion screen<br>
 			- Overwrite the pluggable <a href="https://developer.wordpress.org/reference/functions/wp_notify_postauthor/"><code>wp_notify_postauthor()</code></a> function<br>
 			- See also <a href="https://github.com/WordPress/wordpress-develop/blob/63a2a710680cf344dec9e75cec757ee377a304a9/src/wp-includes/comment.php#L2404">this hardcoded action</a> added to <a href="https://developer.wordpress.org/reference/hooks/wp_set_comment_status/"><code>wp_set_comment_status</code></a> in <a href="https://developer.wordpress.org/reference/functions/wp_set_comment_status/"><code>wp_set_comment_status()</code></a><br>
@@ -152,13 +151,41 @@ Sent when:
 
 Sent when a user attempts to change the Administration Email Address option on the General Settings screen.
 
-    To:        Proposed new email address
-    From:      WordPress <wordpress@host>
-    Subject:   [%s] New Admin Email Address
-    Function:  update_option_new_admin_email()
-    Pluggable: No
-    Filters:   new_admin_email_content
-    Disable:   Remove action on add_option_new_admin_email and update_option_new_admin_email hooks
+
+<table>
+	<tr>
+		<th valign="top" align="left">To</th>
+		<td>Proposed new email address</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Subject</th>
+		<td>[%s] New Admin Email Address</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/update_option_new_admin_email/"><code>update_option_new_admin_email()</code></a></td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/new_admin_email_content/"><code>new_admin_email_content</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Disable</th>
+		<td>
+			Remove <a href="https://developer.wordpress.org/reference/functions/update_option_new_admin_email/"><code>update_option_new_admin_email</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/add_option_new_admin_email/"><code>add_option_new_admin_email</code></a> and <a href="https://developer.wordpress.org/reference/hooks/update_option_new_admin_email/"><code>update_option_new_admin_email</code></a> hooks
+		</td>
+	</tr>
+</table>
 
 ### Site admin email address is changed
 
@@ -593,7 +620,7 @@ Multisite only. Sent when an Administrator requests to delete their site from th
 
 ## License: GPLv2
 
-Copyright 2015 - 2021 John Blackbourn
+Copyright 2015 - 2022 John Blackbourn
 
 This documentation is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
