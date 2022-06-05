@@ -53,7 +53,12 @@ Sent when a user or visitor submits a comment that gets held for moderation.
 
 ### Comment is published
 
-Sent when a user or visitor submits a comment that gets automatically approved, or when a comment previously held for moderation gets approved.
+Sent when:
+
+* A user or visitor submits a comment that gets automatically approved
+* A comment previously held for moderation gets approved.
+
+Details:
 
     To:        Post author
     From:      WordPress <wordpress@host>
@@ -197,7 +202,12 @@ Sent when a user clicks the link in the email requesting confirmation of the cha
 
 ### Personal data export or erasure request is created or resent
 
-Sent when a request is created or resent from the Tools -> Export Personal Data or Tools -> Erase Personal Data screen.
+Sent when:
+
+* A request is created or resent from the Tools -> Export Personal Data screen
+* A request is created or resent from the Tools -> Erase Personal Data screen
+
+Details:
 
     To:        Requester email address
     From:      WordPress <wordpress@host>
@@ -242,7 +252,12 @@ Sent when a site admin clicks the Send Export Link button next to a confirmed da
 
 ### Site admin erases personal data to fulfill a data erasure request
 
-Sent when a site admin clicks the Erase Personal Data button next to a confirmed data erasure request, or clicks the Force Erase Personal Data button next to a data erasure request of any status.
+Sent when:
+
+* An administrator clicks the Erase Personal Data button next to a confirmed data erasure request
+* An administrator clicks the Force Erase Personal Data button next to a data erasure request of any status
+
+Details:
 
     To:        Requester email address
     From:      WordPress <wordpress@host>
