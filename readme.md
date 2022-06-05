@@ -99,24 +99,52 @@ Sent when:
 * A user or visitor submits a comment that gets automatically approved
 * A comment previously held for moderation gets approved.
 
-Details:
 
-    To:        Post author
-    From:      WordPress <wordpress@host>
-    Subject:   [%1$s] Comment: "%2$s"
-               [%1$s] Pingback: "%2$s"
-               [%1$s] Trackback: "%2$s"
-    Function:  wp_notify_postauthor()
-    Pluggable: Yes
-    Filters:   comment_notification_recipients
-               comment_notification_subject
-               comment_notification_text
-               comment_notification_headers
-    Disable:   Return false from notify_post_author filter
-               Remove wp_new_comment_notify_postauthor action on comment_post hook
-               "Email me whenever" settings on Settings -> Discussion screen<br>
-               Overwrite the pluggable wp_notify_postauthor() function
-               See also the hardcoded action added to wp_set_comment_status in wp_set_comment_status()
+<table>
+	<tr>
+		<th valign="top" align="left">To</th>
+		<td>Post author</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Subject</th>
+		<td>
+			[%1$s] Comment: "%2$s"<br>
+			[%1$s] Pingback: "%2$s"<br>
+			[%1$s] Trackback: "%2$s"<br>
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/wp_notify_postauthor/"><code>wp_notify_postauthor()</code></a></td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Pluggable</th>
+		<td>Yes</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/comment_notification_recipients/"><code>comment_notification_recipients</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/comment_notification_subject/"><code>comment_notification_subject</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/comment_notification_text/"><code>comment_notification_text</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/comment_notification_headers/"><code>comment_notification_headers</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Disable</th>
+		<td>
+			- Return false from <a href="https://developer.wordpress.org/reference/hooks/notify_post_author/"><code>notify_post_author</code></a> filter<br>
+			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_new_comment_notify_postauthor/"><code>wp_new_comment_notify_postauthor</code></a> action on <a href="https://developer.wordpress.org/reference/hooks/comment_post/"><code>comment_post</code></a> hook<br>
+			- "Email me whenever" settings on Settings -> Discussion screen<br>
+			- Overwrite the pluggable <a href="https://developer.wordpress.org/reference/functions/wp_notify_postauthor/"><code>wp_notify_postauthor()</code></a> function<br>
+			- See also <a href="https://github.com/WordPress/wordpress-develop/blob/63a2a710680cf344dec9e75cec757ee377a304a9/src/wp-includes/comment.php#L2404">this hardcoded action</a> added to <a href="https://developer.wordpress.org/reference/hooks/wp_set_comment_status/"><code>wp_set_comment_status</code></a> in <a href="https://developer.wordpress.org/reference/functions/wp_set_comment_status/"><code>wp_set_comment_status()</code></a><br>
+		</td>
+	</tr>
+</table>
 
 ## Change of Admin Email
 
