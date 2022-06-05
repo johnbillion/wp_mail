@@ -18,17 +18,29 @@ This list was last updated for WordPress 6.0.
 
 ## Information Applicable to All Emails
 
-All emails sent by WordPress go through the pluggable `wp_mail()` function. The following general-purpose filters and actions are used in this function:
+All emails sent by WordPress go through the pluggable <a href="https://developer.wordpress.org/reference/functions/wp_mail/"><code>wp_mail()</code></a> function. The following general-purpose filters and actions are used in this function:
 
-    Filters:   wp_mail
-               pre_wp_mail
-               wp_mail_from
-               wp_mail_from_name
-               wp_mail_content_type
-               wp_mail_charset
-    Actions:   phpmailer_init
-               wp_mail_succeeded (WP 5.9+)
-               wp_mail_failed
+<table>
+	<tr>
+		<th valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_mail/"><code>wp_mail</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/pre_wp_mail/"><code>pre_wp_mail</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_mail_from/"><code>wp_mail_from</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_mail_from_name/"><code>wp_mail_from_name</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_mail_content_type/"><code>wp_mail_content_type</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_mail_charset/"><code>wp_mail_charset</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Actions</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/phpmailer_init/"><code>phpmailer_init</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_mail_succeeded/"><code>wp_mail_succeeded</code></a> (WP 5.9+)<br>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_mail_failed/"><code>wp_mail_failed</code></a><br>
+		</td>
+	</tr>
+</table>
 
 ## Comments
 
