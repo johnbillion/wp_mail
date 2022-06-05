@@ -102,6 +102,7 @@ Details:
                comment_notification_headers
     Disable:   Return false from notify_post_author filter
                Remove wp_new_comment_notify_postauthor action on comment_post hook
+               "Email me whenever" settings on Settings -> Discussion screen<br>
                Overwrite the pluggable wp_notify_postauthor() function
                See also the hardcoded action added to wp_set_comment_status in wp_set_comment_status()
 
