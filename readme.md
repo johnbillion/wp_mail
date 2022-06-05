@@ -36,20 +36,49 @@ All emails sent by WordPress go through the pluggable `wp_mail()` function. The 
 
 Sent when a user or visitor submits a comment that gets held for moderation.
 
-    To:        Site Admin
-               Post author, if they have the ability to edit the comment
-    From:      WordPress <wordpress@host>
-    Subject:   [%1$s] Please moderate: "%2$s"
-    Function:  wp_notify_moderator()
-    Pluggable: Yes
-    Filters:   comment_moderation_recipients
-               comment_moderation_subject
-               comment_moderation_text
-               comment_moderation_headers
-    Disable:   Return false from notify_moderator filter
-               Remove wp_new_comment_notify_moderator action on comment_post hook
-               "Email me whenever" on Settings -> Discussion
-               Overwrite the pluggable wp_notify_moderator() function
+<table>
+	<tr>
+		<th valign="top" align="left">To</th>
+		<td>
+			Site Admin<br>
+			Post author, if they have the ability to edit the comment
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Subject</th>
+		<td>[%1$s] Please moderate: "%2$s"</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/wp_notify_moderator/"><code>wp_notify_moderator()</code></a></td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Pluggable</th>
+		<td>Yes</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/comment_moderation_recipients/"><code>comment_moderation_recipients</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/comment_moderation_subject/"><code>comment_moderation_subject</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/comment_moderation_text/"><code>comment_moderation_text</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/comment_moderation_headers/"><code>comment_moderation_headers</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Disable</th>
+		<td>
+			- Return false from <a href="https://developer.wordpress.org/reference/hooks/notify_moderator/"><code>notify_moderator</code></a> filter<br>
+			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_new_comment_notify_moderator/"><code>wp_new_comment_notify_moderator</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/comment_post/"><code>comment_post</code></a> hook<br>
+			- "Email me whenever" settings on Settings -> Discussion screen<br>
+			- Overwrite the pluggable <a href="https://developer.wordpress.org/reference/functions/wp_notify_moderator/"><code>wp_notify_moderator()</code></a> function<br>
+		</td>
+	</tr>
+</table>
 
 ### Comment is published
 
