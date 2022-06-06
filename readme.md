@@ -311,7 +311,7 @@ Sent when:
 
 * A user clicks the "Lost your password?" link on the login screen and submits their email address
 * An Administrator clicks the "Send password reset" link next to a user on the Users screen (WP 5.7+)
-* Ad Administrator clicks the "Send Reset Link" from the user editing screen of another user (WP 5.7+)
+* An Administrator clicks the "Send Reset Link" from the user editing screen of another user (WP 5.7+)
 
 Details:
 
