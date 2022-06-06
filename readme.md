@@ -313,31 +313,83 @@ Sent when:
 * An Administrator clicks the "Send password reset" link next to a user on the Users screen (WP 5.7+)
 * An Administrator clicks the "Send Reset Link" from the user editing screen of another user (WP 5.7+)
 
-Details:
-
-    To:        User
-    From:      WordPress <wordpress@host>
-    Subject:   [%s] Password Reset
-    Function:  retrieve_password()
-    Pluggable: No
-    Filters:   retrieve_password_title
-               retrieve_password_message
-               retrieve_password_notification_email (WP 6.0+)
-    Disable:   Return false from send_retrieve_password_email filter (WP 6.0+)
-               Return an empty message from retrieve_password_message filter
+<table>
+	<tr>
+		<th valign="top" align="left">To</th>
+		<td>User</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Subject</th>
+		<td>[%s] Password Reset</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/retrieve_password/"><code>retrieve_password()</code></a></td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/retrieve_password_title/"><code>retrieve_password_title</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/retrieve_password_message/"><code>retrieve_password_message</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/retrieve_password_notification_email/"><code>retrieve_password_notification_email</code></a> (WP 6.0+)<br>
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Disable</th>
+		<td>
+			- Return false from <a href="https://developer.wordpress.org/reference/hooks/send_retrieve_password_email/"><code>send_retrieve_password_email</code></a> filter (WP 6.0+)<br>
+			- Return an empty message from <a href="https://developer.wordpress.org/reference/hooks/retrieve_password_message/"><code>retrieve_password_message</code></a> filter<br>
+		</td>
+	</tr>
+</table>
 
 ### User resets their password
 
 Sent when a user resets their password after clicking the confirmation link sent by the "Lost your password?" feature (see above).
 
-    To:        Site admin
-    From:      WordPress <wordpress@host>
-    Subject:   [%s] Password Changed
-    Function:  wp_password_change_notification()
-    Pluggable: Yes
-    Filters:   wp_password_change_notification_email
-    Disable:   Remove action on after_password_reset hook
-               Overwrite the pluggable wp_password_change_notification() function
+<table>
+	<tr>
+		<th valign="top" align="left">To</th>
+		<td>Site admin</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Subject</th>
+		<td>[%s] Password Changed</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/wp_password_change_notification/"><code>wp_password_change_notification()</code></a></td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Pluggable</th>
+		<td>Yes</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_password_change_notification_email/"><code>wp_password_change_notification_email</code></a>
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Disable</th>
+		<td>
+			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_password_change_notification/"><code>wp_password_change_notification</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/after_password_reset/"><code>after_password_reset</code></a> hook<br>
+			- Overwrite the pluggable <a href="https://developer.wordpress.org/reference/functions/wp_password_change_notification/"><code>wp_password_change_notification()</code></a> function<br>
+		</td>
+	</tr>
+</table>
 
 ### User changes their password
 
