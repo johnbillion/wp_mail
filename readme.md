@@ -395,25 +395,79 @@ Sent when a user resets their password after clicking the confirmation link sent
 
 Sent when a logged in user changes their password from the user profile screen.
 
-    To:        User
-    From:      WordPress <wordpress@host>
-    Subject:   [%s] Password Changed
-    Function:  wp_update_user()
-    Pluggable: No
-    Filters:   password_change_email
-    Disable:   Return false from send_password_change_email filter
+<table>
+	<tr>
+		<th valign="top" align="left">To</th>
+		<td>User</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Subject</th>
+		<td>[%s] Password Changed</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/wp_update_user/"><code>wp_update_user()</code></a></td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/password_change_email/"><code>password_change_email</code></a>
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Disable</th>
+		<td>
+			- Return false from <a href="https://developer.wordpress.org/reference/hooks/send_password_change_email/"><code>send_password_change_email</code></a> filter
+		</td>
+	</tr>
+</table>
 
 ### User attempts to change their email address
 
 Sent when a logged in user attempts to change their email address from the user profile screen.
 
-    To:        Proposed new email address
-    From:      WordPress <wordpress@host>
-    Subject:   [%s] Email Change Request
-    Function:  send_confirmation_on_profile_email()
-    Pluggable: No
-    Filters:   new_user_email_content
-    Disable:   Remove action on personal_options_update hook
+<table>
+	<tr>
+		<th valign="top" align="left">To</th>
+		<td>Proposed new email address</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Subject</th>
+		<td>[%s] Email Change Request</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/send_confirmation_on_profile_email/"><code>send_confirmation_on_profile_email()</code></a></td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/new_user_email_content/"><code>new_user_email_content</code></a>
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Disable</th>
+		<td>
+			- Remove <a href="https://developer.wordpress.org/reference/functions/send_confirmation_on_profile_email/"><code>send_confirmation_on_profile_email()</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/personal_options_update/"><code>personal_options_update</code></a> hook
+		</td>
+	</tr>
+</table>
 
 ### User changes their email address
 
