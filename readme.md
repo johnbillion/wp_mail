@@ -20,7 +20,7 @@ This list was last updated for WordPress 6.0.
 
 All emails sent by WordPress go through the pluggable <a href="https://developer.wordpress.org/reference/functions/wp_mail/"><code>wp_mail()</code></a> function. The following general-purpose filters and actions are used in this function:
 
-<table>
+<table width="100%" style="width:100%">
 	<tr>
 		<th valign="top" align="left">Filters</th>
 		<td>
