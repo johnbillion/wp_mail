@@ -473,13 +473,40 @@ Sent when a logged in user attempts to change their email address from the user 
 
 Sent when a user clicks the link in the email requesting confirmation of the change to their email address (see above).
 
-    To:        User
-    From:      WordPress <wordpress@host>
-    Subject:   [%s] Email Changed
-    Function:  wp_update_user()
-    Pluggable: No
-    Filters:   email_change_email
-    Disable:   Return false from send_email_change_email filter
+<table>
+	<tr>
+		<th valign="top" align="left">To</th>
+		<td>User</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Subject</th>
+		<td>[%s] Email Changed</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/wp_update_user/"><code>wp_update_user()</code></a></td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/email_change_email/"><code>email_change_email</code></a>
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Disable</th>
+		<td>
+			- Return <code>false</code> from <a href="https://developer.wordpress.org/reference/hooks/send_email_change_email/"><code>send_email_change_email</code></a> filter
+		</td>
+	</tr>
+</table>
 
 ## Personal Data Requests
 
