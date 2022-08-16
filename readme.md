@@ -425,7 +425,7 @@ Sent when a logged in user changes their password from the user profile screen.
 	<tr>
 		<th valign="top" align="left">Disable</th>
 		<td>
-			- Return false from <a href="https://developer.wordpress.org/reference/hooks/send_password_change_email/"><code>send_password_change_email</code></a> filter
+			Return false from <a href="https://developer.wordpress.org/reference/hooks/send_password_change_email/"><code>send_password_change_email</code></a> filter
 		</td>
 	</tr>
 </table>
@@ -464,7 +464,7 @@ Sent when a logged in user attempts to change their email address from the user 
 	<tr>
 		<th valign="top" align="left">Disable</th>
 		<td>
-			- Remove <a href="https://developer.wordpress.org/reference/functions/send_confirmation_on_profile_email/"><code>send_confirmation_on_profile_email()</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/personal_options_update/"><code>personal_options_update</code></a> hook
+			Remove <a href="https://developer.wordpress.org/reference/functions/send_confirmation_on_profile_email/"><code>send_confirmation_on_profile_email()</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/personal_options_update/"><code>personal_options_update</code></a> hook
 		</td>
 	</tr>
 </table>
@@ -503,7 +503,7 @@ Sent when a user clicks the link in the email requesting confirmation of the cha
 	<tr>
 		<th valign="top" align="left">Disable</th>
 		<td>
-			- Return <code>false</code> from <a href="https://developer.wordpress.org/reference/hooks/send_email_change_email/"><code>send_email_change_email</code></a> filter
+			Return false from <a href="https://developer.wordpress.org/reference/hooks/send_email_change_email/"><code>send_email_change_email</code></a> filter
 		</td>
 	</tr>
 </table>
