@@ -517,48 +517,130 @@ Sent when:
 * A request is created or resent from the Tools -> Export Personal Data screen
 * A request is created or resent from the Tools -> Erase Personal Data screen
 
-Details:
-
-    To:        Requester email address
-    From:      WordPress <wordpress@host>
-    Subject:   [%1$s] Confirm Action: %2$s
-    Function:  wp_send_user_request()
-    Pluggable: No
-    Filters:   user_request_action_email_subject
-               user_request_action_email_content
-               user_request_action_email_headers
-    Disable:   Unknown, may have to remove the admin pages entirely by removing _wp_privacy_hook_requests_page action from admin_menu hook
+<table>
+	<tr>
+		<th valign="top" align="left">To</th>
+		<td>Requester email address</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Subject</th>
+		<td>[%1$s] Confirm Action: %2$s</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/wp_send_user_request/"><code>wp_send_user_request()</code></a></td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/user_request_action_email_subject/"><code>user_request_action_email_subject</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_request_action_email_content/"><code>user_request_action_email_content</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_request_action_email_headers/"><code>user_request_action_email_headers</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Disable</th>
+		<td>
+			Unknown, may have to remove the admin pages entirely by removing <code>_wp_privacy_hook_requests_page</code> action from <code>admin_menu</code> hook
+		</td>
+	</tr>
+</table>
 
 ### User confirms personal data export or erasure request
 
 Sent when a user clicks the link in the personal data export or erasure request confirmation email (see above).
 
-    To:        Site admin on a single site installation, Network admin on Multisite
-    From:      WordPress <wordpress@host>
-    Subject:   [%1$s] Action Confirmed: %2$s
-    Function:  _wp_privacy_send_request_confirmation_notification()
-    Pluggable: No
-    Filters:   user_request_confirmed_email_to
-               user_request_confirmed_email_subject
-               user_request_confirmed_email_content (WP 5.8+)
-               user_request_confirmed_email_headers
-               user_confirmed_action_email_content (deprecated in 5.8)
-    Disable:   Remove action on user_request_action_confirmed hook
+<table>
+	<tr>
+		<th valign="top" align="left">To</th>
+		<td>
+			Site admin on a single site installation<br>
+			Network admin on a Multisite installation
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Subject</th>
+		<td>[%1$s] Action Confirmed: %2$s</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/_wp_privacy_send_request_confirmation_notification/"><code>_wp_privacy_send_request_confirmation_notification()</code></a></td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/user_request_confirmed_email_to/"><code>user_request_confirmed_email_to</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_request_confirmed_email_subject/"><code>user_request_confirmed_email_subject</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_request_confirmed_email_content/"><code>user_request_confirmed_email_content</code></a> (WP 5.8+)<br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_request_confirmed_email_headers/"><code>user_request_confirmed_email_headers</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_confirmed_action_email_content/"><code>user_confirmed_action_email_content</code></a> (deprecated in 5.8)<br>
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Disable</th>
+		<td>
+			Remove <a href="https://developer.wordpress.org/reference/functions/_wp_privacy_send_request_confirmation_notification/"><code>_wp_privacy_send_request_confirmation_notification()</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/user_request_action_confirmed/"><code>user_request_action_confirmed</code></a> hook
+		</td>
+	</tr>
+</table>
 
 ### Site admin sends link to a personal data export
 
 Sent when a site admin clicks the Send Export Link button next to a confirmed data export request.
 
-    To:        Requester email address
-    From:      WordPress <wordpress@host>
-    Subject:   [%s] Personal Data Export
-    Function:  wp_privacy_send_personal_data_export_email()
-    Pluggable: No
-    Filters:   wp_privacy_personal_data_email_to
-               wp_privacy_personal_data_email_subject
-               wp_privacy_personal_data_email_content
-               wp_privacy_personal_data_email_headers
-    Disable:   Remove filter on wp_privacy_personal_data_export_page hook
+<table>
+	<tr>
+		<th valign="top" align="left">To</th>
+		<td>Requester email address</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Subject</th>
+		<td>[%s] Personal Data Export</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/wp_privacy_send_personal_data_export_email/"><code>wp_privacy_send_personal_data_export_email()</code></a></td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_privacy_personal_data_email_to/"><code>wp_privacy_personal_data_email_to</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_privacy_personal_data_email_subject/"><code>wp_privacy_personal_data_email_subject</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_privacy_personal_data_email_content/"><code>wp_privacy_personal_data_email_content</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_privacy_personal_data_email_headers/"><code>wp_privacy_personal_data_email_headers</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Disable</th>
+		<td>
+			Remove <a href="https://developer.wordpress.org/reference/functions/wp_privacy_send_personal_data_export_email/"><code>wp_privacy_send_personal_data_export_email()</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/wp_privacy_personal_data_export_page/"><code>wp_privacy_personal_data_export_page</code></a> hook
+		</td>
+	</tr>
+</table>
 
 ### Site admin erases personal data to fulfill a data erasure request
 
@@ -567,21 +649,46 @@ Sent when:
 * An administrator clicks the Erase Personal Data button next to a confirmed data erasure request
 * An administrator clicks the Force Erase Personal Data button next to a data erasure request of any status
 
-Details:
-
-    To:        Requester email address
-    From:      WordPress <wordpress@host>
-    Subject:   [%s] Erasure Request Fulfilled
-    Function:  _wp_privacy_send_erasure_fulfillment_notification()
-    Pluggable: No
-    Filters:   user_erasure_fulfillment_email_to
-               user_erasure_fulfillment_email_subject (WP 5.8+)
-               user_erasure_fulfillment_email_content (WP 5.8+)
-               user_erasure_fulfillment_email_headers (WP 5.8+)
-               user_erasure_complete_email_subject (deprecated in 5.8)
-               user_confirmed_action_email_content (deprecated in 5.8)
-               user_erasure_complete_email_headers (deprecated in 5.8)
-    Disable:   Remove filter on wp_privacy_personal_data_erased hook
+<table>
+	<tr>
+		<th valign="top" align="left">To</th>
+		<td>Requester email address</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Subject</th>
+		<td>[%s] Erasure Request Fulfilled</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/_wp_privacy_send_erasure_fulfillment_notification/"><code>_wp_privacy_send_erasure_fulfillment_notification()</code></a></td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_fulfillment_email_to/"><code>user_erasure_fulfillment_email_to</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_fulfillment_email_subject/"><code>user_erasure_fulfillment_email_subject</code></a> (WP 5.8+)<br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_fulfillment_email_content/"><code>user_erasure_fulfillment_email_content</code></a> (WP 5.8+)<br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_fulfillment_email_headers/"><code>user_erasure_fulfillment_email_headers</code></a> (WP 5.8+)<br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_complete_email_subject/"><code>user_erasure_complete_email_subject</code></a> (deprecated in 5.8)<br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_confirmed_action_email_content/"><code>user_confirmed_action_email_content</code></a> (deprecated in 5.8)<br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_complete_email_headers/"><code>user_erasure_complete_email_headers</code></a> (deprecated in 5.8)<br>
+		</td>
+	</tr>
+	<tr>
+		<th valign="top" align="left">Disable</th>
+		<td>
+			Remove <a href="https://developer.wordpress.org/reference/functions/_wp_privacy_send_erasure_fulfillment_notification/"><code>_wp_privacy_send_erasure_fulfillment_notification()</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/wp_privacy_personal_data_erased/"><code>wp_privacy_personal_data_erased</code></a> hook
+		</td>
+	</tr>
+</table>
 
 ## Automatic Updates
 
