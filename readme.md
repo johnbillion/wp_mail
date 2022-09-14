@@ -22,7 +22,7 @@ All emails sent by WordPress go through the pluggable <a href="https://developer
 
 <table width="100%" style="width:100%">
 	<tr>
-		<th valign="top" align="left">Filters</th>
+		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/wp_mail/"><code>wp_mail</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/pre_wp_mail/"><code>pre_wp_mail</code></a><br>
@@ -33,7 +33,7 @@ All emails sent by WordPress go through the pluggable <a href="https://developer
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Actions</th>
+		<th scope="row" valign="top" align="left">Actions</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/phpmailer_init/"><code>phpmailer_init</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/wp_mail_succeeded/"><code>wp_mail_succeeded</code></a> (WP 5.9+)<br>
@@ -50,30 +50,30 @@ Sent when a user or visitor submits a comment that gets held for moderation.
 
 <table>
 	<tr>
-		<th valign="top" align="left">To</th>
+		<th scope="row" valign="top" align="left">To</th>
 		<td>
 			Site Admin<br>
 			Post author, if they have the ability to edit the comment
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">From</th>
+		<th scope="row" valign="top" align="left">From</th>
 		<td>WordPress &lt;wordpress@host&gt;</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Subject</th>
+		<th scope="row" valign="top" align="left">Subject</th>
 		<td>[%1$s] Please moderate: "%2$s"</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Function</th>
+		<th scope="row" valign="top" align="left">Function</th>
 		<td><a href="https://developer.wordpress.org/reference/functions/wp_notify_moderator/"><code>wp_notify_moderator()</code></a></td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Pluggable</th>
+		<th scope="row" valign="top" align="left">Pluggable</th>
 		<td>Yes</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Filters</th>
+		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/comment_moderation_recipients/"><code>comment_moderation_recipients</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/comment_moderation_subject/"><code>comment_moderation_subject</code></a><br>
@@ -82,7 +82,7 @@ Sent when a user or visitor submits a comment that gets held for moderation.
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Disable</th>
+		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
 			- Return false from <a href="https://developer.wordpress.org/reference/hooks/notify_moderator/"><code>notify_moderator</code></a> filter<br>
 			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_new_comment_notify_moderator/"><code>wp_new_comment_notify_moderator</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/comment_post/"><code>comment_post</code></a> hook<br>
@@ -101,15 +101,15 @@ Sent when:
 
 <table>
 	<tr>
-		<th valign="top" align="left">To</th>
+		<th scope="row" valign="top" align="left">To</th>
 		<td>Post author</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">From</th>
+		<th scope="row" valign="top" align="left">From</th>
 		<td>WordPress &lt;wordpress@host&gt;</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Subject</th>
+		<th scope="row" valign="top" align="left">Subject</th>
 		<td>
 			[%1$s] Comment: "%2$s"<br>
 			[%1$s] Pingback: "%2$s"<br>
@@ -117,15 +117,15 @@ Sent when:
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Function</th>
+		<th scope="row" valign="top" align="left">Function</th>
 		<td><a href="https://developer.wordpress.org/reference/functions/wp_notify_postauthor/"><code>wp_notify_postauthor()</code></a></td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Pluggable</th>
+		<th scope="row" valign="top" align="left">Pluggable</th>
 		<td>Yes</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Filters</th>
+		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/comment_notification_recipients/"><code>comment_notification_recipients</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/comment_notification_subject/"><code>comment_notification_subject</code></a><br>
@@ -134,7 +134,7 @@ Sent when:
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Disable</th>
+		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
 			- Return false from <a href="https://developer.wordpress.org/reference/hooks/notify_post_author/"><code>notify_post_author</code></a> filter<br>
 			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_new_comment_notify_postauthor/"><code>wp_new_comment_notify_postauthor</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/comment_post/"><code>comment_post</code></a> hook<br>
@@ -153,33 +153,33 @@ Sent when a user attempts to change the Administration Email Address option on t
 
 <table>
 	<tr>
-		<th valign="top" align="left">To</th>
+		<th scope="row" valign="top" align="left">To</th>
 		<td>Proposed new email address</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">From</th>
+		<th scope="row" valign="top" align="left">From</th>
 		<td>WordPress &lt;wordpress@host&gt;</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Subject</th>
+		<th scope="row" valign="top" align="left">Subject</th>
 		<td>[%s] New Admin Email Address</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Function</th>
+		<th scope="row" valign="top" align="left">Function</th>
 		<td><a href="https://developer.wordpress.org/reference/functions/update_option_new_admin_email/"><code>update_option_new_admin_email()</code></a></td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Pluggable</th>
+		<th scope="row" valign="top" align="left">Pluggable</th>
 		<td>No</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Filters</th>
+		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/new_admin_email_content/"><code>new_admin_email_content</code></a><br>
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Disable</th>
+		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
 			Remove <a href="https://developer.wordpress.org/reference/functions/update_option_new_admin_email/"><code>update_option_new_admin_email</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/add_option_new_admin_email/"><code>add_option_new_admin_email</code></a> and <a href="https://developer.wordpress.org/reference/hooks/update_option_new_admin_email/"><code>update_option_new_admin_email</code></a> hooks
 		</td>
@@ -192,33 +192,33 @@ Sent when a user clicks the link in the email requesting confirmation of the cha
 
 <table>
 	<tr>
-		<th valign="top" align="left">To</th>
+		<th scope="row" valign="top" align="left">To</th>
 		<td>Old site admin email address</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">From</th>
+		<th scope="row" valign="top" align="left">From</th>
 		<td>WordPress &lt;wordpress@host&gt;</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Subject</th>
+		<th scope="row" valign="top" align="left">Subject</th>
 		<td>[%s] Admin Email Changed</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Function</th>
+		<th scope="row" valign="top" align="left">Function</th>
 		<td><a href="https://developer.wordpress.org/reference/functions/wp_site_admin_email_change_notification/"><code>wp_site_admin_email_change_notification()</code></a></td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Pluggable</th>
+		<th scope="row" valign="top" align="left">Pluggable</th>
 		<td>No</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Filters</th>
+		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/site_admin_email_change_email/"><code>site_admin_email_change_email</code></a><br>
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Disable</th>
+		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
 			Return false from <a href="https://developer.wordpress.org/reference/hooks/send_site_admin_email_change_email/"><code>send_site_admin_email_change_email</code></a> filter
 		</td>
@@ -231,33 +231,33 @@ Multisite only. Sent when a user attempts to change the Network Admin Email opti
 
 <table>
 	<tr>
-		<th valign="top" align="left">To</th>
+		<th scope="row" valign="top" align="left">To</th>
 		<td>Proposed new email address</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">From</th>
+		<th scope="row" valign="top" align="left">From</th>
 		<td>WordPress &lt;wordpress@host&gt;</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Subject</th>
+		<th scope="row" valign="top" align="left">Subject</th>
 		<td>[%s] Network Admin Email Change Request</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Function</th>
+		<th scope="row" valign="top" align="left">Function</th>
 		<td><a href="https://developer.wordpress.org/reference/functions/update_network_option_new_admin_email/"><code>update_network_option_new_admin_email()</code></a></td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Pluggable</th>
+		<th scope="row" valign="top" align="left">Pluggable</th>
 		<td>No</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Filters</th>
+		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/new_network_admin_email_content/"><code>new_network_admin_email_content</code></a><br>
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Disable</th>
+		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
 			Remove <a href="https://developer.wordpress.org/reference/functions/update_network_option_new_admin_email/"><code>update_network_option_new_admin_email</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/add_site_option_new_admin_email/"><code>add_site_option_new_admin_email</code></a> and <a href="https://developer.wordpress.org/reference/hooks/update_site_option_new_admin_email/"><code>update_site_option_new_admin_email</code></a> hooks
 		</td>
@@ -270,33 +270,33 @@ Multisite only. Sent when a user clicks the link in the email requesting confirm
 
 <table>
 	<tr>
-		<th valign="top" align="left">To</th>
+		<th scope="row" valign="top" align="left">To</th>
 		<td>Old network admin email address</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">From</th>
+		<th scope="row" valign="top" align="left">From</th>
 		<td>WordPress &lt;wordpress@host&gt;</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Subject</th>
+		<th scope="row" valign="top" align="left">Subject</th>
 		<td>[%s] Notice of Network Admin Email Change</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Function</th>
+		<th scope="row" valign="top" align="left">Function</th>
 		<td><a href="https://developer.wordpress.org/reference/functions/wp_network_admin_email_change_notification/"><code>wp_network_admin_email_change_notification()</code></a></td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Pluggable</th>
+		<th scope="row" valign="top" align="left">Pluggable</th>
 		<td>No</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Filters</th>
+		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/network_admin_email_change_email/"><code>network_admin_email_change_email</code></a><br>
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Disable</th>
+		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
 			Return false from <a href="https://developer.wordpress.org/reference/hooks/send_network_admin_email_change_email/"><code>send_network_admin_email_change_email</code></a> filter
 		</td>
@@ -315,27 +315,27 @@ Sent when:
 
 <table>
 	<tr>
-		<th valign="top" align="left">To</th>
+		<th scope="row" valign="top" align="left">To</th>
 		<td>User</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">From</th>
+		<th scope="row" valign="top" align="left">From</th>
 		<td>WordPress &lt;wordpress@host&gt;</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Subject</th>
+		<th scope="row" valign="top" align="left">Subject</th>
 		<td>[%s] Password Reset</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Function</th>
+		<th scope="row" valign="top" align="left">Function</th>
 		<td><a href="https://developer.wordpress.org/reference/functions/retrieve_password/"><code>retrieve_password()</code></a></td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Pluggable</th>
+		<th scope="row" valign="top" align="left">Pluggable</th>
 		<td>No</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Filters</th>
+		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/retrieve_password_title/"><code>retrieve_password_title</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/retrieve_password_message/"><code>retrieve_password_message</code></a><br>
@@ -343,7 +343,7 @@ Sent when:
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Disable</th>
+		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
 			- Return false from <a href="https://developer.wordpress.org/reference/hooks/send_retrieve_password_email/"><code>send_retrieve_password_email</code></a> filter (WP 6.0+)<br>
 			- Return an empty message from <a href="https://developer.wordpress.org/reference/hooks/retrieve_password_message/"><code>retrieve_password_message</code></a> filter<br>
@@ -357,33 +357,33 @@ Sent when a user resets their password after clicking the confirmation link sent
 
 <table>
 	<tr>
-		<th valign="top" align="left">To</th>
+		<th scope="row" valign="top" align="left">To</th>
 		<td>Site admin</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">From</th>
+		<th scope="row" valign="top" align="left">From</th>
 		<td>WordPress &lt;wordpress@host&gt;</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Subject</th>
+		<th scope="row" valign="top" align="left">Subject</th>
 		<td>[%s] Password Changed</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Function</th>
+		<th scope="row" valign="top" align="left">Function</th>
 		<td><a href="https://developer.wordpress.org/reference/functions/wp_password_change_notification/"><code>wp_password_change_notification()</code></a></td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Pluggable</th>
+		<th scope="row" valign="top" align="left">Pluggable</th>
 		<td>Yes</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Filters</th>
+		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/wp_password_change_notification_email/"><code>wp_password_change_notification_email</code></a>
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Disable</th>
+		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
 			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_password_change_notification/"><code>wp_password_change_notification</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/after_password_reset/"><code>after_password_reset</code></a> hook<br>
 			- Overwrite the pluggable <a href="https://developer.wordpress.org/reference/functions/wp_password_change_notification/"><code>wp_password_change_notification()</code></a> function<br>
@@ -397,33 +397,33 @@ Sent when a logged in user changes their password from the user profile screen.
 
 <table>
 	<tr>
-		<th valign="top" align="left">To</th>
+		<th scope="row" valign="top" align="left">To</th>
 		<td>User</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">From</th>
+		<th scope="row" valign="top" align="left">From</th>
 		<td>WordPress &lt;wordpress@host&gt;</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Subject</th>
+		<th scope="row" valign="top" align="left">Subject</th>
 		<td>[%s] Password Changed</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Function</th>
+		<th scope="row" valign="top" align="left">Function</th>
 		<td><a href="https://developer.wordpress.org/reference/functions/wp_update_user/"><code>wp_update_user()</code></a></td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Pluggable</th>
+		<th scope="row" valign="top" align="left">Pluggable</th>
 		<td>No</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Filters</th>
+		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/password_change_email/"><code>password_change_email</code></a>
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Disable</th>
+		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
 			Return false from <a href="https://developer.wordpress.org/reference/hooks/send_password_change_email/"><code>send_password_change_email</code></a> filter
 		</td>
@@ -436,33 +436,33 @@ Sent when a logged in user attempts to change their email address from the user 
 
 <table>
 	<tr>
-		<th valign="top" align="left">To</th>
+		<th scope="row" valign="top" align="left">To</th>
 		<td>Proposed new email address</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">From</th>
+		<th scope="row" valign="top" align="left">From</th>
 		<td>WordPress &lt;wordpress@host&gt;</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Subject</th>
+		<th scope="row" valign="top" align="left">Subject</th>
 		<td>[%s] Email Change Request</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Function</th>
+		<th scope="row" valign="top" align="left">Function</th>
 		<td><a href="https://developer.wordpress.org/reference/functions/send_confirmation_on_profile_email/"><code>send_confirmation_on_profile_email()</code></a></td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Pluggable</th>
+		<th scope="row" valign="top" align="left">Pluggable</th>
 		<td>No</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Filters</th>
+		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/new_user_email_content/"><code>new_user_email_content</code></a>
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Disable</th>
+		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
 			Remove <a href="https://developer.wordpress.org/reference/functions/send_confirmation_on_profile_email/"><code>send_confirmation_on_profile_email()</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/personal_options_update/"><code>personal_options_update</code></a> hook
 		</td>
@@ -475,33 +475,33 @@ Sent when a user clicks the link in the email requesting confirmation of the cha
 
 <table>
 	<tr>
-		<th valign="top" align="left">To</th>
+		<th scope="row" valign="top" align="left">To</th>
 		<td>User</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">From</th>
+		<th scope="row" valign="top" align="left">From</th>
 		<td>WordPress &lt;wordpress@host&gt;</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Subject</th>
+		<th scope="row" valign="top" align="left">Subject</th>
 		<td>[%s] Email Changed</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Function</th>
+		<th scope="row" valign="top" align="left">Function</th>
 		<td><a href="https://developer.wordpress.org/reference/functions/wp_update_user/"><code>wp_update_user()</code></a></td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Pluggable</th>
+		<th scope="row" valign="top" align="left">Pluggable</th>
 		<td>No</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Filters</th>
+		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/email_change_email/"><code>email_change_email</code></a>
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Disable</th>
+		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
 			Return false from <a href="https://developer.wordpress.org/reference/hooks/send_email_change_email/"><code>send_email_change_email</code></a> filter
 		</td>
@@ -519,27 +519,27 @@ Sent when:
 
 <table>
 	<tr>
-		<th valign="top" align="left">To</th>
+		<th scope="row" valign="top" align="left">To</th>
 		<td>Requester email address</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">From</th>
+		<th scope="row" valign="top" align="left">From</th>
 		<td>WordPress &lt;wordpress@host&gt;</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Subject</th>
+		<th scope="row" valign="top" align="left">Subject</th>
 		<td>[%1$s] Confirm Action: %2$s</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Function</th>
+		<th scope="row" valign="top" align="left">Function</th>
 		<td><a href="https://developer.wordpress.org/reference/functions/wp_send_user_request/"><code>wp_send_user_request()</code></a></td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Pluggable</th>
+		<th scope="row" valign="top" align="left">Pluggable</th>
 		<td>No</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Filters</th>
+		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/user_request_action_email_subject/"><code>user_request_action_email_subject</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/user_request_action_email_content/"><code>user_request_action_email_content</code></a><br>
@@ -547,7 +547,7 @@ Sent when:
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Disable</th>
+		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
 			Unknown, may have to remove the admin pages entirely by removing <code>_wp_privacy_hook_requests_page</code> action from <code>admin_menu</code> hook
 		</td>
@@ -560,30 +560,30 @@ Sent when a user clicks the link in the personal data export or erasure request 
 
 <table>
 	<tr>
-		<th valign="top" align="left">To</th>
+		<th scope="row" valign="top" align="left">To</th>
 		<td>
 			Site admin on a single site installation<br>
 			Network admin on a Multisite installation
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">From</th>
+		<th scope="row" valign="top" align="left">From</th>
 		<td>WordPress &lt;wordpress@host&gt;</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Subject</th>
+		<th scope="row" valign="top" align="left">Subject</th>
 		<td>[%1$s] Action Confirmed: %2$s</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Function</th>
+		<th scope="row" valign="top" align="left">Function</th>
 		<td><a href="https://developer.wordpress.org/reference/functions/_wp_privacy_send_request_confirmation_notification/"><code>_wp_privacy_send_request_confirmation_notification()</code></a></td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Pluggable</th>
+		<th scope="row" valign="top" align="left">Pluggable</th>
 		<td>No</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Filters</th>
+		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/user_request_confirmed_email_to/"><code>user_request_confirmed_email_to</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/user_request_confirmed_email_subject/"><code>user_request_confirmed_email_subject</code></a><br>
@@ -593,7 +593,7 @@ Sent when a user clicks the link in the personal data export or erasure request 
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Disable</th>
+		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
 			Remove <a href="https://developer.wordpress.org/reference/functions/_wp_privacy_send_request_confirmation_notification/"><code>_wp_privacy_send_request_confirmation_notification()</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/user_request_action_confirmed/"><code>user_request_action_confirmed</code></a> hook
 		</td>
@@ -606,27 +606,27 @@ Sent when a site admin clicks the Send Export Link button next to a confirmed da
 
 <table>
 	<tr>
-		<th valign="top" align="left">To</th>
+		<th scope="row" valign="top" align="left">To</th>
 		<td>Requester email address</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">From</th>
+		<th scope="row" valign="top" align="left">From</th>
 		<td>WordPress &lt;wordpress@host&gt;</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Subject</th>
+		<th scope="row" valign="top" align="left">Subject</th>
 		<td>[%s] Personal Data Export</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Function</th>
+		<th scope="row" valign="top" align="left">Function</th>
 		<td><a href="https://developer.wordpress.org/reference/functions/wp_privacy_send_personal_data_export_email/"><code>wp_privacy_send_personal_data_export_email()</code></a></td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Pluggable</th>
+		<th scope="row" valign="top" align="left">Pluggable</th>
 		<td>No</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Filters</th>
+		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/wp_privacy_personal_data_email_to/"><code>wp_privacy_personal_data_email_to</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/wp_privacy_personal_data_email_subject/"><code>wp_privacy_personal_data_email_subject</code></a><br>
@@ -635,7 +635,7 @@ Sent when a site admin clicks the Send Export Link button next to a confirmed da
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Disable</th>
+		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
 			Remove <a href="https://developer.wordpress.org/reference/functions/wp_privacy_send_personal_data_export_email/"><code>wp_privacy_send_personal_data_export_email()</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/wp_privacy_personal_data_export_page/"><code>wp_privacy_personal_data_export_page</code></a> hook
 		</td>
@@ -651,27 +651,27 @@ Sent when:
 
 <table>
 	<tr>
-		<th valign="top" align="left">To</th>
+		<th scope="row" valign="top" align="left">To</th>
 		<td>Requester email address</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">From</th>
+		<th scope="row" valign="top" align="left">From</th>
 		<td>WordPress &lt;wordpress@host&gt;</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Subject</th>
+		<th scope="row" valign="top" align="left">Subject</th>
 		<td>[%s] Erasure Request Fulfilled</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Function</th>
+		<th scope="row" valign="top" align="left">Function</th>
 		<td><a href="https://developer.wordpress.org/reference/functions/_wp_privacy_send_erasure_fulfillment_notification/"><code>_wp_privacy_send_erasure_fulfillment_notification()</code></a></td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Pluggable</th>
+		<th scope="row" valign="top" align="left">Pluggable</th>
 		<td>No</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Filters</th>
+		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_fulfillment_email_to/"><code>user_erasure_fulfillment_email_to</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_fulfillment_email_subject/"><code>user_erasure_fulfillment_email_subject</code></a> (WP 5.8+)<br>
@@ -683,7 +683,7 @@ Sent when:
 		</td>
 	</tr>
 	<tr>
-		<th valign="top" align="left">Disable</th>
+		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
 			Remove <a href="https://developer.wordpress.org/reference/functions/_wp_privacy_send_erasure_fulfillment_notification/"><code>_wp_privacy_send_erasure_fulfillment_notification()</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/wp_privacy_personal_data_erased/"><code>wp_privacy_personal_data_erased</code></a> hook
 		</td>
