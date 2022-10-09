@@ -733,8 +733,8 @@ Sent when a background automatic update to plugins and/or themes completes or fa
 	<tr>
 		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
-			Return false from <a href="https://developer.wordpress.org/reference/hooks/auto_plugin_update_send_email/"><code>auto_plugin_update_send_email</code></a> filter<br>
-			Return false from <a href="https://developer.wordpress.org/reference/hooks/auto_theme_update_send_email/"><code>auto_theme_update_send_email</code></a> filter<br>
+			- Return false from <a href="https://developer.wordpress.org/reference/hooks/auto_plugin_update_send_email/"><code>auto_plugin_update_send_email</code></a> filter<br>
+			- Return false from <a href="https://developer.wordpress.org/reference/hooks/auto_theme_update_send_email/"><code>auto_theme_update_send_email</code></a> filter<br>
 		</td>
 	</tr>
 </table>
@@ -777,8 +777,8 @@ Sent when a background automatic update to WordPress core completes or fails.
 	<tr>
 		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
-			Return false from <a href="https://developer.wordpress.org/reference/hooks/auto_core_update_send_email/"><code>auto_core_update_send_email</code></a> filter<br>
-			Return false from <a href="https://developer.wordpress.org/reference/hooks/send_core_update_notification_email/"><code>send_core_update_notification_email</code></a> filter<br>
+			- Return false from <a href="https://developer.wordpress.org/reference/hooks/auto_core_update_send_email/"><code>auto_core_update_send_email</code></a> filter<br>
+			- Return false from <a href="https://developer.wordpress.org/reference/hooks/send_core_update_notification_email/"><code>send_core_update_notification_email</code></a> filter<br>
 		</td>
 	</tr>
 </table>
@@ -903,8 +903,8 @@ Multisite only. Sent when a new user is invited to join a site from Users -> Add
 	<tr>
 		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
-			Click the "Skip Confirmation Email" checkbox when adding the user<br>
-			Return false from <a href="https://developer.wordpress.org/reference/hooks/wpmu_signup_user_notification/"><code>wpmu_signup_user_notification</code></a> filter<br>
+			- Click the "Skip Confirmation Email" checkbox when adding the user<br>
+			- Return false from <a href="https://developer.wordpress.org/reference/hooks/wpmu_signup_user_notification/"><code>wpmu_signup_user_notification</code></a> filter<br>
 		</td>
 	</tr>
 	<tr>
@@ -956,9 +956,9 @@ Details:
 	<tr>
 		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
-			Filter the <code>registrationnotification</code> option value<br>
-			Remove action from the <a href="https://developer.wordpress.org/reference/hooks/wpmu_new_user/"><code>wpmu_new_user</code></a> hook<br>
-			Toggle "Registration notification" in Network Admin -> Settings<br>
+			- Filter the <code>registrationnotification</code> option value<br>
+			- Remove action from the <a href="https://developer.wordpress.org/reference/hooks/wpmu_new_user/"><code>wpmu_new_user</code></a> hook<br>
+			- Toggle "Registration notification" in Network Admin -> Settings<br>
 		</td>
 	</tr>
 </table>
@@ -999,9 +999,9 @@ Multisite only.
 	<tr>
 		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
-			Click the "Skip Confirmation Email" checkbox when adding the user<br>
-			Return false from the <a href="https://developer.wordpress.org/reference/hooks/wpmu_welcome_user_notification/"><code>wpmu_welcome_user_notification</code></a> filter<br>
-			Remove action from the <a href="https://developer.wordpress.org/reference/hooks/wpmu_activate_user/"><code>wpmu_activate_user</code></a> hook<br>
+			- Click the "Skip Confirmation Email" checkbox when adding the user<br>
+			- Return false from the <a href="https://developer.wordpress.org/reference/hooks/wpmu_welcome_user_notification/"><code>wpmu_welcome_user_notification</code></a> filter<br>
+			- Remove action from the <a href="https://developer.wordpress.org/reference/hooks/wpmu_activate_user/"><code>wpmu_activate_user</code></a> hook<br>
 		</td>
 	</tr>
 </table>
@@ -1068,12 +1068,12 @@ Details:
 	<tr>
 		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
-			Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/register_new_user/"><code>register_new_user</code></a> hook<br>
-			Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/edit_user_created_user/"><code>edit_user_created_user</code></a> hook<br>
-			Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/network_site_new_created_user/"><code>network_site_new_created_user</code></a> hook<br>
-			Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/network_site_users_created_user/"><code>network_site_users_created_user</code></a> hook<br>
-			Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/network_user_new_created_user/"><code>network_user_new_created_user</code></a> hook<br>
-			Overwrite the pluggable <a href="https://developer.wordpress.org/reference/functions/wp_new_user_notification/"><code>wp_new_user_notification()</code></a> function
+			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/register_new_user/"><code>register_new_user</code></a> hook<br>
+			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/edit_user_created_user/"><code>edit_user_created_user</code></a> hook<br>
+			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/network_site_new_created_user/"><code>network_site_new_created_user</code></a> hook<br>
+			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/network_site_users_created_user/"><code>network_site_users_created_user</code></a> hook<br>
+			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/network_user_new_created_user/"><code>network_user_new_created_user</code></a> hook<br>
+			- Overwrite the pluggable <a href="https://developer.wordpress.org/reference/functions/wp_new_user_notification/"><code>wp_new_user_notification()</code></a> function
 		</td>
 	</tr>
 </table>
