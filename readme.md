@@ -743,16 +743,45 @@ Sent when a background automatic update to plugins and/or themes completes or fa
 
 Sent when a background automatic update to WordPress core completes or fails.
 
-    To:        Site admin on a single site installation, Network admin on Multisite
-    From:      WordPress <wordpress@host>
-    Subject:   [%1$s] Your site has updated to WordPress %2$s
-               [%1$s] WordPress %2$s is available. Please update!
-               [%1$s] URGENT: Your site may be down due to a failed update
-    Function:  WP_Automatic_Updater::send_email()
-    Pluggable: No
-    Filters:   auto_core_update_email
-    Disable:   Return false from auto_core_update_send_email filter
-               Return false from send_core_update_notification_email filter
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">To</th>
+		<td>Site admin on a single site installation<br>Network admin on a Multisite installation</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Subject</th>
+		<td>
+			[%1$s] Your site has updated to WordPress %2$s<br>
+			[%1$s] WordPress %2$s is available. Please update!<br>
+			[%1$s] URGENT: Your site may be down due to a failed update<br>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/classes/wp_automatic_updater/send_email/"><code>WP_Automatic_Updater::send_email()</code></a></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/auto_core_update_email/"><code>auto_core_update_email</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Disable</th>
+		<td>
+			Return false from <a href="https://developer.wordpress.org/reference/hooks/auto_core_update_send_email/"><code>auto_core_update_send_email</code></a> filter<br>
+			Return false from <a href="https://developer.wordpress.org/reference/hooks/send_core_update_notification_email/"><code>send_core_update_notification_email</code></a> filter<br>
+		</td>
+	</tr>
+</table>
 
 ### Full log of background update results
 
