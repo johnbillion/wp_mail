@@ -1,4 +1,4 @@
-# WordPress Emails
+# WordPress Email Documentation
 
 This document lists all the situations where WordPress core sends an email, how and when they happen, and how to filter or disable each one.
 
@@ -967,17 +967,44 @@ Details:
 
 Multisite only.
 
-    To:        User being added
-    From:      [Network Name] <[network admin]>
-    Subject:   New %1$s User: %2$s
-    Function:  wpmu_welcome_user_notification()
-    Pluggable: No
-    Filters:   update_welcome_user_subject
-               update_welcome_user_email
-               See also "Welcome User Email" setting in Network Admin -> Settings
-    Disable:   Click the "Skip Confirmation Email" checkbox when adding the user
-               Return false from wpmu_welcome_user_notification filter
-               Remove action on wpmu_activate_user hook
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">To</th>
+		<td>User being added</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">From</th>
+		<td>[Network Name] &lt;[network admin]&gt;</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Subject</th>
+		<td>New %1$s User: %2$s</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/wpmu_welcome_user_notification/"><code>wpmu_welcome_user_notification()</code></a></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/update_welcome_user_subject/"><code>update_welcome_user_subject</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/update_welcome_user_email/"><code>update_welcome_user_email</code></a><br>
+			See also the "Welcome User Email" setting in Network Admin -> Settings<br>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Disable</th>
+		<td>
+			Click the "Skip Confirmation Email" checkbox when adding the user<br>
+			Return false from the <a href="https://developer.wordpress.org/reference/hooks/wpmu_welcome_user_notification/"><code>wpmu_welcome_user_notification</code></a> filter<br>
+			Remove action from the <a href="https://developer.wordpress.org/reference/hooks/wpmu_activate_user/"><code>wpmu_activate_user</code></a> hook<br>
+		</td>
+	</tr>
+</table>
 
 ### A new user is created
 
