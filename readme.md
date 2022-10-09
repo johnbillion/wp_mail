@@ -696,19 +696,48 @@ Sent when:
 
 Sent when a background automatic update to plugins and/or themes completes or fails.
 
-    To:        Site admin on a single site installation, Network admin on Multisite
-    From:      WordPress <wordpress@host>
-    Subject:   [%s] Some plugins and themes have automatically updated
-               [%s] Some plugins were automatically updated
-               [%s] Some themes were automatically updated
-               [%s] Some plugins and themes have failed to update
-               [%s] Some plugins have failed to update
-               [%s] Some themes have failed to update
-    Function:  WP_Automatic_Updater::after_plugin_theme_update()
-    Pluggable: No
-    Filters:   auto_plugin_theme_update_email
-    Disable:   Return false from auto_plugin_update_send_email filter
-               Return false from auto_theme_update_send_email filter
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">To</th>
+		<td>Site admin on a single site installation<br>Network admin on a Multisite installation</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Subject</th>
+		<td>
+			[%s] Some plugins and themes have automatically updated<br>
+			[%s] Some plugins were automatically updated<br>
+			[%s] Some themes were automatically updated<br>
+			[%s] Some plugins and themes have failed to update<br>
+			[%s] Some plugins have failed to update<br>
+			[%s] Some themes have failed to update<br>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/classes/wp_automatic_updater/after_plugin_theme_update/"><code>WP_Automatic_Updater::after_plugin_theme_update()</code></a></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/auto_plugin_theme_update_email/"><code>auto_plugin_theme_update_email</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Disable</th>
+		<td>
+			Return false from <a href="https://developer.wordpress.org/reference/hooks/auto_plugin_update_send_email/"><code>auto_plugin_update_send_email</code></a> filter<br>
+			Return false from <a href="https://developer.wordpress.org/reference/hooks/auto_theme_update_send_email/"><code>auto_theme_update_send_email</code></a> filter<br>
+		</td>
+	</tr>
+</table>
 
 ### Automatic core update
 
