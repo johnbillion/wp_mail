@@ -926,15 +926,42 @@ Multisite only. Sent when a new user account is created via `wpmu_create_user()`
 
 Details:
 
-    To:        Network Admin
-    From:      WordPress <wordpress@host>
-    Subject:   New User Registration: %s
-    Function:  newuser_notify_siteadmin()
-    Pluggable: No
-    Filters:   newuser_notify_siteadmin
-    Disable:   Filter registrationnotification option value
-               Remove action on wpmu_new_user hook
-               Toggle "Registration notification" in Network Admin -> Settings
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">To</th>
+		<td>Network Admin</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Subject</th>
+		<td>New User Registration: %s</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/newuser_notify_siteadmin/"><code>newuser_notify_siteadmin()</code></a></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/newuser_notify_siteadmin/"><code>newuser_notify_siteadmin</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Disable</th>
+		<td>
+			Filter the <code>registrationnotification</code> option value<br>
+			Remove action from the <a href="https://developer.wordpress.org/reference/hooks/wpmu_new_user/"><code>wpmu_new_user</code></a> hook<br>
+			Toggle "Registration notification" in Network Admin -> Settings<br>
+		</td>
+	</tr>
+</table>
 
 ### A user is added, or their account activation is successful
 
