@@ -1010,28 +1010,73 @@ Multisite only.
 
 When a new user is created, two emails are sent from the same function. One to the site admin:
 
-    To:        Site Admin
-    From:      WordPress <wordpress@host>
-    Subject:   [%s] New User Registration
-    Filters:   wp_new_user_notification_email_admin
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">To</th>
+		<td>Site Admin</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Subject</th>
+		<td>[%s] New User Registration</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_new_user_notification_email_admin/"><code>wp_new_user_notification_email_admin</code></a><br>
+		</td>
+	</tr>
+</table>
 
 and one to the newly created user:
 
-    To:        New user
-    From:      WordPress <wordpress@host>
-    Subject:   [%s] Login Details
-    Filters:   wp_new_user_notification_email
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">To</th>
+		<td>New user</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Subject</th>
+		<td>[%s] Login Details</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_new_user_notification_email/"><code>wp_new_user_notification_email</code></a><br>
+		</td>
+	</tr>
+</table>
 
 Details:
 
-    Function:  wp_new_user_notification()
-    Pluggable: Yes
-    Disable:   Remove wp_send_new_user_notifications action on register_new_user hook
-               Remove wp_send_new_user_notifications action on edit_user_created_user hook
-               Remove wp_send_new_user_notifications action on network_site_new_created_user hook
-               Remove wp_send_new_user_notifications action on network_site_users_created_user hook
-               Remove wp_send_new_user_notifications action on network_user_new_created_user hook
-               Overwrite the pluggable wp_new_user_notification() function
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/wp_new_user_notification/"><code>wp_new_user_notification()</code></a></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Pluggable</th>
+		<td>Yes</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Disable</th>
+		<td>
+			Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/register_new_user/"><code>register_new_user</code></a> hook<br>
+			Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/edit_user_created_user/"><code>edit_user_created_user</code></a> hook<br>
+			Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/network_site_new_created_user/"><code>network_site_new_created_user</code></a> hook<br>
+			Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/network_site_users_created_user/"><code>network_site_users_created_user</code></a> hook<br>
+			Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/network_user_new_created_user/"><code>network_user_new_created_user</code></a> hook<br>
+			Overwrite the pluggable <a href="https://developer.wordpress.org/reference/functions/wp_new_user_notification/"><code>wp_new_user_notification()</code></a> function
+		</td>
+	</tr>
+</table>
 
 ## New Site
 
