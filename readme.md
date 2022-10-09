@@ -831,14 +831,42 @@ Only sent when you are using a development version of WordPress and it's not und
 
 Multisite only. Sent when an existing user is added to a site from Users -> Add New -> Add Existing User.
 
-    To:        User being invited
-    From:      WordPress <wordpress@host>
-    Subject:   [%s] Joining Confirmation
-    Function:  wp-admin/user-new.php
-    Pluggable: No
-    Filters:   invited_user_email (WP 5.6+)
-    Disable:   Click the "Skip Confirmation Email" checkbox when adding the user
-    Note:      Prior to WordPress 5.6 there was no filter to alter this email
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">To</th>
+		<td>User being invited</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Subject</th>
+		<td>[%s] Joining Confirmation</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Function</th>
+		<td>wp-admin/user-new.php</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/invited_user_email/"><code>invited_user_email</code></a> (5.6+)<br>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Disable</th>
+		<td>Click the "Skip Confirmation Email" checkbox when adding the user</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Note</th>
+		<td>Prior to WordPress 5.6 there was no filter to alter this email</td>
+	</tr>
+</table>
 
 ### A new user is invited to join a site
 
