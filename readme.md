@@ -785,16 +785,45 @@ Sent when a background automatic update to WordPress core completes or fails.
 
 ### Full log of background update results
 
-Only sent when you are using a development version of WordPress.
+Only sent when you are using a development version of WordPress and it's not under version control.
 
-    To:        Site admin on a single site installation, Network admin on Multisite
-    From:      WordPress <wordpress@host>
-    Subject:   [%s] Background Update Failed
-               [%s] Background Update Finished
-    Function:  WP_Automatic_Updater::send_debug_email()
-    Pluggable: No
-    Filters:   automatic_updates_debug_email
-    Disable:   Return false from automatic_updates_send_debug_email filter
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">To</th>
+		<td>Site admin on a single site installation<br>Network admin on a Multisite installation</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Subject</th>
+		<td>
+			[%s] Background Update Failed<br>
+			[%s] Background Update Finished<br>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/classes/wp_automatic_updater/send_debug_email/"><code>WP_Automatic_Updater::send_debug_email()</code></a></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/auto_core_update_email/"><code>auto_core_update_email</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Disable</th>
+		<td>
+			Return false from <a href="https://developer.wordpress.org/reference/hooks/automatic_updates_send_debug_email/"><code>automatic_updates_send_debug_email</code></a> filter<br>
+		</td>
+	</tr>
+</table>
 
 ## New User
 
