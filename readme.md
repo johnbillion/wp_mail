@@ -872,16 +872,46 @@ Multisite only. Sent when an existing user is added to a site from Users -> Add 
 
 Multisite only. Sent when a new user is invited to join a site from Users -> Add New -> Add New User.
 
-    To:        User being invited
-    From:      [Network Name] <[network admin]>
-    Subject:   [%1$s] Activate %2$s
-    Function:  wpmu_signup_user_notification()
-    Pluggable: No
-    Filters:   wpmu_signup_user_notification_subject
-               wpmu_signup_user_notification_email
-    Disable:   Click the "Skip Confirmation Email" checkbox when adding the user
-               Return false from wpmu_signup_user_notification filter
-    Note:      There is a default filter on wpmu_signup_user_notification_email: admin_created_user_email()
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">To</th>
+		<td>User being invited</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">From</th>
+		<td>[Network Name] &lt;[network admin]&gt;</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Subject</th>
+		<td>[%1$s] Activate %2$s</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/wpmu_signup_user_notification/"><code>wpmu_signup_user_notification()</code></a></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/wpmu_signup_user_notification_subject/"><code>wpmu_signup_user_notification_subject</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/wpmu_signup_user_notification_email/"><code>wpmu_signup_user_notification_email</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Disable</th>
+		<td>
+			Click the "Skip Confirmation Email" checkbox when adding the user<br>
+			Return false from <a href="https://developer.wordpress.org/reference/hooks/wpmu_signup_user_notification/"><code>wpmu_signup_user_notification</code></a> filter<br>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Note</th>
+		<td>There is a default filter attached to <a href="https://developer.wordpress.org/reference/hooks/wpmu_signup_user_notification_email/"><code>wpmu_signup_user_notification_email</code></a>: <a href="https://developer.wordpress.org/reference/functions/admin_created_user_email/"><code>admin_created_user_email()</code></a></td>
+	</tr>
+</table>
 
 ### A new user account is created
 
