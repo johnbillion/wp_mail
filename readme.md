@@ -2,7 +2,7 @@
 
 This document lists all the situations where WordPress core sends an email, how and when they happen, and how to filter or disable each one.
 
-This list was last updated for WordPress 6.0.
+This list was last updated for WordPress 6.1.
 
 ## Table of Contents
 
@@ -1027,6 +1027,7 @@ When a new user is created, two emails are sent from the same function. One to t
 		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/wp_new_user_notification_email_admin/"><code>wp_new_user_notification_email_admin</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_send_new_user_notification_to_admin/"><code>wp_send_new_user_notification_to_admin</code></a> (WP 6.1+)<br>
 		</td>
 	</tr>
 </table>
@@ -1050,6 +1051,7 @@ and one to the newly created user:
 		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/wp_new_user_notification_email/"><code>wp_new_user_notification_email</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_send_new_user_notification_to_user/"><code>wp_send_new_user_notification_to_user</code></a> (WP 6.1+)<br>
 		</td>
 	</tr>
 </table>
@@ -1068,6 +1070,7 @@ Details:
 	<tr>
 		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
+			- Return false from the <a href="https://developer.wordpress.org/reference/hooks/wp_send_new_user_notification_to_admin/"><code>wp_send_new_user_notification_to_admin</code></a> or <a href="https://developer.wordpress.org/reference/hooks/wp_send_new_user_notification_to_user/"><code>wp_send_new_user_notification_to_user</code></a> filter (WP 6.1+)<br>
 			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/register_new_user/"><code>register_new_user</code></a> hook<br>
 			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/edit_user_created_user/"><code>edit_user_created_user</code></a> hook<br>
 			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/network_site_new_created_user/"><code>network_site_new_created_user</code></a> hook<br>
