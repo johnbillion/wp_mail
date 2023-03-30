@@ -1087,14 +1087,40 @@ Details:
 
 Multisite only. Sent when a new site is created from Network Admin -> Sites -> Add New.
 
-    To:        Network Admin
-    From:      Site Admin <[network admin]>
-    Subject:   [%s] New Site Created
-    Function:  wpmu_new_site_admin_notification()
-    Pluggable: No
-    Filters:   new_site_email (WP 5.6+)
-    Disable:   Return false from send_new_site_email filter (WP 5.6+)
-    Note:      Prior to WordPress 5.6 there were no filters to alter or disable this email
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">To</th>
+		<td>Network Admin</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">From</th>
+		<td>Site Admin <[network admin]></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Subject</th>
+		<td>[%s] New Site Created</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/wpmu_new_site_admin_notification/"><code>wpmu_new_site_admin_notification()</code></a></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/new_site_email/"><code>new_site_email</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Disable</th>
+		<td>
+			Return false from the <a href="https://developer.wordpress.org/reference/hooks/send_new_site_email/"><code>send_new_site_email</code></a> filter<br>
+		</td>
+	</tr>
+</table>
 
 ### User registers for a new site
 
