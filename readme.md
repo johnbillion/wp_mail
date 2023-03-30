@@ -855,16 +855,12 @@ Multisite only. Sent when an existing user is added to a site from Users -> Add 
 	<tr>
 		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
-			<a href="https://developer.wordpress.org/reference/hooks/invited_user_email/"><code>invited_user_email</code></a> (5.6+)<br>
+			<a href="https://developer.wordpress.org/reference/hooks/invited_user_email/"><code>invited_user_email</code></a><br>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row" valign="top" align="left">Disable</th>
 		<td>Click the "Skip Confirmation Email" checkbox when adding the user</td>
-	</tr>
-	<tr>
-		<th scope="row" valign="top" align="left">Note</th>
-		<td>Prior to WordPress 5.6 there was no filter to alter this email</td>
 	</tr>
 </table>
 
@@ -1126,15 +1122,42 @@ Multisite only. Sent when a new site is created from Network Admin -> Sites -> A
 
 Multisite only, with site registration allowed. Sent when a visitor registers a new user account and site from wp-signup.php.
 
-    To:        Site Admin
-    From:      [Network Name] <[network admin]>
-    Subject:   [%1$s] Activate %2$s
-    Function:  wpmu_signup_blog_notification()
-    Pluggable: No
-    Filters:   wpmu_signup_blog_notification_subject
-               wpmu_signup_blog_notification_email
-    Disable:   Return false from wpmu_signup_blog_notification filter
-               Remove action on after_signup_site hook
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">To</th>
+		<td>Site Admin</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">From</th>
+		<td>[Network Name] <[network admin]></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Subject</th>
+		<td>[%1$s] Activate %2$s</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/wpmu_signup_blog_notification/"><code>wpmu_signup_blog_notification()</code></a></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Filters</th>
+		<td>
+			- <a href="https://developer.wordpress.org/reference/hooks/wpmu_signup_blog_notification_subject/"><code>wpmu_signup_blog_notification_subject</code></a><br>
+			- <a href="https://developer.wordpress.org/reference/hooks/wpmu_signup_blog_notification_email/"><code>wpmu_signup_blog_notification_email</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Disable</th>
+		<td>
+			- Return false from the <a href="https://developer.wordpress.org/reference/hooks/wpmu_signup_blog_notification/"><code>wpmu_signup_blog_notification</code></a> filter<br>
+			- Remove <a href="https://developer.wordpress.org/reference/functions/wpmu_signup_blog_notification/"><code>wpmu_signup_blog_notification()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/after_signup_site/"><code>after_signup_site</code></a> hook<br>
+		</td>
+	</tr>
+</table>
 
 ### User activates their new site, or site added from Network Admin -> Sites -> Add New
 
@@ -1213,7 +1236,7 @@ Multisite only. Sent when an Administrator requests to delete their site from th
 
 ## License: GPLv2
 
-Copyright 2015 - 2022 John Blackbourn
+Copyright 2015 - 2023 John Blackbourn
 
 This documentation is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
