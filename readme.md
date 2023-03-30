@@ -52,8 +52,8 @@ Sent when a user or visitor submits a comment that gets held for moderation.
 	<tr>
 		<th scope="row" valign="top" align="left">To</th>
 		<td>
-			Site Admin<br>
-			Post author, if they have the ability to edit the comment
+			- Site Admin<br>
+			- Post author, if they have the ability to edit the comment
 		</td>
 	</tr>
 	<tr>
@@ -562,8 +562,8 @@ Sent when a user clicks the link in the personal data export or erasure request 
 	<tr>
 		<th scope="row" valign="top" align="left">To</th>
 		<td>
-			Site admin on a single site installation<br>
-			Network admin on a Multisite installation
+			- Site admin on a single site installation<br>
+			- Network admin on a Multisite installation
 		</td>
 	</tr>
 	<tr>
@@ -1146,8 +1146,8 @@ Multisite only, with site registration allowed. Sent when a visitor registers a 
 	<tr>
 		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
-			- <a href="https://developer.wordpress.org/reference/hooks/wpmu_signup_blog_notification_subject/"><code>wpmu_signup_blog_notification_subject</code></a><br>
-			- <a href="https://developer.wordpress.org/reference/hooks/wpmu_signup_blog_notification_email/"><code>wpmu_signup_blog_notification_email</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/wpmu_signup_blog_notification_subject/"><code>wpmu_signup_blog_notification_subject</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/wpmu_signup_blog_notification_email/"><code>wpmu_signup_blog_notification_email</code></a><br>
 		</td>
 	</tr>
 	<tr>
@@ -1163,30 +1163,85 @@ Multisite only, with site registration allowed. Sent when a visitor registers a 
 
 Multisite only.
 
-    To:        Network Admin
-    From:      WordPress <wordpress@host>
-    Subject:   New Site Registration: %s
-    Function:  newblog_notify_siteadmin()
-    Pluggable: No
-    Filters:   newblog_notify_siteadmin
-    Disable:   Filter registrationnotification option value
-               Remove action on wpmu_new_blog or wp_initialize_site hooks
-               Toggle "Registration notification" in Network Admin -> Settings
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">To</th>
+		<td>Network Admin</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">From</th>
+		<td>WordPress <wordpress@host></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Subject</th>
+		<td>New Site Registration: %s</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/newblog_notify_siteadmin/"><code>newblog_notify_siteadmin()</code></a></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/newblog_notify_siteadmin/"><code>newblog_notify_siteadmin</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Disable</th>
+		<td>
+			- Filter the <code>registrationnotification</code> option value
+			- Change the "Registration notification" setting in Network Admin -> Settings
+			- Remove <a href="https://developer.wordpress.org/reference/functions/newblog_notify_siteadmin/"><code>newblog_notify_siteadmin()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/wpmu_new_blog/"><code>wpmu_new_blog</code></a> hook<br>
+			- Remove <a href="https://developer.wordpress.org/reference/functions/newblog_notify_siteadmin/"><code>newblog_notify_siteadmin()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/wp_initialize_site/"><code>wp_initialize_site</code></a> hook<br>
+		</td>
+	</tr>
+</table>
 
 ### User activates their new site, or site added from Network Admin -> Sites -> Add New
 
 Multisite only.
 
-    To:        New Site Admin
-    From:      [Network Name] <[network admin]>
-    Subject:   New %1$s Site: %2$s
-    Function:  wpmu_welcome_notification()
-    Pluggable: No
-    Filters:   update_welcome_subject
-               update_welcome_email
-               See also "Welcome Email" setting in Network Admin -> Settings
-    Disable:   Return false from wpmu_welcome_notification filter
-               Remove action on wpmu_activate_blog hook
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">To</th>
+		<td>New Site Admin</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">From</th>
+		<td>[Network Name] <[network admin]></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Subject</th>
+		<td>New %1$s Site: %2$s</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/wpmu_welcome_notification/"><code>wpmu_welcome_notification()</code></a></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/update_welcome_subject/"><code>update_welcome_subject</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/update_welcome_email/"><code>update_welcome_email</code></a><br>
+			See also the "Welcome Email" setting in Network Admin -> Settings<br>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Disable</th>
+		<td>
+			- Return false from the <a href="https://developer.wordpress.org/reference/hooks/wpmu_welcome_notification/"><code>wpmu_welcome_notification</code></a> filter<br>
+			- Remove <a href="https://developer.wordpress.org/reference/functions/wpmu_welcome_notification/"><code>wpmu_welcome_notification()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/wpmu_activate_blog/"><code>wpmu_activate_blog</code></a> hook<br>
+		</td>
+	</tr>
+</table>
 
 ## Other
 
