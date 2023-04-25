@@ -1249,14 +1249,40 @@ Multisite only.
 
 Sent when WordPress is initially installed.
 
-    To:        Site Admin
-    From:      WordPress <wordpress@host>
-    Subject:   New WordPress Site
-    Function:  wp_new_blog_notification()
-    Pluggable: Yes
-    Filters:   wp_installed_email (WP 5.6+)
-    Disable:   Overwrite the pluggable wp_new_blog_notification() function
-    Note:      Prior to WordPress 5.6 there was no filter to alter this email
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">To</th>
+		<td>Site Admin</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">From</th>
+		<td>WordPress <wordpress@host></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Subject</th>
+		<td>New WordPress Site</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/wp_new_blog_notification/"><code>wp_new_blog_notification()</code></a></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Pluggable</th>
+		<td>yes</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_installed_email/"><code>wp_installed_email</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Disable</th>
+		<td>
+			Overwrite the pluggable <a href="https://developer.wordpress.org/reference/functions/wp_new_blog_notification/"><code>wp_new_blog_notification()</code></a> function
+		</td>
+	</tr>
+</table>
 
 ### A fatal error occurs
 
