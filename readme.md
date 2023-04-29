@@ -1290,30 +1290,34 @@ Sent when a fatal error occurs in a plugin or theme and Recovery Mode is not act
 
 **Important:** The `wp_fatal_error_handler_enabled` filter cannot be used by plugins as it runs too early. [Information about using this filter can be found here](https://core.trac.wordpress.org/browser/trunk/src/wp-includes/error-protection.php?rev=49489&marks=114-131#L97).
 
-    To:        Site Admin / Value of RECOVERY_MODE_EMAIL constant
-    From:      WordPress &lt;wordpress@host&gt;
-    Subject:   [%s] Your Site is Experiencing a Technical Issue
-    Function:  send_recovery_mode_email()
-    Pluggable: No
-    Filters:   wp_fatal_error_handler_enabled
-               recovery_email_support_info
-               recovery_email_debug_info
-               recovery_mode_email
-    Disable:   Define WP_DISABLE_FATAL_ERROR_HANDLER as true
-               Return false from wp_fatal_error_handler_enabled filter
-    Note:      Does not currently apply to Multisite
+```
+To:        Site Admin / Value of RECOVERY_MODE_EMAIL constant
+From:      WordPress <wordpress@host>
+Subject:   [%s] Your Site is Experiencing a Technical Issue
+Function:  send_recovery_mode_email()
+Pluggable: No
+Filters:   wp_fatal_error_handler_enabled
+           recovery_email_support_info
+           recovery_email_debug_info
+           recovery_mode_email
+Disable:   Define WP_DISABLE_FATAL_ERROR_HANDLER as true
+           Return false from wp_fatal_error_handler_enabled filter
+Note:      Does not currently apply to Multisite
+```
 
 ### Site admin requests to delete site
 
 Multisite only. Sent when an Administrator requests to delete their site from the Tools -> Delete Site screen.
 
-    To:        Site Admin
-    From:      WordPress &lt;wordpress@host&gt;
-    Subject:   [%s] Delete My Site
-    Function:  wp-admin/ms-delete-site.php
-    Pluggable: No
-    Filters:   delete_site_email_content
-    Disable:   Not possible
+```
+To:        Site Admin
+From:      WordPress <wordpress@host>
+Subject:   [%s] Delete My Site
+Function:  wp-admin/ms-delete-site.php
+Pluggable: No
+Filters:   delete_site_email_content
+Disable:   Not possible
+```
 
 ## License: GPLv2
 
