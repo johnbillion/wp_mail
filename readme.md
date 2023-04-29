@@ -1170,7 +1170,7 @@ Multisite only.
 	</tr>
 	<tr>
 		<th scope="row" valign="top" align="left">From</th>
-		<td>WordPress <wordpress@host></td>
+		<td>WordPress &lt;wordpress@host&gt;</td>
 	</tr>
 	<tr>
 		<th scope="row" valign="top" align="left">Subject</th>
@@ -1256,7 +1256,7 @@ Sent when WordPress is initially installed.
 	</tr>
 	<tr>
 		<th scope="row" valign="top" align="left">From</th>
-		<td>WordPress <wordpress@host></td>
+		<td>WordPress &lt;wordpress@host&gt;</td>
 	</tr>
 	<tr>
 		<th scope="row" valign="top" align="left">Subject</th>
@@ -1291,7 +1291,7 @@ Sent when a fatal error occurs in a plugin or theme and Recovery Mode is not act
 **Important:** The `wp_fatal_error_handler_enabled` filter cannot be used by plugins as it runs too early. [Information about using this filter can be found here](https://core.trac.wordpress.org/browser/trunk/src/wp-includes/error-protection.php?rev=49489&marks=114-131#L97).
 
     To:        Site Admin / Value of RECOVERY_MODE_EMAIL constant
-    From:      WordPress <wordpress@host>
+    From:      WordPress &lt;wordpress@host&gt;
     Subject:   [%s] Your Site is Experiencing a Technical Issue
     Function:  send_recovery_mode_email()
     Pluggable: No
@@ -1308,7 +1308,7 @@ Sent when a fatal error occurs in a plugin or theme and Recovery Mode is not act
 Multisite only. Sent when an Administrator requests to delete their site from the Tools -> Delete Site screen.
 
     To:        Site Admin
-    From:      WordPress <wordpress@host>
+    From:      WordPress &lt;wordpress@host&gt;
     Subject:   [%s] Delete My Site
     Function:  wp-admin/ms-delete-site.php
     Pluggable: No
