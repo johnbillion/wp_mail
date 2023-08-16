@@ -1090,7 +1090,7 @@ Multisite only. Sent when a new site is created from Network Admin -> Sites -> A
 	</tr>
 	<tr>
 		<th scope="row" valign="top" align="left">From</th>
-		<td>Site Admin <[network admin]></td>
+		<td>Site Admin &lt;[network admin]&gt;</td>
 	</tr>
 	<tr>
 		<th scope="row" valign="top" align="left">Subject</th>
@@ -1129,7 +1129,7 @@ Multisite only, with site registration allowed. Sent when a visitor registers a 
 	</tr>
 	<tr>
 		<th scope="row" valign="top" align="left">From</th>
-		<td>[Network Name] <[network admin]></td>
+		<td>[Network Name] &lt;[network admin]&gt;</td>
 	</tr>
 	<tr>
 		<th scope="row" valign="top" align="left">Subject</th>
@@ -1212,7 +1212,7 @@ Multisite only.
 	</tr>
 	<tr>
 		<th scope="row" valign="top" align="left">From</th>
-		<td>[Network Name] <[network admin]></td>
+		<td>[Network Name] &lt;[network admin]&gt;</td>
 	</tr>
 	<tr>
 		<th scope="row" valign="top" align="left">Subject</th>
