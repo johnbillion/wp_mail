@@ -1290,18 +1290,50 @@ Sent when a fatal error occurs in a plugin or theme and Recovery Mode is not act
 
 **Important:** The `wp_fatal_error_handler_enabled` filter cannot be used by plugins as it runs too early. [Information about using this filter can be found here](https://core.trac.wordpress.org/browser/trunk/src/wp-includes/error-protection.php?rev=49489&marks=114-131#L97).
 
-    To:        Site Admin / Value of RECOVERY_MODE_EMAIL constant
-    From:      WordPress &lt;wordpress@host&gt;
-    Subject:   [%s] Your Site is Experiencing a Technical Issue
-    Function:  send_recovery_mode_email()
-    Pluggable: No
-    Filters:   wp_fatal_error_handler_enabled
-               recovery_email_support_info
-               recovery_email_debug_info
-               recovery_mode_email
-    Disable:   Define WP_DISABLE_FATAL_ERROR_HANDLER as true
-               Return false from wp_fatal_error_handler_enabled filter
-    Note:      Does not currently apply to Multisite
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">To</th>
+		<td>Site Admin / Value of RECOVERY_MODE_EMAIL constant</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Subject</th>
+		<td>[%s] Your Site is Experiencing a Technical Issue</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/send_recovery_mode_email/"><code>send_recovery_mode_email()</code></a></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_fatal_error_handler_enabled/"><code>wp_fatal_error_handler_enabled</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/recovery_email_support_info/"><code>recovery_email_support_info</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/recovery_email_debug_info/"><code>recovery_email_debug_info</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/recovery_mode_email/"><code>recovery_mode_email</code></a><br>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Disable</th>
+		<td>
+			Define <code>WP_DISABLE_FATAL_ERROR_HANDLER</code> as <code>true</code><br>
+			Return <code>false</code> from the <a href="https://developer.wordpress.org/reference/hooks/wp_fatal_error_handler_enabled/"><code>wp_fatal_error_handler_enabled</code></a> filter
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Note</th>
+		<td>
+			Does not currently apply to Multisite
+		</td>
+	</tr>
+</table>
 
 ### Site admin requests to delete site
 
@@ -1314,6 +1346,41 @@ Multisite only. Sent when an Administrator requests to delete their site from th
     Pluggable: No
     Filters:   delete_site_email_content
     Disable:   Not possible
+
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">To</th>
+		<td>Site Admin</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Subject</th>
+		<td>[%s] Delete My Site</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">File</th>
+		<td><code>wp-admin/ms-delete-site.php</code></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/delete_site_email_content/"><code>delete_site_email_content</code></a>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Disable</th>
+		<td>
+			Not possible
+		</td>
+	</tr>
+</table>
 
 ## License: GPLv2
 
