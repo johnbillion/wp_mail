@@ -1339,14 +1339,6 @@ Sent when a fatal error occurs in a plugin or theme and Recovery Mode is not act
 
 Multisite only. Sent when an Administrator requests to delete their site from the Tools -> Delete Site screen.
 
-    To:        Site Admin
-    From:      WordPress &lt;wordpress@host&gt;
-    Subject:   [%s] Delete My Site
-    Function:  wp-admin/ms-delete-site.php
-    Pluggable: No
-    Filters:   delete_site_email_content
-    Disable:   Not possible
-
 <table>
 	<tr>
 		<th scope="row" valign="top" align="left">To</th>
