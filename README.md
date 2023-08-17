@@ -22,7 +22,7 @@ All emails sent by WordPress go through the pluggable <a href="https://developer
 
 <table>
 	<tr>
-		<th scope="row" valign="top" align="left">Filters</th>
+		<th scope="row" valign="top" align="left">Filters<br><img width="478" height="1"></th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/wp_mail/"><code>wp_mail</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/pre_wp_mail/"><code>pre_wp_mail</code></a><br>
@@ -30,6 +30,7 @@ All emails sent by WordPress go through the pluggable <a href="https://developer
 			<a href="https://developer.wordpress.org/reference/hooks/wp_mail_from_name/"><code>wp_mail_from_name</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/wp_mail_content_type/"><code>wp_mail_content_type</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/wp_mail_charset/"><code>wp_mail_charset</code></a><br>
+			<img width="478" height="1">
 		</td>
 	</tr>
 	<tr>
