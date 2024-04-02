@@ -1193,8 +1193,8 @@ Multisite only.
 	<tr>
 		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
-			- Filter the <code>registrationnotification</code> option value
-			- Change the "Registration notification" setting in Network Admin -> Settings
+			- Filter the <code>registrationnotification</code> option value<br>
+			- Change the "Registration notification" setting in Network Admin -> Settings<br>
 			- Remove <a href="https://developer.wordpress.org/reference/functions/newblog_notify_siteadmin/"><code>newblog_notify_siteadmin()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/wpmu_new_blog/"><code>wpmu_new_blog</code></a> hook<br>
 			- Remove <a href="https://developer.wordpress.org/reference/functions/newblog_notify_siteadmin/"><code>newblog_notify_siteadmin()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/wp_initialize_site/"><code>wp_initialize_site</code></a> hook<br>
 		</td>
@@ -1323,8 +1323,8 @@ Sent when a fatal error occurs in a plugin or theme and Recovery Mode is not act
 	<tr>
 		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
-			Define <code>WP_DISABLE_FATAL_ERROR_HANDLER</code> as <code>true</code><br>
-			Return <code>false</code> from the <a href="https://developer.wordpress.org/reference/hooks/wp_fatal_error_handler_enabled/"><code>wp_fatal_error_handler_enabled</code></a> filter
+			Define <code>WP_DISABLE_FATAL_ERROR_HANDLER</code> as true<br>
+			Return false from the <a href="https://developer.wordpress.org/reference/hooks/wp_fatal_error_handler_enabled/"><code>wp_fatal_error_handler_enabled</code></a> filter
 		</td>
 	</tr>
 	<tr>
