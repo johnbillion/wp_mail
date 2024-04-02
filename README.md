@@ -2,7 +2,7 @@
 
 This document lists all the situations where WordPress core sends an email, how and when they happen, and how to filter or disable each one.
 
-This list was last updated for WordPress 6.4.
+This list was last updated for WordPress 6.5.
 
 ## Table of Contents
 
@@ -175,6 +175,7 @@ Sent when a user attempts to change the Administration Email Address option on t
 	<tr>
 		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/new_admin_email_subject/"><code>new_admin_email_subject</code></a> (WP 6.5+)<br>
 			<a href="https://developer.wordpress.org/reference/hooks/new_admin_email_content/"><code>new_admin_email_content</code></a><br>
 		</td>
 	</tr>
