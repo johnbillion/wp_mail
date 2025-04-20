@@ -36,7 +36,7 @@ All emails sent by WordPress go through the pluggable <a href="https://developer
 		<th scope="row" valign="top" align="left">Actions</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/phpmailer_init/"><code>phpmailer_init</code></a><br>
-			<a href="https://developer.wordpress.org/reference/hooks/wp_mail_succeeded/"><code>wp_mail_succeeded</code></a> (WP 5.9+)<br>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_mail_succeeded/"><code>wp_mail_succeeded</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/wp_mail_failed/"><code>wp_mail_failed</code></a><br>
 		</td>
 	</tr>
@@ -175,7 +175,7 @@ Sent when a user attempts to change the Administration Email Address option on t
 	<tr>
 		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
-			<a href="https://developer.wordpress.org/reference/hooks/new_admin_email_subject/"><code>new_admin_email_subject</code></a> (WP 6.5+)<br>
+			<a href="https://developer.wordpress.org/reference/hooks/new_admin_email_subject/"><code>new_admin_email_subject</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/new_admin_email_content/"><code>new_admin_email_content</code></a><br>
 		</td>
 	</tr>
@@ -311,8 +311,8 @@ Multisite only. Sent when a user clicks the link in the email requesting confirm
 Sent when:
 
 * A user clicks the "Lost your password?" link on the login screen and submits their email address
-* An Administrator clicks the "Send password reset" link next to a user on the Users screen (WP 5.7+)
-* An Administrator clicks the "Send Reset Link" from the user editing screen of another user (WP 5.7+)
+* An Administrator clicks the "Send password reset" link next to a user on the Users screen
+* An Administrator clicks the "Send Reset Link" from the user editing screen of another user
 
 <table>
 	<tr>
@@ -340,13 +340,13 @@ Sent when:
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/retrieve_password_title/"><code>retrieve_password_title</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/retrieve_password_message/"><code>retrieve_password_message</code></a><br>
-			<a href="https://developer.wordpress.org/reference/hooks/retrieve_password_notification_email/"><code>retrieve_password_notification_email</code></a> (WP 6.0+)<br>
+			<a href="https://developer.wordpress.org/reference/hooks/retrieve_password_notification_email/"><code>retrieve_password_notification_email</code></a><br>
 		</td>
 	</tr>
 	<tr>
 		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
-			- Return false from <a href="https://developer.wordpress.org/reference/hooks/send_retrieve_password_email/"><code>send_retrieve_password_email</code></a> filter (WP 6.0+)<br>
+			- Return false from <a href="https://developer.wordpress.org/reference/hooks/send_retrieve_password_email/"><code>send_retrieve_password_email</code></a> filter<br>
 			- Return an empty message from <a href="https://developer.wordpress.org/reference/hooks/retrieve_password_message/"><code>retrieve_password_message</code></a> filter<br>
 		</td>
 	</tr>
@@ -588,9 +588,9 @@ Sent when a user clicks the link in the personal data export or erasure request 
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/user_request_confirmed_email_to/"><code>user_request_confirmed_email_to</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/user_request_confirmed_email_subject/"><code>user_request_confirmed_email_subject</code></a><br>
-			<a href="https://developer.wordpress.org/reference/hooks/user_request_confirmed_email_content/"><code>user_request_confirmed_email_content</code></a> (WP 5.8+)<br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_request_confirmed_email_content/"><code>user_request_confirmed_email_content</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/user_request_confirmed_email_headers/"><code>user_request_confirmed_email_headers</code></a><br>
-			<a href="https://developer.wordpress.org/reference/hooks/user_confirmed_action_email_content/"><code>user_confirmed_action_email_content</code></a> (deprecated in 5.8)<br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_confirmed_action_email_content/"><code>user_confirmed_action_email_content</code></a> (deprecated)<br>
 		</td>
 	</tr>
 	<tr>
@@ -675,12 +675,12 @@ Sent when:
 		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_fulfillment_email_to/"><code>user_erasure_fulfillment_email_to</code></a><br>
-			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_fulfillment_email_subject/"><code>user_erasure_fulfillment_email_subject</code></a> (WP 5.8+)<br>
-			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_fulfillment_email_content/"><code>user_erasure_fulfillment_email_content</code></a> (WP 5.8+)<br>
-			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_fulfillment_email_headers/"><code>user_erasure_fulfillment_email_headers</code></a> (WP 5.8+)<br>
-			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_complete_email_subject/"><code>user_erasure_complete_email_subject</code></a> (deprecated in 5.8)<br>
-			<a href="https://developer.wordpress.org/reference/hooks/user_confirmed_action_email_content/"><code>user_confirmed_action_email_content</code></a> (deprecated in 5.8)<br>
-			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_complete_email_headers/"><code>user_erasure_complete_email_headers</code></a> (deprecated in 5.8)<br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_fulfillment_email_subject/"><code>user_erasure_fulfillment_email_subject</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_fulfillment_email_content/"><code>user_erasure_fulfillment_email_content</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_fulfillment_email_headers/"><code>user_erasure_fulfillment_email_headers</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_complete_email_subject/"><code>user_erasure_complete_email_subject</code></a> (deprecated)<br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_confirmed_action_email_content/"><code>user_confirmed_action_email_content</code></a> (deprecated)<br>
+			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_complete_email_headers/"><code>user_erasure_complete_email_headers</code></a> (deprecated)<br>
 		</td>
 	</tr>
 	<tr>
@@ -1024,7 +1024,7 @@ When a new user is created, two emails are sent from the same function. One to t
 		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/wp_new_user_notification_email_admin/"><code>wp_new_user_notification_email_admin</code></a><br>
-			<a href="https://developer.wordpress.org/reference/hooks/wp_send_new_user_notification_to_admin/"><code>wp_send_new_user_notification_to_admin</code></a> (WP 6.1+)<br>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_send_new_user_notification_to_admin/"><code>wp_send_new_user_notification_to_admin</code></a><br>
 		</td>
 	</tr>
 </table>
@@ -1048,7 +1048,7 @@ and one to the newly created user:
 		<th scope="row" valign="top" align="left">Filters</th>
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/wp_new_user_notification_email/"><code>wp_new_user_notification_email</code></a><br>
-			<a href="https://developer.wordpress.org/reference/hooks/wp_send_new_user_notification_to_user/"><code>wp_send_new_user_notification_to_user</code></a> (WP 6.1+)<br>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_send_new_user_notification_to_user/"><code>wp_send_new_user_notification_to_user</code></a><br>
 		</td>
 	</tr>
 </table>
@@ -1067,7 +1067,7 @@ Details:
 	<tr>
 		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
-			- Return false from the <a href="https://developer.wordpress.org/reference/hooks/wp_send_new_user_notification_to_admin/"><code>wp_send_new_user_notification_to_admin</code></a> or <a href="https://developer.wordpress.org/reference/hooks/wp_send_new_user_notification_to_user/"><code>wp_send_new_user_notification_to_user</code></a> filter (WP 6.1+)<br>
+			- Return false from the <a href="https://developer.wordpress.org/reference/hooks/wp_send_new_user_notification_to_admin/"><code>wp_send_new_user_notification_to_admin</code></a> or <a href="https://developer.wordpress.org/reference/hooks/wp_send_new_user_notification_to_user/"><code>wp_send_new_user_notification_to_user</code></a> filter<br>
 			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/register_new_user/"><code>register_new_user</code></a> hook<br>
 			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/edit_user_created_user/"><code>edit_user_created_user</code></a> hook<br>
 			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_send_new_user_notifications/"><code>wp_send_new_user_notifications()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/network_site_new_created_user/"><code>network_site_new_created_user</code></a> hook<br>
