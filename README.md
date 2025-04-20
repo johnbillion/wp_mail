@@ -86,7 +86,7 @@ Sent when a user or visitor submits a comment that gets held for moderation.
 		<td>
 			- Return false from <a href="https://developer.wordpress.org/reference/hooks/notify_moderator/"><code>notify_moderator</code></a> filter<br>
 			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_new_comment_notify_moderator/"><code>wp_new_comment_notify_moderator</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/comment_post/"><code>comment_post</code></a> hook<br>
-			- "Email me whenever" settings on Settings -> Discussion screen<br>
+			- "Email me whenever" settings on Settings → Discussion screen<br>
 			- Overwrite the pluggable <a href="https://developer.wordpress.org/reference/functions/wp_notify_moderator/"><code>wp_notify_moderator()</code></a> function<br>
 		</td>
 	</tr>
@@ -138,7 +138,7 @@ Sent when:
 		<td>
 			- Return false from <a href="https://developer.wordpress.org/reference/hooks/notify_post_author/"><code>notify_post_author</code></a> filter<br>
 			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_new_comment_notify_postauthor/"><code>wp_new_comment_notify_postauthor</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/comment_post/"><code>comment_post</code></a> hook<br>
-			- "Email me whenever" settings on Settings -> Discussion screen<br>
+			- "Email me whenever" settings on Settings → Discussion screen<br>
 			- Overwrite the pluggable <a href="https://developer.wordpress.org/reference/functions/wp_notify_postauthor/"><code>wp_notify_postauthor()</code></a> function<br>
 			- See also <a href="https://github.com/WordPress/wordpress-develop/blob/63a2a710680cf344dec9e75cec757ee377a304a9/src/wp-includes/comment.php#L2404">this hardcoded action</a> added to <a href="https://developer.wordpress.org/reference/hooks/wp_set_comment_status/"><code>wp_set_comment_status</code></a> in <a href="https://developer.wordpress.org/reference/functions/wp_set_comment_status/"><code>wp_set_comment_status()</code></a><br>
 		</td>
@@ -515,8 +515,8 @@ Sent when a user clicks the link in the email requesting confirmation of the cha
 
 Sent when:
 
-* A request is created or resent from the Tools -> Export Personal Data screen
-* A request is created or resent from the Tools -> Erase Personal Data screen
+* A request is created or resent from the Tools → Export Personal Data screen
+* A request is created or resent from the Tools → Erase Personal Data screen
 
 <table>
 	<tr>
@@ -830,7 +830,7 @@ Only sent when you are using a development version of WordPress and it's not und
 
 ### An existing user is invited to a site
 
-Multisite only. Sent when an existing user is added to a site from Users -> Add New -> Add Existing User.
+Multisite only. Sent when an existing user is added to a site from Users → Add New → Add Existing User.
 
 <table>
 	<tr>
@@ -867,7 +867,7 @@ Multisite only. Sent when an existing user is added to a site from Users -> Add 
 
 ### A new user is invited to join a site
 
-Multisite only. Sent when a new user is invited to join a site from Users -> Add New -> Add New User.
+Multisite only. Sent when a new user is invited to join a site from Users → Add New → Add New User.
 
 <table>
 	<tr>
@@ -914,10 +914,10 @@ Multisite only. Sent when a new user is invited to join a site from Users -> Add
 
 Multisite only. Sent when a new user account is created via `wpmu_create_user()`:
 
-* From Network Admin -> Sites -> Add New and the email address doesn't already exist
-* From Network Admin -> Sites -> [Edit] -> Users -> Add New User
-* From Network Admin -> Users -> Add New
-* From Users -> Add New -> Add New User and the "Skip Confirmation Email" checkbox is checked
+* From Network Admin → Sites → Add New and the email address doesn't already exist
+* From Network Admin → Sites → [Edit] → Users → Add New User
+* From Network Admin → Users → Add New
+* From Users → Add New → Add New User and the "Skip Confirmation Email" checkbox is checked
 * When a user activates their new account on `wp-activate.php`
 * Via a REST API request to create a new user (`POST` to `/wp/v2/users`)
 
@@ -955,7 +955,7 @@ Details:
 		<td>
 			- Filter the <code>registrationnotification</code> option value<br>
 			- Remove action from the <a href="https://developer.wordpress.org/reference/hooks/wpmu_new_user/"><code>wpmu_new_user</code></a> hook<br>
-			- Toggle "Registration notification" in Network Admin -> Settings<br>
+			- Toggle "Registration notification" in Network Admin → Settings<br>
 		</td>
 	</tr>
 </table>
@@ -990,7 +990,7 @@ Multisite only.
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/update_welcome_user_subject/"><code>update_welcome_user_subject</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/update_welcome_user_email/"><code>update_welcome_user_email</code></a><br>
-			See also the "Welcome User Email" setting in Network Admin -> Settings<br>
+			See also the "Welcome User Email" setting in Network Admin → Settings<br>
 		</td>
 	</tr>
 	<tr>
@@ -1082,7 +1082,7 @@ Details:
 
 ### A new site is created
 
-Multisite only. Sent when a new site is created from Network Admin -> Sites -> Add New.
+Multisite only. Sent when a new site is created from Network Admin → Sites → Add New.
 
 <table>
 	<tr>
@@ -1160,7 +1160,7 @@ Multisite only, with site registration allowed. Sent when a visitor registers a 
 	</tr>
 </table>
 
-### User activates their new site, or site added from Network Admin -> Sites -> Add New
+### User activates their new site, or site added from Network Admin → Sites → Add New
 
 Multisite only.
 
@@ -1195,14 +1195,14 @@ Multisite only.
 		<th scope="row" valign="top" align="left">Disable</th>
 		<td>
 			- Filter the <code>registrationnotification</code> option value<br>
-			- Change the "Registration notification" setting in Network Admin -> Settings<br>
+			- Change the "Registration notification" setting in Network Admin → Settings<br>
 			- Remove <a href="https://developer.wordpress.org/reference/functions/newblog_notify_siteadmin/"><code>newblog_notify_siteadmin()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/wpmu_new_blog/"><code>wpmu_new_blog</code></a> hook<br>
 			- Remove <a href="https://developer.wordpress.org/reference/functions/newblog_notify_siteadmin/"><code>newblog_notify_siteadmin()</code></a> action from the <a href="https://developer.wordpress.org/reference/hooks/wp_initialize_site/"><code>wp_initialize_site</code></a> hook<br>
 		</td>
 	</tr>
 </table>
 
-### User activates their new site, or site added from Network Admin -> Sites -> Add New
+### User activates their new site, or site added from Network Admin → Sites → Add New
 
 Multisite only.
 
@@ -1232,7 +1232,7 @@ Multisite only.
 		<td>
 			<a href="https://developer.wordpress.org/reference/hooks/update_welcome_subject/"><code>update_welcome_subject</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/update_welcome_email/"><code>update_welcome_email</code></a><br>
-			See also the "Welcome Email" setting in Network Admin -> Settings<br>
+			See also the "Welcome Email" setting in Network Admin → Settings<br>
 		</td>
 	</tr>
 	<tr>
@@ -1338,7 +1338,7 @@ Sent when a fatal error occurs in a plugin or theme and Recovery Mode is not act
 
 ### Site admin requests to delete site
 
-Multisite only. Sent when an Administrator requests to delete their site from the Tools -> Delete Site screen.
+Multisite only. Sent when an Administrator requests to delete their site from the Tools → Delete Site screen.
 
 <table>
 	<tr>
