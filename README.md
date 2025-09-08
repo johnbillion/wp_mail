@@ -590,7 +590,6 @@ Sent when a user clicks the link in the personal data export or erasure request 
 			<a href="https://developer.wordpress.org/reference/hooks/user_request_confirmed_email_subject/"><code>user_request_confirmed_email_subject</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/user_request_confirmed_email_content/"><code>user_request_confirmed_email_content</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/user_request_confirmed_email_headers/"><code>user_request_confirmed_email_headers</code></a><br>
-			<a href="https://developer.wordpress.org/reference/hooks/user_confirmed_action_email_content/"><code>user_confirmed_action_email_content</code></a> (deprecated)<br>
 		</td>
 	</tr>
 	<tr>
@@ -678,9 +677,6 @@ Sent when:
 			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_fulfillment_email_subject/"><code>user_erasure_fulfillment_email_subject</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_fulfillment_email_content/"><code>user_erasure_fulfillment_email_content</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_fulfillment_email_headers/"><code>user_erasure_fulfillment_email_headers</code></a><br>
-			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_complete_email_subject/"><code>user_erasure_complete_email_subject</code></a> (deprecated)<br>
-			<a href="https://developer.wordpress.org/reference/hooks/user_confirmed_action_email_content/"><code>user_confirmed_action_email_content</code></a> (deprecated)<br>
-			<a href="https://developer.wordpress.org/reference/hooks/user_erasure_complete_email_headers/"><code>user_erasure_complete_email_headers</code></a> (deprecated)<br>
 		</td>
 	</tr>
 	<tr>
