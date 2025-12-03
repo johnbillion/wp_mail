@@ -2,7 +2,7 @@
 
 This document lists all the situations where WordPress core sends an email, how and when they happen, and how to filter or disable each one.
 
-This list was last updated for WordPress 6.8.
+This list was last updated for WordPress 6.9.
 
 ## Table of Contents
 
@@ -30,6 +30,7 @@ All emails sent by WordPress go through the pluggable <a href="https://developer
 			<a href="https://developer.wordpress.org/reference/hooks/wp_mail_from_name/"><code>wp_mail_from_name</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/wp_mail_content_type/"><code>wp_mail_content_type</code></a><br>
 			<a href="https://developer.wordpress.org/reference/hooks/wp_mail_charset/"><code>wp_mail_charset</code></a><br>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_mail_embed_args/"><code>wp_mail_embed_args</code></a><br>
 		</td>
 	</tr>
 	<tr>
@@ -96,7 +97,8 @@ Sent when a user or visitor submits a comment that gets held for moderation.
 
 Sent when:
 
-* A user or visitor submits a comment that gets automatically approved
+* A user or visitor submits a comment that gets automatically approved.
+* A user adds a note to a block. [Notes are a new feature in WordPress 6.9](https://make.wordpress.org/core/2025/11/15/notes-feature-in-wordpress-6-9/).
 * A comment previously held for moderation gets approved.
 
 <table>
@@ -112,6 +114,7 @@ Sent when:
 		<th scope="row" valign="top" align="left">Subject</th>
 		<td>
 			[%1$s] Comment: "%2$s"<br>
+			[%1$s] Note: "%2$s"<br>
 			[%1$s] Pingback: "%2$s"<br>
 			[%1$s] Trackback: "%2$s"<br>
 		</td>
