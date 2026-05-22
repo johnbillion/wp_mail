@@ -2,7 +2,7 @@
 
 This document lists all the situations where WordPress core sends an email, how and when they happen, and how to filter or disable each one.
 
-This list was last updated for WordPress 6.9.
+This list was last updated for WordPress 7.0.
 
 ## Table of Contents
 
