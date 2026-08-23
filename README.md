@@ -2,7 +2,7 @@
 
 This document lists all the situations where WordPress core sends an email, how and when they happen, and how to filter or disable each one.
 
-This list was last updated for WordPress 7.0.
+This list was last updated for WordPress 7.1.
 
 ## Table of Contents
 
@@ -144,6 +144,45 @@ Sent when:
 			- "Email me whenever" settings on Settings → Discussion screen<br>
 			- Overwrite the pluggable <a href="https://developer.wordpress.org/reference/functions/wp_notify_postauthor/"><code>wp_notify_postauthor()</code></a> function<br>
 			- See also <a href="https://github.com/WordPress/wordpress-develop/blob/63a2a710680cf344dec9e75cec757ee377a304a9/src/wp-includes/comment.php#L2404">this hardcoded action</a> added to <a href="https://developer.wordpress.org/reference/hooks/wp_set_comment_status/"><code>wp_set_comment_status</code></a> in <a href="https://developer.wordpress.org/reference/functions/wp_set_comment_status/"><code>wp_set_comment_status()</code></a><br>
+		</td>
+	</tr>
+</table>
+
+### User is mentioned in a note
+
+Sent when a user is @mentioned in a note that is added to a block. This email is new in WordPress 7.1.
+
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">To</th>
+		<td>
+			Each user mentioned in the note, except:<br>
+			- The author of the note<br>
+			- The post author, who is notified about every note by the email above<br>
+			- Users who cannot edit the note<br>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Subject</th>
+		<td>[%1$s] You were mentioned in a note on "%2$s"</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/wp_send_note_notification/"><code>wp_send_note_notification()</code></a></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Disable</th>
+		<td>
+			- Remove <a href="https://developer.wordpress.org/reference/functions/wp_notify_note_mentions/"><code>wp_notify_note_mentions</code></a> action from <a href="https://developer.wordpress.org/reference/hooks/rest_insert_comment/"><code>rest_insert_comment</code></a> hook<br>
+			- "Email me whenever → Anyone posts a note" setting on Settings → Discussion screen<br>
 		</td>
 	</tr>
 </table>
@@ -1376,7 +1415,7 @@ Multisite only. Sent when an Administrator requests to delete their site from th
 
 ## License: GPLv2
 
-Copyright 2015 - 2025 John Blackbourn
+Copyright 2015 - 2026 John Blackbourn
 
 This documentation is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
