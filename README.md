@@ -473,6 +473,46 @@ Sent when a logged in user changes their password from the user profile screen.
 	</tr>
 </table>
 
+### Application password is created
+
+Sent when an application password is added to a user's account. This email is new in WordPress 7.2.
+
+<table>
+	<tr>
+		<th scope="row" valign="top" align="left">To</th>
+		<td>User</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">From</th>
+		<td>WordPress &lt;wordpress@host&gt;</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Subject</th>
+		<td>[%s] Application Password Created</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Function</th>
+		<td><a href="https://developer.wordpress.org/reference/functions/wp_application_password_created_notification/"><code>wp_application_password_created_notification()</code></a></td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Pluggable</th>
+		<td>No</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Filters</th>
+		<td>
+			<a href="https://developer.wordpress.org/reference/hooks/wp_application_password_created_email/"><code>wp_application_password_created_email</code></a>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row" valign="top" align="left">Disable</th>
+		<td>
+			- Return false from <a href="https://developer.wordpress.org/reference/hooks/wp_send_application_password_created_email/"><code>wp_send_application_password_created_email</code></a> filter<br>
+			- Remove <code>wp_application_password_created_notification</code> action from <a href="https://developer.wordpress.org/reference/hooks/wp_create_application_password/"><code>wp_create_application_password</code></a> hook<br>
+		</td>
+	</tr>
+</table>
+
 ### User attempts to change their email address
 
 Sent when a logged in user attempts to change their email address from the user profile screen.
